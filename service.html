@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service — Eudaimonia Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas class="stars" id="stars"></canvas>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Eudaimonia Universe</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html" class="active">Service</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="hero" style="min-height:50vh;">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="container hero-content">
+    <p class="hero-label">Service</p>
+    <h1 class="hero-catch"><span class="hero-catch-gradient">事業とプロダクト</span></h1>
+    <p class="hero-sub" style="margin-top:16px;">対立学の知見を、研究・実装・資産化の三層で社会に届ける</p>
+  </div>
+</section>
+
+<!-- BUSINESS PLAN OVERVIEW -->
+<section class="section-sm section-bordered" style="z-index:1; position:relative;">
+  <div class="container fi" style="text-align:center;">
+    <p class="section-desc" style="max-width:700px; margin:0 auto;">
+      対立学は、対立の構造を解明し、止揚（ジンテーゼ）を設計可能にする学問です。<br>
+      この学問を社会に届けるために、三つの事業部門がそれぞれの役割を担います。<br>
+      研究で深め、現場で検証し、プロダクトとして社会に届ける——それが私たちの事業計画です。
+    </p>
+  </div>
+</section>
+
+<!-- DIVISIONS -->
+<section class="section section-bordered">
+  <div class="container">
+    <div class="fi" style="margin-bottom:56px;">
+      <p class="section-label">Divisions</p>
+      <h2 class="section-title">三つの部門</h2>
+    </div>
+
+    <!-- Think Tank -->
+    <div class="card fi" style="margin-bottom:28px;">
+      <div style="display:flex; gap:12px; align-items:baseline; margin-bottom:16px;">
+        <span class="card-num" style="font-size:2rem; margin-bottom:0;">01</span>
+        <div>
+          <h3>Think Tank Division</h3>
+          <div class="tag">— 対立を「学問」にする —</div>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top:20px;">
+        <div>
+          <h4>役割・成果物</h4>
+          <ul>
+            <li>対立の構造解明と対立学（Tairitsugaku）の体系化</li>
+            <li>止揚（Synthese）のプロセス解明と方法論確立</li>
+            <li>理論モデル / 止揚プロトコル / 止揚学（Synthese Science）</li>
+          </ul>
+          <h4>研究テーマ</h4>
+          <ul>
+            <li>対立構造の分類と観測方法論</li>
+            <li>認知発達と社会進化</li>
+            <li>Giver現象と人間進化</li>
+            <li>技術と人間性の統合</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:var(--lav-main);">独自開発: Human OS Modeling</h4>
+          <p>書き換え可能なOSとしての人間構造モデル。価値観コア（L0）、世界解釈（L1: 視座・視野・自己透過度）、構造変容力（L2: コンピテンシー＋ウェルビーイング）、日常慣習（L3）の4層で人間の内面構造を記述し、対立から止揚への動的な変容を設計する。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produce -->
+    <div class="card fi" style="margin-bottom:28px;">
+      <div style="display:flex; gap:12px; align-items:baseline; margin-bottom:16px;">
+        <span class="card-num" style="font-size:2rem; margin-bottom:0;">02</span>
+        <div>
+          <h3>Synthese Produce Division</h3>
+          <div class="tag">— 対立学を「現場」で起こす —</div>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top:20px;">
+        <div>
+          <h4>提供領域</h4>
+          <ul>
+            <li>統合的事業開発（対立構造の診断と止揚設計）</li>
+            <li>組織開発2.0（変容設計）</li>
+            <li>OEM実装（価値観可視化、対話設計）</li>
+            <li>Human OS Modelingに基づく人材・組織診断</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:var(--lav-main);">人的資本可視化指針（改訂版）対応</h4>
+          <p>内閣官房・金融庁・経済産業省が令和8年3月に公表した指針が求める、経営戦略と連動した人材戦略の実践と開示に対応。対立学に基づくHuman OS Modelingを基盤に、動的な人的資本の可視化を支援します。</p>
+          <ul style="margin-top:12px;">
+            <li>経営戦略と人材戦略の対立構造の止揚設計</li>
+            <li>人的資本の動的可視化</li>
+            <li>投資家との対話設計</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asset -->
+    <div class="card fi">
+      <div style="display:flex; gap:12px; align-items:baseline; margin-bottom:16px;">
+        <span class="card-num" style="font-size:2rem; margin-bottom:0;">03</span>
+        <div>
+          <h3>Synthese Asset Division</h3>
+          <div class="tag">— 対立学を「社会資産」として固定化 —</div>
+        </div>
+      </div>
+      <ul style="margin-top:12px;">
+        <li>対立学の知見と現場知をプロダクト化し、誰もが使える仕組みに転換</li>
+        <li>研究 → 実装 → アセット化 → 社会普及の循環を形成</li>
+        <li>ジンテーゼ社会の「OS」として、止揚のプロセスを社会に実装</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section section-bordered section-tint">
+  <div class="container">
+    <div class="fi" style="margin-bottom:56px;">
+      <p class="section-label">Projects</p>
+      <h2 class="section-title">社会実装プロジェクト</h2>
+      <p class="section-desc">対立学が現場で機能している実証フィールド。</p>
+    </div>
+    <div class="grid-3 fi">
+      <div class="card" style="text-align:center;">
+        <h3>育業</h3>
+        <div class="tag">IKUGYO</div>
+        <p>「仕事か育児か」という対立構造を止揚し、ライフイベントを人材進化の契機へ転換する</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <h3>Guild</h3>
+        <div class="tag">GUILD</div>
+        <p>文化資本・技術資本・精神資本の対立を超え、新しい価値生成モデルを構築する</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <h3>Giver</h3>
+        <div class="tag">GIVER CULTURE</div>
+        <p>「与えるか奪うか」の対立を超える。ギバー現象の観測と止揚的場の形成研究</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPS -->
+<section class="section section-bordered">
+  <div class="container">
+    <div class="fi" style="margin-bottom:56px;">
+      <p class="section-label">Applications</p>
+      <h2 class="section-title">ジンテーゼ社会創造アプリ</h2>
+    </div>
+    <div class="grid-2 fi">
+      <div class="app-card">
+        <div class="app-visual app-visual-1">
+          <h3>Omusubi Quest<span>REAL PLAYING GAME</span></h3>
+        </div>
+        <div class="app-body">
+          <p class="tagline">最高の自分を生きる、リアルプレイングゲーム</p>
+          <p>現実世界を舞台に、自らのHuman OSを進化させる。日常をクエストとして捉え直し、対立を止揚のプロセスとしてゲーム体験に実装します。</p>
+          <a href="https://stg-rpg.vercel.app/login" target="_blank" rel="noopener" class="app-link">Launch App</a>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-visual app-visual-2">
+          <h3>SOURCE<span>HUMAN FREQUENCY OS</span></h3>
+        </div>
+        <div class="app-body">
+          <p class="tagline">自分を、奏でる。— あなたの108の源泉から、世界に一枚だけの曲を。</p>
+          <p>内面構造を「周波数」として可視化し、その人だけの楽曲を生成。対立する自己の側面を統合し、止揚的な自己認識と他者との共鳴を創り出します。</p>
+          <a href="https://source-delta-nine.vercel.app/" target="_blank" rel="noopener" class="app-link">Launch App</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSETS -->
+<section class="section section-bordered section-tint">
+  <div class="container">
+    <div class="fi" style="margin-bottom:56px;">
+      <p class="section-label">Assets</p>
+      <h2 class="section-title">アセット群</h2>
+      <p class="section-desc">対立学から生まれた方法論とツール。ジンテーゼ社会の基盤インフラ。</p>
+    </div>
+    <div class="grid-2 fi">
+      <div class="asset asset-featured">
+        <div class="asset-icon">OS</div>
+        <div>
+          <h4>Human OS Modeling</h4>
+          <p>価値観コア→世界解釈→構造変容力→日常慣習の4層で人間の内面構造を記述・変容設計する独自フレームワーク</p>
+        </div>
+      </div>
+      <div class="asset">
+        <div class="asset-icon">◇</div>
+        <div><h4>新世界の窓</h4><p>認知枠の対立を可視化し、拡張を促すフレームワーク</p></div>
+      </div>
+      <div class="asset">
+        <div class="asset-icon">◈</div>
+        <div><h4>未来の自分AI</h4><p>認知モデルの対立構造を可視化し、止揚を支援</p></div>
+      </div>
+      <div class="asset">
+        <div class="asset-icon">▣</div>
+        <div><h4>育業資産群</h4><p>16コンピテンシー、PoC設計等</p></div>
+      </div>
+      <div class="asset">
+        <div class="asset-icon">◎</div>
+        <div><h4>対話設計プロトコル</h4><p>対立から止揚を生み出す対話の構造化メソッド</p></div>
+      </div>
+      <div class="asset">
+        <div class="asset-icon">⬡</div>
+        <div><h4>Giver観測スキーマ</h4><p>ギバー現象の観測と対立構造の分析フレームワーク</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-logo">Eudaimonia Universe</span>
+      <span class="footer-copy">&copy; 2026 Eudaimonia Universe.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="stars.js"></script>
+</body>
+</html>
