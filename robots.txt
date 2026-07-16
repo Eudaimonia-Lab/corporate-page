@@ -1,0 +1,55 @@
+# robots.txt — eudaimoniauniverse.com
+# 方針: AI クローラーを含む全クローラーに全ページの取得を許可（AI回答での引用と将来モデルでの言及を最大化）
+# 注意: 個別グループを持つボットは「*」グループを無視するため、各グループに Allow: / を明示すること
+# 注意: ここで許可しても CDN/WAF 層（Netlify）でブロックされ得る。デプロイ後にUA別curl監査を実施
+
+# --- 検索エンジン ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- AI 検索・回答系（ブロックすると引用資格を失う） ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- AI 学習用（将来モデルの学習データでの言及機会） ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# --- その他すべて ---
+User-agent: *
+Allow: /
+
+Sitemap: https://eudaimoniauniverse.com/sitemap.xml

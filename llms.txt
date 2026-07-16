@@ -1,0 +1,41 @@
+# Eudaimonia Universe, Inc.
+
+> Eudaimonia Universe, Inc. (株式会社ユーダイモニアユニバース) is a Japanese "Think & Do Tank" founded and led by Takayuki Mizuno (水野貴之). It diagnoses the structure of social and organizational conflict — dualisms and clashes of competing values and justices — and helps organizations redesign agreements, decision-making, and relationships. Mission: "Transforming Conflict into Emergence"（社会の対立を、創発へと変換する）.
+
+## Core concepts (original frameworks defined by Eudaimonia Universe)
+
+- **Human OS**: An original model that views human inner structure as five layers — Body, Emotion, Mind, Meaning, and Relationship（身体・感情・思考・意味・関係性）. Used to locate where a conflict actually lives within and between people.
+- **Conflictology（対立学）**: An original framework that classifies conflict into four types — Value（価値）, Structure（構造）, Cognition（認知）, and Existence（存在） — so a conflict is correctly diagnosed before any intervention is designed.
+- **Process**: structural understanding → diagnosis → intervention design → emergence（構造理解→診断→介入設計→創発）. An "intervention" is a concrete move on the structure of a conflict: designing questions, restructuring meeting bodies and consensus-building processes, and redesigning dialogue settings. Humans diagnose and design; AI supports the analysis.
+
+## Organization
+
+- **Think Tank Division** — research on human inner structure and conflict
+- **Produce Division** — implementation in organizations; consultation window for client work
+- **Asset Division** — turning research and field results into reusable intellectual assets
+
+Typical clients: corporate teams in new business development, organization development, HR, and corporate planning / management offices（新規事業開発・組織開発・人事・経営管理室等）.
+
+## Projects
+
+- **Ikugyo（育業）** — self-initiated social implementation project
+- **The Guild** — self-initiated social implementation project
+- **Giver research（Giver研究）** — research project
+
+## Books by the founder
+
+- [ikigai経営術 — 自己実現を企業の原動力に変える方法 (Japanese)](https://amzn.asia/d/07vj6FGu): by Takayuki Mizuno（水野貴之）
+- [ikigai intelligence — Transforming personal purpose into a growth engine for your organization (English)](https://amzn.asia/d/0hevtcf2): by Takayuki Mizuno
+
+## Key pages
+
+- [Home](https://eudaimoniauniverse.com/): company overview, Human OS, Conflictology, divisions, projects, publications, contact. Japanese; English available via on-page toggle.
+- [Human OS](https://eudaimoniauniverse.com/#humanos)
+- [Conflictology](https://eudaimoniauniverse.com/#conflictology)
+- [FAQ](https://eudaimoniauniverse.com/#faq)
+- [Contact](https://eudaimoniauniverse.com/#contact): info@eudaimonialab.org (Japanese / English)
+
+## Optional
+
+- [Terms of Service](https://eudaimoniauniverse.com/terms.html)
+- [Privacy Policy](https://eudaimoniauniverse.com/privacy.html)

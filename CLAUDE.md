@@ -19,7 +19,20 @@ assets/
 
 - 静的HTML/CSS/JS（フレームワークなし）
 - フォント: Google Fonts（Noto Sans JP, Inter）
-- ホスティング: GitHub Pages（予定）
+- ホスティング: **Netlify**（リポジトリ: `Eudaimonia-Lab/corporate-page`）
+
+## デプロイとロールバック
+
+- **main への push = Netlify 自動デプロイ = 本番公開**。push 前に必ず確認を取る
+- リモートに `staging` ブランチあり。大きめの変更は staging で確認してから main へ
+- ロールバック: ① `git revert` して push、または ② Netlify UI の Deploys 履歴から
+  以前のデプロイを "Publish deploy" で復元（緊急時はこちらが速い）
+- 視覚的変更の完了条件は `.claude/rules/frontend-verify.md` に従う
+
+## Git 運用
+
+- `git config user.email` はこのリポジトリでは `aya.mizuno@gmail.com`
+- コミットは conventional commits（feat/fix/docs/chore）＋日本語説明可
 
 ## デザイントークン（CSS変数）
 
@@ -41,6 +54,16 @@ assets/
 ```bash
 npx serve .
 ```
+
+## SEO / GEO 運用ルール
+
+- **dateModified / lastmod の同期**: コンテンツ変更を含む push の前に、index.html 内 JSON-LD の
+  `WebPage.dateModified` と sitemap.xml の `<lastmod>` を当日日付に更新する。
+  無変更での日付更新はしない（スパムシグナルになるため）
+- **FAQ の同期**: 可視FAQセクション・FAQPage JSON-LD・llms.txt の文言を変えるときは必ず3箇所同時に更新する
+- **用語の正準表記**: 「対立学」（英語は Conflictology 固定）／「Human OS」（半角・「モデル」を付けない）／
+  対立学は「4タイプ」・Human OSは「5層」／プロセス表記は「構造理解→診断→介入設計→創発」
+- **robots.txt**: AIクローラーを含む全許可方針。Disallow を足す変更は要相談
 
 ## 注意事項
 

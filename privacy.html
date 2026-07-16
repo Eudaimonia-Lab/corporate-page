@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー — Eudaimonia Universe, Inc.</title>
+<meta name="description" content="株式会社ユーダイモニアユニバースのプライバシーポリシーです。個人情報の取得項目・利用目的・第三者提供・安全管理措置・お問い合わせ窓口について定めています。">
+<link rel="canonical" href="https://eudaimoniauniverse.com/privacy.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Eudaimonia Universe, Inc.">
+<meta property="og:title" content="プライバシーポリシー — Eudaimonia Universe, Inc.">
+<meta property="og:description" content="株式会社ユーダイモニアユニバースのプライバシーポリシーです。">
+<meta property="og:url" content="https://eudaimoniauniverse.com/privacy.html">
+<meta property="og:image" content="https://eudaimoniauniverse.com/img/og-image.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  color: #c0c8d4;
+  background: #06080F;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; transition: color 0.3s; }
+
+:root {
+  --bg: #06080F;
+  --bg2: #0C1023;
+  --teal: #00B5A0;
+  --blue: #4A70B5;
+  --purple: #7B50A3;
+  --lav-main: #C5B8DE;
+  --text-muted: #6a7590;
+  --text-dim: #8a94a8;
+  --white: #F8F6FC;
+  --border: rgba(197,184,222,0.1);
+  --ease: 0.35s ease;
+}
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0 40px; height: 72px;
+  display: flex; align-items: center;
+  background: rgba(6,8,15,0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  width: 100%; max-width: 1140px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  display: flex; align-items: center;
+  gap: 14px; height: 64px;
+  transition: opacity var(--ease);
+}
+.nav-logo img { height: 44px; width: auto; display: block; }
+.nav-logo-text {
+  font-family: Cambria, 'Inter', sans-serif;
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--lav-main); white-space: nowrap;
+}
+.nav-logo:hover { opacity: 0.85; }
+.nav-back {
+  font-family: Cambria, 'Inter', sans-serif;
+  font-size: 0.72rem; letter-spacing: 0.1em;
+  color: var(--text-muted);
+  display: flex; align-items: center; gap: 8px;
+  transition: color var(--ease);
+}
+.nav-back:hover { color: var(--lav-main); }
+.nav-back::before { content: '←'; font-size: 0.9rem; }
+
+/* MAIN */
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 140px 40px 100px;
+}
+
+.page-label {
+  font-family: Cambria, 'Inter', sans-serif;
+  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 16px;
+}
+.page-title {
+  font-family: Georgia, 'Noto Serif JP', serif;
+  font-size: 2.2rem; font-weight: 700;
+  color: var(--white); line-height: 1.3;
+  margin-bottom: 12px;
+}
+.page-date {
+  font-size: 0.78rem; color: var(--text-muted);
+  margin-bottom: 56px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 32px;
+}
+
+.policy-intro {
+  font-size: 0.95rem; line-height: 2;
+  color: var(--text-dim);
+  margin-bottom: 48px;
+  padding: 24px 28px;
+  border-left: 3px solid var(--teal);
+  background: rgba(0,181,160,0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+.policy-section {
+  margin-bottom: 44px;
+}
+.policy-section h2 {
+  font-family: Georgia, 'Noto Serif JP', serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.policy-section p {
+  font-size: 0.92rem; line-height: 2;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+.policy-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 12px;
+}
+.policy-section li {
+  font-size: 0.92rem; line-height: 2;
+  color: var(--text-dim);
+  padding-left: 2em;
+  position: relative;
+  margin-bottom: 4px;
+}
+.policy-section li::before {
+  content: attr(data-num);
+  position: absolute; left: 0;
+  color: var(--text-muted);
+}
+
+.policy-contact {
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: rgba(74,112,181,0.07);
+  border: 1px solid rgba(74,112,181,0.2);
+  border-radius: 8px;
+  font-size: 0.88rem; line-height: 2;
+  color: var(--text-dim);
+}
+.policy-contact a {
+  color: var(--lav-main);
+}
+.policy-contact a:hover { color: var(--white); }
+
+.policy-note {
+  font-size: 0.82rem; color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.policy-revision {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem; color: var(--text-muted);
+  line-height: 2;
+}
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 40px;
+  text-align: center;
+}
+.footer-copy {
+  font-family: Cambria, 'Inter', sans-serif;
+  font-size: 0.65rem; color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .main { padding: 120px 24px 80px; }
+  .nav { padding: 0 20px; }
+  .page-title { font-size: 1.6rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Eudaimonia Universe, Inc.">
+      <img src="img/mark-2026-05-14.png?v=1781795429" alt="">
+      <span class="nav-logo-text">Eudaimonia Universe, Inc.</span>
+    </a>
+    <a href="index.html" class="nav-back">トップへ戻る</a>
+  </div>
+</nav>
+
+<main class="main">
+  <p class="page-label">Legal</p>
+  <h1 class="page-title">プライバシーポリシー</h1>
+  <p class="page-date">最終改定：2026年4月30日</p>
+
+  <p class="policy-intro">
+    株式会社ユーダイモニアユニバース（代表取締役：水野 貴之）（以下「当社」といいます。）は、お客様、取引先（取引先ご担当者様も含みます。）（以下「お客様等」といいます。）の個人情報を取り扱う事業者として、個人情報を適切に保護管理していくことが当社の社会的責務であるとの考えに基づいて、次のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定め、本ポリシーに従って適正に個人情報を取り扱います。<br><br>
+    なお、本ポリシーで使用する用語の意味は、個人情報の保護に関する法律（以下「個人情報保護法」といいます。）に準拠するものとします。
+  </p>
+
+  <div class="policy-section">
+    <h2>１．法令、国が定める指針その他の規範の遵守</h2>
+    <p>当社は、当社が事業活動のために取得・利用する個人情報の取扱いにあたり、個人情報保護法その他の個人情報保護に関する法令、国が定める指針その他の規範を遵守いたします。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>２．個人情報の適切な管理およびリスク対応</h2>
+    <p>当社は、個人情報の取得から廃棄までの一連管理を厳重に行い、個人情報を正確かつ最新の状態に保つとともに、個人情報の漏えい、滅失又はき損（不正アクセス、紛失、破壊、改ざんを含む）等のリスクに対し、適切な予防対策を講じます。万一リスクが発生した場合は、迅速な状況把握に努め、速やかに是正処置を講じ、実施します。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>３．取得する個人情報の項目</h2>
+    <p>当社は、お客様等に関する次に掲げる個人情報を取得します。</p>
+    <ul>
+      <li data-num="⑴">本人確認に関する情報（氏名、メールアドレス、アカウントのIDおよびパスワード、生年月日）</li>
+      <li data-num="⑵">お取引に関する情報（お取引内容および購入履歴に関する情報等）</li>
+      <li data-num="⑶">サービスのご利用に際して取得する情報（クッキー（Cookie）ID等のオンライン上の識別子、ご利用の端末情報、位置情報、閲覧履歴その他のサービスの利用状況等）</li>
+      <li data-num="⑷">その他の情報（お客様等から当社へのお問い合せ・ご連絡等に関する情報等）</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>４．利用目的</h2>
+    <p>当社は、お客様等からご提供いただく個人情報を、次に掲げる利用目的の範囲内において、取得および利用いたします。</p>
+    <ul>
+      <li data-num="⑴">商品等の改善、新サービスの企画・研究・開発</li>
+      <li data-num="⑵">サービス・商品に関するお知らせ、カタログ・DMの送付</li>
+      <li data-num="⑶">事業活動に関するご案内、アンケート、キャンペーンの実施</li>
+      <li data-num="⑷">商品・サービスのお届け、ご提供、アフターサービス、意見収集</li>
+      <li data-num="⑸">与信管理、回収管理、債権管理</li>
+      <li data-num="⑹">登録、本人認証、ユーザー管理</li>
+      <li data-num="⑺">対価のご請求</li>
+      <li data-num="⑻">不正行為等の防止および対応</li>
+      <li data-num="⑼">サービスの保守、管理</li>
+      <li data-num="⑽">マーケティングデータの調査・分析、施策の検討・実施</li>
+      <li data-num="⑾">属性・履歴分析に基づく興味関心に合わせた広告・マーケティング</li>
+      <li data-num="⑿">お問い合せ対応およびご連絡</li>
+      <li data-num="⒀">本ポリシー記載の場合における、第三者に対する提供</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>５．利用目的の変更</h2>
+    <p>当社は、個人情報の利用目的を変更する場合には、変更前の利用目的と関連性を有すると合理的に認められる範囲を超えては行わず、変更された利用目的について、本人に通知または公表します。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>６．個人情報の第三者提供について</h2>
+    <p>当社は、法令に基づく場合や人命・財産の保護に必要な場合等、個人情報保護法で認められる例外を除き、あらかじめお客様等の同意を得ないで、第三者に提供いたしません。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>７．安全管理措置</h2>
+    <p>当社は、個人情報の漏えい、滅失または毀損の防止のために、組織的・人的・物理的・技術的な安全管理措置を講じています。詳細については「個人情報の取扱規程」を策定し、責任者の設置、従業員への定期研修、アクセス制限、外部からの不正アクセス防止等の措置を実施しています。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>８．開示等の請求</h2>
+    <p>当社は、個人情報保護法に基づき、お客様等からの利用目的の通知、開示（第三者提供記録の開示を含む）、訂正・追加・削除、利用停止・第三者提供停止の請求に適切に対応いたします。</p>
+    <p class="policy-note">※利用目的の通知および開示請求については、1回につき1,000円の手数料を頂戴いたします。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>９．個人情報の委託および外国にある第三者への提供</h2>
+    <p>１　当社は、個人情報の取扱いの全部または一部を委託する場合は、委託先において個人情報の安全管理が図られるよう、必要かつ適切な監督を行います。</p>
+    <p>２　当社は、サービスの運営にあたり、外国（米国等）にある外部サービスを利用する場合があり、お客様等の個人情報が当該外国のサーバー等に保管される場合があります。その際、当社は当該外国の法制度を把握した上で、安全管理措置を講じます。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>10．苦情、ご相談等への対応</h2>
+    <p>当社は、個人情報のお取扱いに関するご意見、お問合せ、苦情およびご相談に迅速に対応いたします。</p>
+    <div class="policy-contact">
+      <strong style="color: #C5B8DE;">【個人情報お問合せ窓口】</strong><br>
+      Mail：<a href="mailto:info@eudaimonialab.org">info@eudaimonialab.org</a><br>
+      株式会社ユーダイモニアユニバース 個人情報保護窓口
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <h2>11．クッキー（cookie）および外部送信ツールの取扱い</h2>
+    <p>クッキー（cookie）とは、お客様等がウェブサイトを訪れた際にご使用のコンピュータを識別する仕組みです。</p>
+    <p>当社は、本サイトの利用状況を把握し、サービスの改善を行うためにGoogle Analyticsを利用しています。Google Analyticsによる情報の収集方法および利用方法については、Googleのプライバシーポリシーをご確認ください。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>12．クレジットカード情報の取扱い</h2>
+    <p>当社は、お客様等のクレジットカード情報の非保持化（当社のサーバーを通過させないこと）を推進しており、本サービスにおける決済は、外部の決済代行会社が提供する決済システムを利用します。クレジットカード情報は、当該決済代行会社が取得・保存するものであり、当社において当該情報の保存・保管は行いません。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>13．アクセスログの取扱い</h2>
+    <p>お客様等が本サイトにアクセスした場合、その操作の情報をアクセスログとして記録しています。利便性向上、原因追及、統計分析のために使用し、それ以外の目的には利用いたしません。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>14．リンクについて</h2>
+    <p>当社ウェブサイト上の第三者サイトへのリンク先における個人情報の取り扱いについては、当社の責任範囲外となります。各リンク先のプライバシーポリシーをご確認ください。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>15．SSLによる個人情報保護について</h2>
+    <p>当社ウェブサイトでは、個人情報を入力する画面にSSL（暗号化技術）を使用しています。ただし、その安全性は当社によって保証されるものではなく、万一当社の過失（故意または重過失を除く）無くデータ漏洩等の事故が起こった場合には、当社は責任を負いかねます。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>16．改定</h2>
+    <p>当社は、本ポリシーの内容を継続的に見直し、その改善に努めます。改定した場合には、当社ウェブサイト上に掲載します。</p>
+  </div>
+
+  <div class="policy-revision">
+    <p>【2020年12月1日制定】</p>
+    <p>【2023年4月30日改定】</p>
+    <p>【2023年8月15日改定】</p>
+    <p>【2023年9月22日改定】</p>
+    <p>【2026年4月30日改定】</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <p class="footer-copy">&copy; 2026 Eudaimonia Universe, Inc.</p>
+</footer>
+
+</body>
+</html>
