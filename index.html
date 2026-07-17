@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#F7F8FC">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eudaimonia Universe — 社会の対立を、創発へと変換する Think & Do Tank</title>
 <meta name="description" content="人々がより善く幸せで在り続けられる社会を目指し、対立の複雑さを構造から診断して新しい合意・意思決定・関係性をつくるThink & Do Tank。独自理論「Human OS」と「対立学」にAI分析を組み合わせ、組織変容・意思決定設計・事業開発を支援します。">
@@ -162,8 +163,8 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: 'Calibri', 'Noto Sans JP', 'Inter', sans-serif;
-  color: #c0c8d4;
-  background: #06080F;
+  color: var(--text);
+  background: var(--bg);
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -173,39 +174,39 @@ a { text-decoration: none; color: inherit; transition: color 0.35s; }
 ul { list-style: none; }
 
 :root {
-  --bg: #06080F;
-  --bg2: #0C1023;
-  --bg3: #12162E;
-  --nebula: #1A1548;
-  --card-bg: #12162E;
-  --teal: #00B5A0;
-  --blue: #4A70B5;
-  --purple: #7B50A3;
-  --magenta: #D64A8C;
-  --yellow: #E8C830;
-  --orange: #E87030;
-  --lav-off-white: #F8F6FC;
-  --lav-light: #EDE8F5;
-  --lav-main: #C5B8DE;
-  --lav-purple: #9B8ABF;
-  --stellar: #4A70B5;
-  --stellar-dim: rgba(74,112,181,0.15);
-  --gold: #E8C830;
-  --gold-glow: rgba(232,200,48,0.10);
-  --aurora: #00B5A0;
-  --text: #dfe3ec;
-  --text-dim: #b8bdc8;
-  --text-muted: #8891a3;
-  --white: #F8F6FC;
-  --surface: rgba(255,255,255,0.025);
-  --border: rgba(255,255,255,0.06);
-  --hover: rgba(255,255,255,0.06);
+  --bg: #F7F8FC;
+  --bg2: #EFF2F9;
+  --bg3: #E7EBF6;
+  --nebula: #DFE5F5;
+  --card-bg: #FFFFFF;
+  --teal: #00877A;
+  --blue: #3A5B9E;
+  --purple: #6B4396;
+  --magenta: #B23A78;
+  --yellow: #A8821F;
+  --orange: #C05A20;
+  --lav-off-white: #2A2440;
+  --lav-light: #4A3F6B;
+  --lav-main: #5F4B8B;
+  --lav-purple: #7B6AA6;
+  --stellar: #3A5B9E;
+  --stellar-dim: rgba(58,91,158,0.10);
+  --gold: #A8821F;
+  --gold-glow: rgba(168,130,31,0.08);
+  --aurora: #00877A;
+  --text: #333B4F;
+  --text-dim: #4C5568;
+  --text-muted: #8A92A6;
+  --white: #1E2436;
+  --surface: rgba(20,30,60,0.03);
+  --border: rgba(30,40,80,0.12);
+  --hover: rgba(20,30,60,0.05);
   --container: 1080px;
   --ease: 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
 }
 
 .container { max-width: var(--container); margin: 0 auto; padding: 0 48px; }
-.stars { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+.stars { display: none; }
 
 /* NAV */
 .nav {
@@ -214,14 +215,21 @@ ul { list-style: none; }
   transition: background var(--ease), backdrop-filter var(--ease);
 }
 .nav.scrolled {
-  background: rgba(6,8,16,0.88);
+  background: rgba(247,248,252,0.92);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
 }
 .nav-inner {
   max-width: var(--container); margin:0 auto;
   display: flex; align-items: center; justify-content: space-between;
+  gap: 32px;
   height: 92px;
+}
+.nav-logo { flex-shrink: 0; }
+.nav-links { flex-wrap: nowrap; }
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1200px) {
+  .nav-logo-text { display: none; }
 }
 .nav-logo {
   display: flex; align-items: center;
@@ -268,14 +276,16 @@ ul { list-style: none; }
 .hero-orb-1 {
   width: 600px; height: 600px;
   top: 10%; left: 50%; transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(26,21,72,0.55) 0%, rgba(123,80,163,0.12) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(95,75,139,0.10) 0%, rgba(0,135,122,0.06) 40%, transparent 70%);
 }
 .hero-orb-2 {
   width: 350px; height: 350px;
   top: 30%; right: 5%;
-  background: radial-gradient(circle, rgba(214,74,140,0.06) 0%, rgba(232,200,48,0.04) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(178,58,120,0.05) 0%, rgba(168,130,31,0.04) 50%, transparent 70%);
 }
 .hero-content { position: relative; z-index:2; }
+.hero-grid { display:flex; align-items:center; }
+.hero-text { flex:1 1 auto; min-width:0; }
 .hero-label {
   font-family: Cambria, 'Inter', sans-serif;
   font-size: 0.65rem; font-weight: 500;
@@ -360,8 +370,9 @@ ul { list-style: none; }
   position: relative; overflow: hidden;
 }
 .card:hover {
-  background: rgba(18,22,46,0.85);
-  border-color: rgba(197,184,222,0.18);
+  background: #FFFFFF;
+  box-shadow: 0 6px 24px rgba(30,40,80,0.10);
+  border-color: rgba(95,75,139,0.18);
   transform: translateY(-3px);
 }
 .card-num {
@@ -413,7 +424,7 @@ ul { list-style: none; }
 }
 .thesis-step:hover {
   background:rgba(255,255,255,0.04);
-  border-color:rgba(197,184,222,0.18);
+  border-color:rgba(95,75,139,0.18);
 }
 .thesis-num {
   font-family:Cambria,'Inter',sans-serif;
@@ -421,7 +432,7 @@ ul { list-style: none; }
   color:var(--lav-off-white);
   width:32px; height:32px;
   display:flex; align-items:center; justify-content:center;
-  border:1px solid rgba(197,184,222,0.3);
+  border:1px solid rgba(95,75,139,0.3);
   border-radius:50%; flex-shrink:0;
   background: rgba(123,80,163,0.12);
 }
@@ -464,7 +475,7 @@ ul { list-style: none; }
   border:1px solid var(--border); border-radius:8px;
   transition: all var(--ease);
 }
-.asset:hover { background:var(--hover); border-color:rgba(197,184,222,0.15); }
+.asset:hover { background:var(--hover); border-color:rgba(95,75,139,0.15); }
 .asset-icon {
   width:36px; height:36px; border-radius:7px;
   background:rgba(123,80,163,0.12); border:1px solid rgba(123,80,163,0.18);
@@ -499,7 +510,7 @@ ul { list-style: none; }
   background:var(--surface); border:1px solid var(--border);
   margin-bottom:12px; transition:all var(--ease);
 }
-.contact-cat:hover { background:var(--hover); border-color:rgba(197,184,222,0.15); }
+.contact-cat:hover { background:var(--hover); border-color:rgba(95,75,139,0.15); }
 .contact-cat h4 { font-family: Georgia, 'Noto Serif JP', serif; font-size:0.9rem; color:var(--white); margin-bottom:2px; }
 .contact-cat p { font-size:0.75rem; color:var(--text-muted); }
 .form { display:grid; gap:16px; }
@@ -548,14 +559,14 @@ ul { list-style: none; }
 .newsletter-form { width: 100%; }
 .newsletter-input-wrap {
   display: flex; gap: 0;
-  background: rgba(197,184,222,0.06);
-  border: 1px solid rgba(197,184,222,0.2);
+  background: rgba(95,75,139,0.06);
+  border: 1px solid rgba(95,75,139,0.2);
   border-radius: 8px;
   overflow: hidden;
   transition: border-color 0.3s;
 }
 .newsletter-input-wrap:focus-within {
-  border-color: rgba(197,184,222,0.5);
+  border-color: rgba(95,75,139,0.5);
 }
 .newsletter-input {
   flex: 1; background: transparent;
@@ -599,7 +610,7 @@ ul { list-style: none; }
   text-decoration: none; color: inherit;
 }
 .pub-card:hover {
-  border-color: rgba(197,184,222,0.35);
+  border-color: rgba(95,75,139,0.35);
   transform: translateY(-3px);
 }
 .pub-cover {
@@ -649,7 +660,7 @@ ul { list-style: none; }
   font-family: Cambria, 'Inter', sans-serif;
   font-size: 0.7rem; letter-spacing: 0.1em;
   color: var(--lav-main);
-  border-bottom: 1px solid rgba(197,184,222,0.3);
+  border-bottom: 1px solid rgba(95,75,139,0.3);
   padding-bottom: 2px;
   transition: color 0.25s, border-color 0.25s;
 }
@@ -683,7 +694,7 @@ ul { list-style: none; }
   .nav-links.open {
     display:flex; flex-direction:column;
     position:fixed; inset:0;
-    background:rgba(6,8,16,0.97);
+    background:rgba(247,248,252,0.97);
     justify-content:center; align-items:center;
     gap:28px; z-index:99;
   }
@@ -725,7 +736,7 @@ ul { list-style: none; }
 }
 .lang-btn.active {
   color: var(--lav-main);
-  border-color: rgba(197,184,222,0.3);
+  border-color: rgba(95,75,139,0.3);
 }
 .lang-btn:hover { color: var(--white); }
 </style>
@@ -762,27 +773,18 @@ ul { list-style: none; }
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
   <div class="container hero-content">
-    <p class="hero-label" data-i18n="hero-label">Think &amp; Do Tank for Emergence</p>
-    <h1 class="hero-catch"><span class="hero-catch-gradient" data-i18n="hero-catch">社会の対立を、<br>創発へと変換する。</span></h1>
-    <p class="hero-sub" data-i18n="hero-sub">Transforming Conflict into Emergence.</p>
-    <p class="hero-desc" data-i18n="hero-desc">
-      Eudaimonia Universeは、<br>
-      人々がより善く幸せで在り続けることができる社会の実現を目指し、<br>
-      個人・組織・社会に生じる対立の複雑さ——とくに二元論や正義の衝突——を<br>
-      構造から診断し、新しい合意・意思決定・関係性をつくることを支援する会社です。<br><br>
-      基盤にあるのは、独自開発した二つの理論。<br>
-      人間の内的構造を5つの層で捉えるモデル「Human OS」と、<br>
-      対立を4つのタイプに分類して診断する「対立学（Conflictology）」です。<br>
-      この二つにAIによる分析を組み合わせて対立の構造を読み解き、<br>
-      そこに働きかける打ち手——私たちはこれを「介入」と呼びます——を設計し、<br>
-      これまで見えなかった選択肢を提示します。<br><br>
-      対立から新しい関係性や価値が立ち上がる。<br>
-      この現象を、私たちは「創発」と呼んでいます。
-    </p>
-    <p class="hero-en" data-i18n="hero-en">
-      Diagnosing conflict structurally and designing interventions<br>
-      to create new relationships and value.
-    </p>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-label" data-i18n="hero-label">Think &amp; Do Tank for Emergence</p>
+        <h1 class="hero-catch"><span class="hero-catch-gradient" data-i18n="hero-catch">社会の対立を、<br>創発へと変換する。</span></h1>
+        <p class="hero-sub" data-i18n="hero-sub">Transforming Conflict into Emergence.</p>
+        <p class="hero-desc" data-i18n="hero-desc">
+          Eudaimonia Universeは、<br>
+          人々がより善く幸せで在り続けることができる社会の実現を目指す会社です。<br>
+          対立の構造を診断し、合意・意思決定・関係性の再設計を支援します。
+        </p>
+      </div>
+    </div>
   </div>
   <div class="hero-scroll">
     <span>SCROLL</span>
@@ -793,9 +795,17 @@ ul { list-style: none; }
 <!-- SUB-COPY / INTRO -->
 <section class="section-sm section-bordered" style="z-index:1; position:relative;">
   <div class="container fi" style="text-align:center;">
-    <p class="section-desc" style="max-width:720px; margin:0 auto;" data-i18n="intro">
-      対立の構造を診断し、最適な介入を設計することで、<br>
-      新たな関係性と価値を生み出す。
+    <p class="section-desc" style="max-width:640px; margin:0 auto; text-align:left;" data-i18n="intro">
+      私たちが向き合うのは、個人・組織・社会に生じる対立の複雑さ。<br>
+      とくに、二元論や正義の衝突です。<br><br>
+      基盤にあるのは、独自開発した二つの理論。<br>
+      人間の内的構造を5つの層で捉えるモデル「Human OS」と、<br>
+      対立を4つのタイプに分類して診断する「対立学（Conflictology）」です。<br>
+      この二つにAIの分析を重ね、対立の構造を読み解く。<br>
+      その構造に働きかける打ち手を、私たちは「介入」と呼びます。<br>
+      診断から介入の設計までを一貫して行い、<br>これまで見えなかった選択肢を提示します。<br><br>
+      対立から、新しい関係性や価値が立ち上がる。<br>
+      この現象を、私たちは「創発」と呼んでいます。
     </p>
   </div>
 </section>
@@ -829,26 +839,26 @@ ul { list-style: none; }
           <div class="thesis-step">
             <span class="thesis-num" style="color:var(--teal); border-color:rgba(0,181,160,0.3); background:rgba(0,181,160,0.08);">01</span>
             <div>
-              <h4 style="color:var(--white); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step1-title">構造として捉える — Conflict as Structure</h4>
+              <h4 style="color:var(--white); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step1-title">構造として捉える</h4>
               <p data-i18n="purpose-step1">対立を、感情論ではなく<br>分析できる構造として捉える</p>
             </div>
           </div>
           <div class="thesis-step">
             <span class="thesis-num" style="color:var(--blue); border-color:rgba(74,112,181,0.3); background:rgba(74,112,181,0.08);">02</span>
             <div>
-              <h4 style="color:var(--white); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step2-title">設計対象として扱う — Design Object</h4>
+              <h4 style="color:var(--white); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step2-title">設計対象として扱う</h4>
               <p data-i18n="purpose-step2">対立を、新たな価値を生み出す設計対象<br>として扱う</p>
             </div>
           </div>
           <div class="thesis-step">
             <span class="thesis-num" style="color:var(--gold); border-color:rgba(232,200,48,0.4); background:rgba(232,200,48,0.08);">03</span>
             <div>
-              <h4 style="color:var(--gold); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step3-title">創発 — Emergence</h4>
+              <h4 style="color:var(--gold); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step3-title">創発</h4>
               <p data-i18n="purpose-step3-desc">対立を起点に、新しい関係性と意味が<br>立ち上がる</p>
             </div>
           </div>
         </div>
-        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:24px;" data-i18n="purpose-flow-note">実際の支援の進め方は、<a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(197,184,222,0.3);">Approachの4ステップ</a>をご覧ください。</p>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:24px;" data-i18n="purpose-flow-note">実際の支援の進め方は、<a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(95,75,139,0.3);">Approachの4ステップ</a>をご覧ください。</p>
       </div>
     </div>
   </div>
@@ -862,13 +872,13 @@ ul { list-style: none; }
         <p class="section-label">Human OS</p>
         <h2 class="section-title" data-i18n="humanos-title">人間は構造である</h2>
         <p class="section-desc" data-i18n="humanos-desc1">
-          対立の相手を「頑固な人」「話が通じない部門」と捉えている限り、状況は動きません。<br>人の意思決定や行動は、固定された性格や能力ではなく、<br>変化し続ける構造から生まれている——これが私たちの人間観です。
+          対立の相手を「頑固な人」「話が通じない部門」と捉えている限り、状況は動きません。<br>人の意思決定や行動は、固定された性格や能力ではなく、<br>変化し続ける構造から生まれている。これが私たちの人間観です。
         </p>
         <p class="section-desc" style="margin-top:20px;" data-i18n="humanos-desc2">
           <strong style="color:var(--white);">Human OS</strong> は、人間の内的構造を5つの層で統合的に捉えるために独自開発したモデルです。<br>対立の診断では、このモデルを「どの層で何が起きているのか」を読み解く共通言語として使います。
         </p>
         <p class="section-desc" style="margin-top:20px;" data-i18n="humanos-desc3">
-          会議で繰り返される衝突が、思考（Mind）の層の論理の食い違いに見えて、<br>実は意味（Meaning）の層——互いが大切にしている価値観のずれ——から生じていることは少なくありません。<br>原因の層を取り違えたままでは、どれだけ議論を重ねても対立は解けません。<br>層を特定できるからこそ、対立の「表面」ではなく「根本」を扱えます。
+          会議で繰り返される衝突が、思考（Mind）の層の論理の食い違いに見えて、<br>実は意味（Meaning）の層、つまり互いが大切にしている価値観のずれから生じていることは少なくありません。<br>原因の層を取り違えたままでは、どれだけ議論を重ねても対立は解けません。<br>層を特定できるからこそ、対立の「表面」ではなく「根本」を扱えます。
         </p>
       </div>
       <div class="card fi" style="border-left:3px solid var(--teal);">
@@ -982,7 +992,7 @@ ul { list-style: none; }
       <p class="section-label" style="text-align:center;">Approach</p>
       <h2 class="section-title" style="text-align:center;" data-i18n="approach-title">構造で扱い、最適解を設計する</h2>
       <p class="section-desc" style="text-align:center; margin:0 auto 48px;" data-i18n="approach-desc">
-        私たちの進め方は一貫しています。感覚ではなく構造で対立を扱う。<br>唯一の正解を押しつけるのではなく、その組織にとっての最適解を設計する。<br>そして状況に応じて、介入——対立の構造に働きかける具体的な打ち手——を選択する。
+        私たちの進め方は一貫しています。感覚ではなく構造で対立を扱う。<br>唯一の正解を押しつけるのではなく、その組織にとっての最適解を設計する。<br>そして、対立の構造に働きかける打ち手である「介入」を、状況に応じて選択する。
       </p>
       <div class="timeline" style="margin-top:16px;">
         <div class="tl-item">
@@ -1011,7 +1021,7 @@ ul { list-style: none; }
   <div class="container">
     <div class="fi" style="text-align:center; margin-bottom:64px;">
       <p class="section-label">Divisions</p>
-      <h2 class="section-title" data-i18n="divisions-title">研究・実装・資産化 — 循環する3つの部門</h2>
+      <h2 class="section-title" data-i18n="divisions-title">研究・実装・資産化が循環する3つの部門</h2>
       <p class="section-desc" style="max-width:720px; margin:0 auto;" data-i18n="divisions-desc">研究（Think Tank）が理論をつくり、実装（Produce）が現場で検証し、<br>資産化（Asset）がその成果を繰り返し使える形に変える。<br>この循環が、Think &amp; Do Tankとしての骨格です。</p>
     </div>
     <div class="grid-3 fi">
@@ -1084,7 +1094,7 @@ ul { list-style: none; }
   <div class="container">
     <div class="fi" style="margin-bottom:56px;">
       <p class="section-label">Assets</p>
-      <h2 class="section-title" data-i18n="assets-title">知的資産体系 — 変換を再現可能にする道具</h2>
+      <h2 class="section-title" data-i18n="assets-title">変換を再現可能にする、知的資産体系</h2>
       <p class="section-desc" data-i18n="assets-desc">対立から創発への変換を、属人的な技ではなく、再現可能なプロセスにする。<br>そのために独自開発してきた知的資産です。土台となる理論（基盤アセット）と、<br>それを現場で使える形にした道具（応用アセット）の二層で構成されます。</p>
     </div>
 
@@ -1095,14 +1105,14 @@ ul { list-style: none; }
           <div class="asset-icon" style="background:rgba(0,181,160,0.12); border-color:rgba(0,181,160,0.2); color:var(--teal);">OS</div>
           <div>
             <h4 data-i18n="assets-hos-title">Human OS</h4>
-            <p data-i18n="assets-hos-desc">Body / Emotion / Mind / Meaning / Relationship の5層で人間の内的構造を捉えるモデル。すべての診断と介入設計の土台。</p>
+            <p data-i18n="assets-hos-desc">Body（身体）・Emotion（感情）・Mind（思考）・Meaning（意味）・Relationship（関係性）の5層で人間の内的構造を捉えるモデル。すべての診断と介入設計の土台。</p>
           </div>
         </div>
         <div class="asset" style="border-left:3px solid var(--purple);">
           <div class="asset-icon" style="background:rgba(123,80,163,0.12); border-color:rgba(123,80,163,0.2); color:var(--purple);">CL</div>
           <div>
             <h4 data-i18n="assets-cl-title">対立学</h4>
-            <p data-i18n="assets-cl-desc">価値／構造／認知／存在の4タイプで対立を診断するフレームワーク。介入設計の基盤理論。</p>
+            <p data-i18n="assets-cl-desc">価値・構造・認知・存在の4タイプで対立を診断するフレームワーク。介入設計の基盤理論。</p>
           </div>
         </div>
       </div>
@@ -1143,7 +1153,7 @@ ul { list-style: none; }
     <div class="grid-2" style="align-items:start;">
       <div class="fi">
         <p class="section-label">Archives</p>
-        <h2 class="section-title" data-i18n="archives-title">蓄積された知 — <br>現在の理論を支える歩み</h2>
+        <h2 class="section-title" data-i18n="archives-title">現在の理論を支える、<br>蓄積された知</h2>
         <p class="section-desc" data-i18n="archives-desc">
           創業以来、私たちは複数の研究・事業活動を重ねてきました。<br>それぞれの活動で培われた知は、現在の「対立から創発へ」のプロセスを支える基盤として統合されています。
         </p>
@@ -1320,7 +1330,7 @@ ul { list-style: none; }
       <div class="fi">
         <p class="section-label">Contact</p>
         <h2 class="section-title" style="font-size:1.8rem;" data-i18n="contact-title">お問い合わせ</h2>
-        <a href="mailto:info@eudaimonialab.org" style="display:inline-block; margin-top:20px; font-family:Cambria,'Inter',sans-serif; font-size:1.05rem; color:var(--lav-main); letter-spacing:0.04em; border-bottom:1px solid rgba(197,184,222,0.3); padding-bottom:4px; transition:all var(--ease);">info@eudaimonialab.org</a>
+        <a href="mailto:info@eudaimonialab.org" style="display:inline-block; margin-top:20px; font-family:Cambria,'Inter',sans-serif; font-size:1.05rem; color:var(--lav-main); letter-spacing:0.04em; border-bottom:1px solid rgba(95,75,139,0.3); padding-bottom:4px; transition:all var(--ease);">info@eudaimonialab.org</a>
         <p style="font-size:0.88rem; color:var(--text-dim); line-height:1.9; margin-top:20px;" data-i18n="contact-lead">新規事業開発部門、組織開発部門、人事部門、経営管理室等の皆さまからのご相談をお受けしています。<br>状況を伺いながら、課題の整理からご一緒します。</p>
         <div style="margin-top:32px;">
           <div class="contact-cat">
@@ -1467,10 +1477,10 @@ const translations = {
     'hero-label': 'Think &amp; Do Tank for Emergence',
     'hero-catch': '社会の対立を、<br>創発へと変換する。',
     'hero-sub': 'Transforming Conflict into Emergence.',
-    'hero-desc': 'Eudaimonia Universeは、<br>人々がより善く幸せで在り続けることができる社会の実現を目指し、<br>個人・組織・社会に生じる対立の複雑さ——とくに二元論や正義の衝突——を<br>構造から診断し、新しい合意・意思決定・関係性をつくることを支援する会社です。<br><br>基盤にあるのは、独自開発した二つの理論。<br>人間の内的構造を5つの層で捉えるモデル「Human OS」と、<br>対立を4つのタイプに分類して診断する「対立学（Conflictology）」です。<br>この二つにAIによる分析を組み合わせて対立の構造を読み解き、<br>そこに働きかける打ち手——私たちはこれを「介入」と呼びます——を設計し、<br>これまで見えなかった選択肢を提示します。<br><br>対立から新しい関係性や価値が立ち上がる。<br>この現象を、私たちは「創発」と呼んでいます。',
+    'hero-desc': 'Eudaimonia Universeは、<br>人々がより善く幸せで在り続けることができる社会の実現を目指す会社です。<br>対立の構造を診断し、合意・意思決定・関係性の再設計を支援します。',
     'hero-en': 'Diagnosing conflict structurally and designing interventions<br>to create new relationships and value.',
 
-    'intro': '対立の構造を診断し、最適な介入を設計することで、<br>新たな関係性と価値を生み出す。',
+    'intro': '私たちが向き合うのは、個人・組織・社会に生じる対立の複雑さ。<br>とくに、二元論や正義の衝突です。<br><br>基盤にあるのは、独自開発した二つの理論。<br>人間の内的構造を5つの層で捉えるモデル「Human OS」と、<br>対立を4つのタイプに分類して診断する「対立学（Conflictology）」です。<br>この二つにAIの分析を重ね、対立の構造を読み解く。<br>その構造に働きかける打ち手を、私たちは「介入」と呼びます。<br>診断から介入の設計までを一貫して行い、<br>これまで見えなかった選択肢を提示します。<br><br>対立から、新しい関係性や価値が立ち上がる。<br>この現象を、私たちは「創発」と呼んでいます。',
 
     'purpose-title': '対立は問題ではなく、<br>構造である',
     'purpose-desc1': '社会、組織、そして個人の中で起こる対立は、単なる意見の食い違いや感情のもつれではなく、<br>価値観・仕組み・認識のずれが絡み合って生じる構造的な現象です。<br>構造があるということは、分析でき、設計し直せるということです。',
@@ -1478,18 +1488,18 @@ const translations = {
     'purpose-desc3': 'Eudaimonia Universeは、対立を「解決すべき問題」ではなく、<strong style="color:var(--white);">「新たな価値を生み出す設計対象」</strong>として捉えます。',
     'purpose-quote': '創発とは、既存の要素の単なる統合ではなく、<br>それらを超えて新しい関係性や意味が立ち上がる現象。<br>対立は、その起点となる最も重要なエネルギーである。',
     'purpose-flow-intro': 'この考え方を、3つの視点で表しています。',
-    'purpose-step1-title': '構造として捉える — Conflict as Structure',
+    'purpose-step1-title': '構造として捉える',
     'purpose-step1': '対立を、感情論ではなく<br>分析できる構造として捉える',
-    'purpose-step2-title': '設計対象として扱う — Design Object',
+    'purpose-step2-title': '設計対象として扱う',
     'purpose-step2': '対立を、新たな価値を生み出す設計対象<br>として扱う',
-    'purpose-step3-title': '創発 — Emergence',
+    'purpose-step3-title': '創発',
     'purpose-step3-desc': '対立を起点に、新しい関係性と意味が<br>立ち上がる',
-    'purpose-flow-note': '実際の支援の進め方は、<a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(197,184,222,0.3);">Approachの4ステップ</a>をご覧ください。',
+    'purpose-flow-note': '実際の支援の進め方は、<a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(95,75,139,0.3);">Approachの4ステップ</a>をご覧ください。',
 
     'humanos-title': '人間は構造である',
-    'humanos-desc1': '対立の相手を「頑固な人」「話が通じない部門」と捉えている限り、状況は動きません。<br>人の意思決定や行動は、固定された性格や能力ではなく、<br>変化し続ける構造から生まれている——これが私たちの人間観です。',
+    'humanos-desc1': '対立の相手を「頑固な人」「話が通じない部門」と捉えている限り、状況は動きません。<br>人の意思決定や行動は、固定された性格や能力ではなく、<br>変化し続ける構造から生まれている。これが私たちの人間観です。',
     'humanos-desc2': '<strong style="color:var(--white);">Human OS</strong> は、人間の内的構造を5つの層で統合的に捉えるために独自開発したモデルです。<br>対立の診断では、このモデルを「どの層で何が起きているのか」を読み解く共通言語として使います。',
-    'humanos-desc3': '会議で繰り返される衝突が、思考（Mind）の層の論理の食い違いに見えて、<br>実は意味（Meaning）の層——互いが大切にしている価値観のずれ——から生じていることは少なくありません。<br>原因の層を取り違えたままでは、どれだけ議論を重ねても対立は解けません。<br>層を特定できるからこそ、対立の「表面」ではなく「根本」を扱えます。',
+    'humanos-desc3': '会議で繰り返される衝突が、思考（Mind）の層の論理の食い違いに見えて、<br>実は意味（Meaning）の層、つまり互いが大切にしている価値観のずれから生じていることは少なくありません。<br>原因の層を取り違えたままでは、どれだけ議論を重ねても対立は解けません。<br>層を特定できるからこそ、対立の「表面」ではなく「根本」を扱えます。',
     'humanos-B-title': 'Body — 身体',
     'humanos-B-desc': '体調やストレスなど、すべての判断の土台になる身体の状態',
     'humanos-E-title': 'Emotion — 感情',
@@ -1515,7 +1525,7 @@ const translations = {
     'conflictology-msg-desc': 'どのタイプの対立が・どこで起きているのかを<br>正確に診断できれば、対立は「排除すべき厄介ごと」から、新たな関係性と価値を生み出す起点へと変わります。',
 
     'approach-title': '構造で扱い、最適解を設計する',
-    'approach-desc': '私たちの進め方は一貫しています。感覚ではなく構造で対立を扱う。<br>唯一の正解を押しつけるのではなく、その組織にとっての最適解を設計する。<br>そして状況に応じて、介入——対立の構造に働きかける具体的な打ち手——を選択する。',
+    'approach-desc': '私たちの進め方は一貫しています。感覚ではなく構造で対立を扱う。<br>唯一の正解を押しつけるのではなく、その組織にとっての最適解を設計する。<br>そして、対立の構造に働きかける打ち手である「介入」を、状況に応じて選択する。',
     'approach-s1-label': 'Step 01 — Foundation',
     'approach-s1-desc': '<strong style="color:var(--white);">構造理解（Human OS）</strong><br>関わる人々の内的構造をHuman OSの5層で把握し、すべての介入の基盤とする。',
     'approach-s2-label': 'Step 02 — Diagnosis',
@@ -1525,7 +1535,7 @@ const translations = {
     'approach-s4-label': 'Step 04 — Emergence',
     'approach-s4-desc': '<strong style="color:var(--white);">創発（新たな価値）</strong><br>対立を起点に、新しい関係性と意味、これまでなかった選択肢が立ち上がる。',
 
-    'divisions-title': '研究・実装・資産化 — 循環する3つの部門',
+    'divisions-title': '研究・実装・資産化が循環する3つの部門',
     'divisions-desc': '研究（Think Tank）が理論をつくり、実装（Produce）が現場で検証し、<br>資産化（Asset）がその成果を繰り返し使える形に変える。<br>この循環が、Think &amp; Do Tankとしての骨格です。',
     'divisions-d1-tag': '対立と人間構造の研究',
     'divisions-d1-li1': 'Human OSの進化',
@@ -1551,13 +1561,13 @@ const translations = {
     'projects-p3-tag': '利他 × 創発',
     'projects-p3-desc': '利他的にふるまう人（Giver）と創発の関係を探究する研究プロジェクト。対立学の理論検証と、実践的な介入モデルの検証を行う',
 
-    'assets-title': '知的資産体系 — 変換を再現可能にする道具',
+    'assets-title': '変換を再現可能にする、知的資産体系',
     'assets-desc': '対立から創発への変換を、属人的な技ではなく、再現可能なプロセスにする。<br>そのために独自開発してきた知的資産です。土台となる理論（基盤アセット）と、<br>それを現場で使える形にした道具（応用アセット）の二層で構成されます。',
     'assets-foundation': 'Foundation — 基盤アセット',
     'assets-hos-title': 'Human OS',
-    'assets-hos-desc': 'Body / Emotion / Mind / Meaning / Relationship の5層で人間の内的構造を捉えるモデル。すべての診断と介入設計の土台。',
+    'assets-hos-desc': 'Body（身体）・Emotion（感情）・Mind（思考）・Meaning（意味）・Relationship（関係性）の5層で人間の内的構造を捉えるモデル。すべての診断と介入設計の土台。',
     'assets-cl-title': '対立学',
-    'assets-cl-desc': '価値／構造／認知／存在の4タイプで対立を診断するフレームワーク。介入設計の基盤理論。',
+    'assets-cl-desc': '価値・構造・認知・存在の4タイプで対立を診断するフレームワーク。介入設計の基盤理論。',
     'assets-application': 'Application — 応用アセット',
     'assets-ai-title': 'AIソリューション',
     'assets-ai-desc': '対立の診断から介入プランの提示までを支援するAIプロダクト。介入設計を、より速く、より精緻にする。',
@@ -1566,7 +1576,7 @@ const translations = {
     'assets-or-title': '組織変容フレーム',
     'assets-or-desc': '「構造理解 → 診断 → 介入設計 → 創発」のプロセスを、組織単位のプロジェクトとして実装するためのフレームワーク。',
 
-    'archives-title': '蓄積された知 — <br>現在の理論を支える歩み',
+    'archives-title': '現在の理論を支える、<br>蓄積された知',
     'archives-desc': '創業以来、私たちは複数の研究・事業活動を重ねてきました。<br>それぞれの活動で培われた知は、現在の「対立から創発へ」のプロセスを支える基盤として統合されています。',
     'archives-quote': 'これまでの研究は、現在の創発を支える地層',
     'pub-label': 'Publications',
@@ -1662,13 +1672,13 @@ const translations = {
     'hero-label': 'Think &amp; Do Tank for Emergence',
     'hero-catch': "Transforming society's conflicts,<br>into emergence.",
     'hero-sub': 'Transforming Conflict into Emergence.',
-    'hero-desc': 'Eudaimonia Universe works toward a society where people can<br>continue to live well and happily.<br>We diagnose the complexity of conflict in individuals, organizations, and society —<br>especially dualisms and clashes of justice — from its structure,<br>and support the creation of new agreements, decisions, and relationships.<br><br>Our foundation is two proprietary theories:<br>"Human OS," a model that captures the inner structure of human beings in five layers,<br>and "Conflictology," which diagnoses conflict by classifying it into four types.<br>Combining these with AI-powered analysis, we read the structure of a conflict<br>and design interventions — concrete moves that act on that structure —<br>to present options that were previously invisible.<br><br>When new relationships and value arise from conflict,<br>we call this phenomenon "emergence."',
+    'hero-desc': 'Eudaimonia Universe works toward a society where people can<br>continue to live well and happily.<br>We diagnose the structure of conflict and support the redesign of<br>agreements, decision-making, and relationships.',
     'hero-en': 'Diagnosing conflict structurally and designing interventions<br>to create new relationships and value.',
 
-    'intro': 'Diagnosing the structure of conflict and designing optimal interventions<br>to generate new relationships and value.',
+    'intro': 'We face the complexity of conflict in individuals, organizations, and society,<br>above all dualisms and clashes of justice.<br><br>Our foundation is two proprietary theories:<br>"Human OS," a model that captures the inner structure of human beings in five layers,<br>and "Conflictology," which diagnoses conflict by classifying it into four types.<br>Combining these with AI-powered analysis, we read the structure of a conflict.<br>We call the concrete moves that act on that structure "interventions."<br>From diagnosis to intervention design, we present options that were previously invisible.<br><br>When new relationships and value arise from conflict,<br>we call this phenomenon "emergence."',
 
     'purpose-title': 'Conflict is not a problem,<br>but a structure',
-    'purpose-desc1': 'Conflict in society, organizations, and individuals is not a mere difference of opinion or a tangle of emotions.<br>It is a structural phenomenon, arising from intertwined gaps in values, systems, and perception.<br>And if it has a structure, it can be analyzed — and redesigned.',
+    'purpose-desc1': 'Conflict in society, organizations, and individuals is not a mere difference of opinion or a tangle of emotions.<br>It is a structural phenomenon, arising from intertwined gaps in values, systems, and perception.<br>And if it has a structure, it can be analyzed and redesigned.',
     'purpose-desc2': 'Yet in most settings, conflict is settled early through adjustment and compromise.<br>A middle-ground plan may quiet a clash among executives over business strategy.<br>But digging into the structure of what each side truly valued<br>can reveal a third option better than either.<br>Every time a conflict ends in compromise, that possibility is lost.',
     'purpose-desc3': 'Eudaimonia Universe views conflict not as "a problem to be solved," but as <strong style="color:var(--white);">"a design object that generates new value."</strong>',
     'purpose-quote': 'Emergence is not merely the integration of existing elements,<br>but a phenomenon where new relationships and meanings arise beyond them.<br>Conflict is the most important energy at its origin.',
@@ -1679,12 +1689,12 @@ const translations = {
     'purpose-step2': 'Treat conflict as a design object<br>that generates new value',
     'purpose-step3-title': 'Emergence',
     'purpose-step3-desc': 'Starting from conflict, new relationships and meanings arise',
-    'purpose-flow-note': 'For how an actual engagement proceeds, see the <a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(197,184,222,0.3);">four steps in Approach</a>.',
+    'purpose-flow-note': 'For how an actual engagement proceeds, see the <a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(95,75,139,0.3);">four steps in Approach</a>.',
 
     'humanos-title': 'Humans are structure',
-    'humanos-desc1': 'As long as we see the other side as "a stubborn person" or "a department that won\'t listen," nothing moves.<br>Human decision-making and behavior arise not from fixed personality or ability,<br>but from an ever-changing structure — this is our view of human beings.',
+    'humanos-desc1': 'As long as we see the other side as "a stubborn person" or "a department that won\'t listen," nothing moves.<br>Human decision-making and behavior arise not from fixed personality or ability,<br>but from an ever-changing structure. This is our view of human beings.',
     'humanos-desc2': '<strong style="color:var(--white);">Human OS</strong> is our proprietary model for capturing the inner structure of human beings in five integrated layers.<br>In diagnosis, it serves as a common language for reading which layer a conflict is really occurring in.',
-    'humanos-desc3': 'A recurring clash in meetings may look like a logical disagreement at the Mind layer,<br>when it actually stems from the Meaning layer — a gap in what each side deeply values.<br>Misread the layer, and no amount of discussion will resolve the conflict.<br>Identifying the layer is what lets us address the root of conflict, not its surface.',
+    'humanos-desc3': 'A recurring clash in meetings may look like a logical disagreement at the Mind layer,<br>when it actually stems from the Meaning layer: a gap in what each side deeply values.<br>Misread the layer, and no amount of discussion will resolve the conflict.<br>Identifying the layer is what lets us address the root of conflict, not its surface.',
     'humanos-B-title': 'Body — Physical',
     'humanos-B-desc': 'The bodily state — health, stress — that underlies every judgment',
     'humanos-E-title': 'Emotion — Feeling',
@@ -1703,16 +1713,16 @@ const translations = {
     'conflictology-c2-title': 'Structural Conflict',
     'conflictology-c2-desc': "Structure — Conflict produced by the organization's own design, such as incentive or authority structures that pit departments against each other. It recurs even if the people change.",
     'conflictology-c3-title': 'Cognitive Conflict',
-    'conflictology-c3-desc': 'Cognition — The same facts, interpreted differently — born from information gaps and differing premises.',
+    'conflictology-c3-desc': 'Cognition — Conflict in which the same facts are interpreted differently, born from information gaps and differing premises.',
     'conflictology-c4-title': 'Existential Conflict',
     'conflictology-c4-desc': "Existence — The deepest conflict, arising from the sense that one's role or place is threatened. It cannot be dissolved by concession or persuasion.",
     'conflictology-msg-title': "Conflict becomes a source of value<br>depending on how it's handled.",
     'conflictology-msg-desc': 'When we can diagnose precisely which type of conflict is occurring and where, conflict turns from a nuisance to be eliminated into a starting point for new relationships and value.',
 
     'approach-title': 'Treat with structure, design optimal solutions',
-    'approach-desc': 'Our way of working is consistent: treat conflict through structure, not intuition;<br>design the optimal solution for that organization rather than imposing a single answer;<br>and choose interventions — concrete moves that act on the structure of the conflict — according to the situation.',
+    'approach-desc': 'Our way of working is consistent: treat conflict through structure, not intuition;<br>design the optimal solution for that organization rather than imposing a single answer;<br>and choose interventions, the concrete moves that act on the structure of the conflict, according to the situation.',
     'approach-s1-label': 'Step 01 — Foundation',
-    'approach-s1-desc': '<strong style="color:var(--white);">Structural Understanding (Human OS)</strong><br>Map the inner structure of the people involved across the five layers of Human OS — the foundation for every intervention.',
+    'approach-s1-desc': '<strong style="color:var(--white);">Structural Understanding (Human OS)</strong><br>Map the inner structure of the people involved across the five layers of Human OS. This is the foundation for every intervention.',
     'approach-s2-label': 'Step 02 — Diagnosis',
     'approach-s2-desc': '<strong style="color:var(--white);">Diagnosis (Conflictology)</strong><br>Diagnose where and why the conflict arises using the four types of Conflictology. This is where the real point of contention comes into view.',
     'approach-s3-label': 'Step 03 — Design',
@@ -1720,7 +1730,7 @@ const translations = {
     'approach-s4-label': 'Step 04 — Emergence',
     'approach-s4-desc': '<strong style="color:var(--white);">Emergence (New Value)</strong><br>From the conflict as starting point, new relationships, meanings, and previously unseen options arise.',
 
-    'divisions-title': 'Research, Implementation, Asset Creation — Three Divisions in a Cycle',
+    'divisions-title': 'Three Divisions in a Cycle: Research, Implementation, and Asset Creation',
     'divisions-desc': 'Research (Think Tank) builds the theory, Implementation (Produce) tests it in the field,<br>and Asset Creation (Asset) turns the results into reusable form.<br>This cycle is the backbone of our Think &amp; Do Tank.',
     'divisions-d1-tag': 'Research on conflict and human structure',
     'divisions-d1-li1': 'Evolution of Human OS',
@@ -1744,15 +1754,15 @@ const translations = {
     'projects-p2-tag': 'Redesign of cultural & relational capital',
     'projects-p2-desc': "An initiative that revisits an organization's cultural accumulation (cultural capital) and human connections (relational capital) to build ground where emergence keeps arising",
     'projects-p3-tag': 'Altruism × Emergence',
-    'projects-p3-desc': 'A research project exploring the relationship between Givers — people who act altruistically — and emergence, testing the theory of Conflictology and practical intervention models',
+    'projects-p3-desc': 'A research project exploring the relationship between Givers (people who act altruistically) and emergence, testing the theory of Conflictology and practical intervention models',
 
-    'assets-title': 'Intellectual Assets — Tools that Make the Transformation Reproducible',
+    'assets-title': 'Intellectual Assets that Make the Transformation Reproducible',
     'assets-desc': 'We turn the transformation from conflict to emergence into a reproducible process, not a personal art.<br>These proprietary assets come in two layers: the underlying theories (Foundation)<br>and the tools that make them usable in the field (Application).',
     'assets-foundation': 'Foundation — Core Assets',
     'assets-hos-title': 'Human OS',
-    'assets-hos-desc': 'A model that captures the inner structure of human beings in five layers: Body / Emotion / Mind / Meaning / Relationship. The foundation of every diagnosis and intervention design.',
+    'assets-hos-desc': 'A model that captures the inner structure of human beings in five layers: Body, Emotion, Mind, Meaning, and Relationship. The foundation of every diagnosis and intervention design.',
     'assets-cl-title': 'Conflictology',
-    'assets-cl-desc': 'A framework that diagnoses conflict across four types: Value / Structure / Cognition / Existence. The foundational theory for intervention design.',
+    'assets-cl-desc': 'A framework that diagnoses conflict across four types: Value, Structure, Cognition, and Existence. The foundational theory for intervention design.',
     'assets-application': 'Application — Applied Assets',
     'assets-ai-title': 'AI Solution',
     'assets-ai-desc': 'An AI product that supports the process from diagnosis to intervention planning — making intervention design faster and more precise.',
@@ -1761,7 +1771,7 @@ const translations = {
     'assets-or-title': 'Organizational Transformation Frame',
     'assets-or-desc': 'A framework for implementing the process — structural understanding → diagnosis → intervention design → emergence — as an organization-level project.',
 
-    'archives-title': 'Accumulated Knowledge —<br>The Path Behind Our Theory',
+    'archives-title': 'The Accumulated Knowledge<br>Behind Our Current Theory',
     'archives-desc': 'Since our founding, we have carried out a series of research and business activities.<br>The knowledge cultivated in each is now integrated as the foundation of our current process from conflict to emergence.',
     'archives-quote': 'Our research to date is the geological layer supporting the current emergence',
     'pub-label': 'Publications',
@@ -1785,7 +1795,7 @@ const translations = {
     'archives-a4': '<strong style="color:var(--white);">Research & Papers</strong><br>A body of academic research → the theoretical foundation of Conflictology',
 
     'about-title': 'Think & Do Tank for<br>Research × Implementation × Asset Creation',
-    'about-desc': 'Eudaimonia Universe is a Think & Do Tank that studies the structure of human beings and conflict, and implements the results in organizations and society.<br>Our proposals rest on years of research into human consciousness and ikigai — the inner life of people — combined with hands-on support in the field.<br>Moving between the two, we refine our results into tools anyone can use.',
+    'about-desc': 'Eudaimonia Universe is a Think & Do Tank that studies the structure of human beings and conflict, and implements the results in organizations and society.<br>Our proposals rest on years of research into human consciousness and ikigai, the inner life of people, combined with hands-on support in the field.<br>Moving between the two, we refine our results into tools anyone can use.',
     'about-th-org': 'Organization',
     'about-th-type': 'Type',
     'about-th-base': 'Foundation',
@@ -1794,7 +1804,7 @@ const translations = {
     'about-f1-title': 'Research × Implementation × Asset Creation',
     'about-f1-desc': 'One company spanning theory (Think Tank), field implementation (Produce), and asset creation (Asset). Because research and practice circulate, the theory keeps improving.',
     'about-f2-title': 'Diagnosis through Structure',
-    'about-f2-desc': 'We diagnose conflict and design interventions based on structural models — Human OS and Conflictology — not intuition or rules of thumb. That is why we can explain the reasoning behind every move.',
+    'about-f2-desc': 'We diagnose conflict and design interventions based on structural models, Human OS and Conflictology, not intuition or rules of thumb. That is why we can explain the reasoning behind every move.',
     'about-f3-title': 'Global Capability',
     'about-f3-desc': 'The structure of conflict is common across languages and cultures. In multilingual, multicultural settings, we apply the same structural diagnosis and intervention design.',
 
@@ -1825,17 +1835,17 @@ const translations = {
 
     'faq-title': 'Frequently Asked Questions',
     'faq-q1': 'What kind of company is Eudaimonia Universe?',
-    'faq-a1': 'Eudaimonia Universe, Inc. is a Japanese Think &amp; Do Tank that diagnoses conflict in organizations and society from its structure, and supports the design of new agreements, decision-making, and relationships. It is built on two proprietary theories — Human OS and Conflictology — and operates through a cycle of three divisions: research (Think Tank), implementation (Produce), and asset creation (Asset). The Founder &amp; CEO is Takayuki Mizuno.',
+    'faq-a1': 'Eudaimonia Universe, Inc. is a Japanese Think &amp; Do Tank that diagnoses conflict in organizations and society from its structure, and supports the design of new agreements, decision-making, and relationships. It is built on two proprietary theories, Human OS and Conflictology, and operates through a cycle of three divisions: research (Think Tank), implementation (Produce), and asset creation (Asset). The Founder &amp; CEO is Takayuki Mizuno.',
     'faq-q2': 'What is Human OS?',
     'faq-a2': 'Human OS is a proprietary model developed by Eudaimonia Universe that captures the inner structure of human beings in five layers: Body, Emotion, Mind, Meaning, and Relationship. In diagnosis, it serves as a common language for reading which layer a conflict is occurring in.',
     'faq-q3': 'What is Conflictology?',
-    'faq-a3': 'Conflictology is a proprietary framework developed by Eudaimonia Universe that diagnoses conflict by classifying it into four types: Value, Structure, Cognition, and Existence. Diagnosing which type of conflict is occurring — and where — before choosing a response prevents misdirected interventions.',
+    'faq-a3': 'Conflictology is a proprietary framework developed by Eudaimonia Universe that diagnoses conflict by classifying it into four types: Value, Structure, Cognition, and Existence. Diagnosing the type and location of a conflict before choosing a response prevents misdirected interventions.',
     'faq-q4': "Why can't organizational conflict be resolved by discussion alone?",
     'faq-a4': 'Because conflict is a structural phenomenon in which multiple factors are entangled at once, rather than the result of a single cause. Without identifying the type of cause, discussion after discussion will miss the mark. That is why we always diagnose a conflict before trying to resolve it.',
     'faq-q5': 'What does an "intervention" actually involve?',
     'faq-a5': 'An intervention is a concrete move that acts on the structure of a conflict. It includes designing questions that reframe the issue (reconstructing perspectives), restructuring meeting bodies and consensus-building processes (redesigning decision-making), and rebuilding roles and forums for dialogue (redefining relationships). Rather than imposing a single answer, we design the optimal solution for each organization based on the diagnosis.',
     'faq-q6': 'How does an engagement proceed?',
-    'faq-a6': 'Support proceeds in four steps: structural understanding → diagnosis → intervention design → emergence. We first map the inner structure of the people involved using the five layers of Human OS, then diagnose where and why the conflict arises using the four types of Conflictology. Based on the diagnosis, we design interventions with the support of AI analysis, aiming for a state where new relationships, meanings, and previously unseen options arise from the conflict — emergence.',
+    'faq-a6': 'Support proceeds in four steps: structural understanding → diagnosis → intervention design → emergence. We first map the inner structure of the people involved using the five layers of Human OS, then diagnose where and why the conflict arises using the four types of Conflictology. Based on the diagnosis, we design interventions with the support of AI analysis, aiming for a state where new relationships, meanings, and previously unseen options arise from the conflict: emergence.',
     'faq-q7': 'How is AI used?',
     'faq-a7': 'Humans design the interventions; AI supports the analysis. By combining Human OS and Conflictology with AI-powered analysis to read the structure of a conflict, we make intervention design faster and more precise. We are also developing an AI product that supports the process from diagnosis to intervention planning.',
     'faq-q8': 'What kinds of inquiries do you accept?',

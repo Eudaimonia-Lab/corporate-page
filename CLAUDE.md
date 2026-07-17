@@ -5,7 +5,7 @@
 Eudaimonia Universe の企業サイト。静的HTMLサイト。
 
 - **テーマ**: "Transforming Conflict into Emergence"
-- **デザイン**: Cosmos × Lavender テーマ、ダークUI
+- **デザイン**: Cosmos × Lavender テーマ、ライトUI（白基調。2026-07 にダークからリニューアル）
 
 ## 構成
 
@@ -40,12 +40,13 @@ assets/
 
 | 変数 | 用途 |
 |------|------|
-| `--teal` (#00B5A0) | アクセント / CTA |
-| `--blue` (#4A70B5) | メインカラー |
-| `--purple` (#7B50A3) | サブカラー |
-| `--magenta` (#D64A8C) | ハイライト |
-| `--yellow` (#E8C830) | ゴールド / 強調 |
-| `--bg` (#06080F) | 背景色 |
+| `--teal` (#00877A) | アクセント / CTA |
+| `--blue` (#3A5B9E) | メインカラー |
+| `--purple` (#6B4396) | サブカラー |
+| `--magenta` (#B23A78) | ハイライト |
+| `--gold` (#A8821F) | ゴールド / 強調 |
+| `--bg` (#F7F8FC) | 背景色（白基調） |
+| `--white` (#1E2436) | 見出し・強調テキスト（名称は旧テーマの名残） |
 
 ## 開発
 
