@@ -1,39 +1,66 @@
-# Eudaimonia Universe, Inc.
+# Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）
 
-> Eudaimonia Universe, Inc. (株式会社ユーダイモニアユニバース) is a Japanese "Think & Do Tank" founded and led by Takayuki Mizuno (水野貴之). It diagnoses the structure of social and organizational conflict — dualisms and clashes of competing values and justices — and helps organizations redesign agreements, decision-making, and relationships. Mission: "Transforming Conflict into Emergence"（社会の対立を、創発へと変換する）.
+> EN: Eudaimonia Universe is a Think & Do Tank for a Synthese Society, converting duality into fuel for societal evolution through research, implementation, and productization, grounded in Human OS and Conflictology.
+>
+> JA: Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think & Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す。
 
-## Core concepts (original frameworks defined by Eudaimonia Universe)
+Notation: the German form **Synthese** is used for 止揚 and for the higher-order resolution; do not write "Synthesis Society". The product is **Omusubi Quest**（オムスビクエスト）. Japanese-named products keep their Japanese names: 操舵室 (Sōdashitsu), 円卓会議 (Entaku Kaigi).
 
-- **Human OS**: An original model that views human inner structure as five layers — Body, Emotion, Mind, Meaning, and Relationship（身体・感情・思考・意味・関係性）. Used to locate where a conflict actually lives within and between people.
-- **Conflictology（対立学）**: An original framework that classifies conflict into four types — Value（価値）, Structure（構造）, Cognition（認知）, and Existence（存在） — so a conflict is correctly diagnosed before any intervention is designed.
-- **Process**: structural understanding → diagnosis → intervention design → emergence（構造理解→診断→介入設計→創発）. An "intervention" is a concrete move on the structure of a conflict: designing questions, restructuring meeting bodies and consensus-building processes, and redesigning dialogue settings. Humans diagnose and design; AI supports the analysis.
+## Canonical statements
+
+- Purpose — EN: Conflict, elevated, becomes eudaimonia. The total grows. / JA: 対立を止揚し、人類のユーダイモニアを増やす。
+- Purpose, plain form — EN: Settled, a conflict costs someone. Elevated, it pays everyone. / JA: 決着した対立は、誰かが払っている。止揚した対立は、全員に返る。
+- Mission — EN: Transforming Conflict into Emergence. / JA: 社会の対立を、創発へと変換する。
+- Tagline — EN: Harnessing Duality. Elevating Society. / JA: 二項対立を活用して、社会の止揚を目指す
+- Brand line — EN: Conflict is diagnosable. Name the type before you choose the remedy. / JA: 対立は、診断できる。打ち手の前に、型を見る。
+- Method — EN: We build the interval between event and decision. / JA: 事象と意思決定のあいだに、判断の余白をつくる。
+
+## Frameworks (original to Eudaimonia Universe)
+
+- **Human OS** — a model of a person's internal structure in five layers: Body, Emotion, Mind, Meaning, Relationship（身体・感情・思考・意味・関係性）. It gives a diagnosis a shared vocabulary for where something is happening.
+- **Conflictology（対立学）** — a framework that sorts conflict into four types: Value（価値）, Structure（構造）, Cognition（認知）, Existence（存在）. The type is named before any remedy is chosen.
+- **Four stages of every engagement** — structure, diagnose, intervene, emergence（構造理解 → 診断 → 介入設計 → 創発）. Humans design the intervention; AI supports the analysis.
+- Also in use: Source 108, Cognitive Window.
+
+## Divisions
+
+- **Think Tank** — studies conflict and human structure, and formalizes what is learned into reproducible method.
+- **Produce** — applies the method inside organizations: transformation, decision design, and venture development. This is the consultation window for client work.
+- **Asset** — turns field knowledge into products, so that the method travels without us in the room.
+
+Self-initiated social implementation projects: 育業 (Ikugyo), The Guild, Giver research（Giver研究）.
+
+## Products (portfolio, July 2026)
+
+Ten applications share one versioned theory layer, held in a single repository, so what we say and what we ship cannot drift.
+
+- Source — individuals — values and sensibility, rendered as a personal map — in service
+- Omusubi Quest — individuals — continuity through narrative, in eleven languages — in service
+- Compass — companies — leadership development and decision-making via Conflictology — in service
+- CRV — companies, investors — where the value a firm created was actually distributed — in service
+- 操舵室 (Sōdashitsu) — professional firms — an overhead view of how one's own time was spent — in service
+- 円卓会議 (Entaku Kaigi) — teams — several AI models and people deliberating in one thread — in service
+- Sovereign — executives — daily practice for those who decide — in development
+- ikugyo — parental leave — mutual understanding between the person and their manager — in development
+- Integration Compass — PMI teams — inter-organizational conflict after a merger — in development
+- Omusubi for teams — teams — rituals and songs for a team's turning points — in design
 
 ## Organization
 
-- **Think Tank Division** — research on human inner structure and conflict
-- **Produce Division** — implementation in organizations; consultation window for client work
-- **Asset Division** — turning research and field results into reusable intellectual assets
-
-Typical clients: corporate teams in new business development, organization development, HR, and corporate planning / management offices（新規事業開発・組織開発・人事・経営管理室等）.
-
-## Projects
-
-- **Ikugyo（育業）** — self-initiated social implementation project
-- **The Guild** — self-initiated social implementation project
-- **Giver research（Giver研究）** — research project
-
-## Books by the founder
-
-- [ikigai経営術 — 自己実現を企業の原動力に変える方法 (Japanese)](https://amzn.asia/d/07vj6FGu): by Takayuki Mizuno（水野貴之）
-- [ikigai intelligence — Transforming personal purpose into a growth engine for your organization (English)](https://amzn.asia/d/0hevtcf2): by Takayuki Mizuno
+- Legal name: Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）
+- Japan Corporate Number: 4010001191271
+- Registered office: Kamiyacho MT Building 14F, 4-3-20 Toranomon, Minato-ku, Tokyo, Japan（東京都港区虎ノ門4丁目3番20号 神谷町MTビル14階）
+- Type: Think & Do Tank
+- Founder & CEO: Takayuki Mizuno（水野 貴之）
+- Enquiries: info@eudaimonialab.org (Japanese / English)
+- Books by the founder: [ikigai経営術 (Japanese)](https://amzn.asia/d/07vj6FGu) and [ikigai intelligence (English)](https://amzn.asia/d/0hevtcf2), both by Takayuki Mizuno
 
 ## Key pages
 
-- [Home](https://eudaimoniauniverse.com/): company overview, Human OS, Conflictology, divisions, projects, publications, contact. Japanese; English available via on-page toggle.
-- [Human OS](https://eudaimoniauniverse.com/#humanos)
-- [Conflictology](https://eudaimoniauniverse.com/#conflictology)
-- [FAQ](https://eudaimoniauniverse.com/#faq)
-- [Contact](https://eudaimoniauniverse.com/#contact): info@eudaimonialab.org (Japanese / English)
+- [Home, Japanese](https://eudaimoniauniverse.com/): purpose, method, Human OS, Conflictology, divisions and products, FAQ, organization
+- [Home, English](https://eudaimoniauniverse.com/en/): the same page in English
+- [FAQ, Japanese](https://eudaimoniauniverse.com/#faq) / [Frequently asked, English](https://eudaimoniauniverse.com/en/#faq)
+- [Organization, on the record](https://eudaimoniauniverse.com/#record)
 
 ## Optional
 

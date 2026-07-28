@@ -2,36 +2,317 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="theme-color" content="#F7F8FC">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eudaimonia Universe — 社会の対立を、創発へと変換する Think & Do Tank</title>
-<meta name="description" content="人々がより善く幸せで在り続けられる社会を目指し、対立の複雑さを構造から診断して新しい合意・意思決定・関係性をつくるThink & Do Tank。独自理論「Human OS」と「対立学」にAI分析を組み合わせ、組織変容・意思決定設計・事業開発を支援します。">
+<title>Eudaimonia Universe｜社会の対立を、創発へと変換する Think &amp; Do Tank</title>
+<meta name="description" content="Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think &amp; Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す。">
+<meta name="theme-color" content="#F7F8FC">
 <link rel="canonical" href="https://eudaimoniauniverse.com/">
-
-<!-- OGP -->
+<link rel="alternate" hreflang="ja" href="https://eudaimoniauniverse.com/">
+<link rel="alternate" hreflang="en" href="https://eudaimoniauniverse.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://eudaimoniauniverse.com/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_GB">
 <meta property="og:site_name" content="Eudaimonia Universe, Inc.">
-<meta property="og:title" content="Eudaimonia Universe — 社会の対立を、創発へと変換する Think & Do Tank">
-<meta property="og:description" content="対立の複雑さを構造から診断し、新しい合意・意思決定・関係性をつくる。独自理論「Human OS」と「対立学」にAI分析を組み合わせ、組織変容・意思決定設計・事業開発を支援します。">
 <meta property="og:url" content="https://eudaimoniauniverse.com/">
+<meta property="og:title" content="Eudaimonia Universe｜社会の対立を、創発へと変換する Think &amp; Do Tank">
+<meta property="og:description" content="Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think &amp; Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す。">
 <meta property="og:image" content="https://eudaimoniauniverse.com/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:locale:alternate" content="en_US">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Eudaimonia Universe — 社会の対立を、創発へと変換する Think & Do Tank">
-<meta name="twitter:description" content="対立の複雑さを構造から診断し、新しい合意・意思決定・関係性をつくる。独自理論「Human OS」と「対立学」にAI分析を組み合わせ、組織変容・意思決定設計・事業開発を支援します。">
+<meta name="twitter:title" content="Eudaimonia Universe｜社会の対立を、創発へと変換する Think &amp; Do Tank">
+<meta name="twitter:description" content="Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think &amp; Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す。">
 <meta name="twitter:image" content="https://eudaimoniauniverse.com/img/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<style>
+:root{
+  /* 公式ロゴ (.ai) から抽出した確定値。2026年4月 pptx 由来の旧パレットは使わない */
+  --bg:#F7F8FC; --bg2:#F1F3F9; --line:#E2E5EE; --card:#FFFFFF;
+  --ink:#353B4D; --indigo:#29243E; --purple:#5C4C87; --grey:#8B92A4; --gold:#A28335;
+  --teal:#39817F; --steel:#386F8B; --magenta:#8B4383;
+  --r-green:#3BAD90; --r-blue:#147EBF; --r-purple:#88167B;
+  --r-red:#DA3B49; --r-orange:#EA953C; --r-yellow:#F3CB3F;
+  --wordmark:#3F3B3A;
+  --serif:Georgia,'Times New Roman','Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif;
+  --sans:'Helvetica Neue',Inter,Arial,'Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif;
+  --label:Cambria,Georgia,serif;
+  --brand:'Futura','Avenir Next','Century Gothic',Jost,'Helvetica Neue',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1}
+.wrap{max-width:960px;margin:0 auto;padding:0 30px}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:50;background:rgba(247,248,252,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:64px;overflow-x:auto}
+nav .brand{display:flex;align-items:center;gap:11px;text-decoration:none;white-space:nowrap}
+nav .brand svg{height:26px;width:auto;display:block}
+nav .brand b{font-family:var(--brand);color:var(--wordmark);font-size:15.5px;font-weight:500;letter-spacing:0.045em}
+nav a.lk{color:var(--purple);text-decoration:none;font-size:12px;letter-spacing:0.1em;white-space:nowrap}
+nav a.lk:hover{color:var(--magenta)}
+nav .lang{margin-left:auto;font-size:11.5px;letter-spacing:0.14em;white-space:nowrap;color:var(--grey)}
+nav .lang a{color:var(--purple);text-decoration:none}
+nav .lang b{color:var(--indigo)}
+section{padding:82px 0;border-top:1px solid var(--line)}
+.klabel{font-family:var(--label);font-size:12.5px;font-weight:bold;letter-spacing:0.26em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+h1{font-family:var(--serif);font-weight:normal;font-size:46px;line-height:1.4;letter-spacing:0.01em;
+   background:linear-gradient(100deg,#29243E 0%,#39817F 34%,#386F8B 62%,#8B4383 100%);
+   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--indigo);width:fit-content}
+h2{font-family:var(--serif);font-weight:normal;color:var(--indigo);font-size:28px;line-height:1.5;margin-bottom:18px}
+h2 .en{font-family:var(--label);font-size:15px;color:var(--grey);letter-spacing:0.12em;margin-left:12px}
+h3{font-family:var(--serif);font-weight:normal;color:var(--indigo);font-size:17px;margin-bottom:6px}
+p{max-width:700px}
+.hero{padding:96px 0 84px}
+.hero .logo{width:186px;height:auto;display:block;margin-bottom:38px}
+.hero .ja-sub{font-family:var(--serif);color:var(--purple);font-size:19px;margin-top:26px;letter-spacing:0.06em}
+.claim{margin-top:34px;padding-left:20px;border-left:3px solid var(--r-purple)}
+.claim .big{font-family:var(--serif);color:var(--indigo);font-size:25px;line-height:1.6}
+.claim .sm{color:var(--purple);font-size:15px;margin-top:8px}
+.def{color:var(--ink);font-size:15.5px;margin-top:32px;max-width:680px}
+.beat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 38px;margin:6px 0}
+.beat .big{font-family:var(--serif);color:var(--indigo);font-size:24px;line-height:1.6}
+.beat .sm{color:var(--purple);font-size:15px;margin-top:12px}
+.flow{display:flex;flex-wrap:wrap;margin:24px 0 6px;align-items:stretch}
+.step{flex:1 1 190px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:6px}
+.step .n{font-family:var(--label);font-size:11px;letter-spacing:0.2em;color:var(--grey);display:block;margin-bottom:8px;text-transform:uppercase}
+.step p{font-size:13.5px;color:var(--ink);line-height:1.85}
+.step.s1{border-top:3px solid var(--r-green)} .step.s2{border-top:3px solid var(--r-blue)}
+.step.s3{border-top:3px solid var(--r-purple)} .step.s4{border-top:3px solid var(--r-red)}
+.arrow{align-self:center;color:var(--grey);font-size:15px;padding:0 3px}
+.grid{display:grid;gap:14px;margin-top:22px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(285px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.g5{grid-template-columns:repeat(auto-fit,minmax(158px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.card p{font-size:13.5px;color:var(--ink);line-height:1.85}
+.card .t{font-family:var(--serif);color:var(--indigo);font-size:16.5px;margin-bottom:6px}
+.card .t .en{font-family:var(--label);font-size:11px;color:var(--grey);letter-spacing:0.1em;margin-left:7px}
+.note{color:var(--purple);font-size:13.5px;margin-top:18px}
+details{border-bottom:1px solid var(--line)}
+details summary{cursor:pointer;padding:18px 0;font-family:var(--serif);color:var(--indigo);font-size:17px;line-height:1.6;list-style:none;position:relative;padding-right:30px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";position:absolute;right:4px;top:17px;color:var(--purple);font-family:var(--sans);font-size:19px}
+details[open] summary::after{content:"\2212"}
+details .a{padding:0 0 22px;font-size:15px;color:var(--ink);line-height:1.95;max-width:740px}
+/* 10製品の表は狭い画面でページ全体を横に広げてしまうので、表の中だけでスクロールさせる */
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:20px}
+table{width:100%;min-width:560px;border-collapse:collapse;font-size:13.5px}
+caption{text-align:left}
+th{font-family:var(--label);font-size:11px;font-weight:bold;letter-spacing:0.16em;color:var(--grey);text-align:left;padding:9px 12px;border-bottom:1.5px solid var(--line);text-transform:uppercase}
+td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.st{color:var(--teal);font-weight:bold} td.sd{color:var(--gold);font-weight:bold}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin-top:22px;font-size:14.5px}
+.facts dl{display:grid;grid-template-columns:minmax(150px,auto) 1fr;gap:10px 24px}
+.facts dt{color:var(--grey);font-family:var(--label);font-size:11.5px;font-weight:bold;letter-spacing:0.1em;padding-top:5px}
+.facts dd{color:var(--ink)}
+.gloss{background:var(--bg2);border-left:3px solid var(--r-purple);border-radius:0 12px 12px 0;padding:24px 26px;margin-top:22px}
+.gloss p{font-size:14px;max-width:740px;line-height:1.95}
+.gloss p + p{margin-top:12px}
+footer{padding:56px 0 78px;color:var(--grey);font-size:13px;line-height:2.1;border-top:1px solid var(--line)}
+footer a{color:var(--purple)}
+.cta{display:inline-block;margin-top:24px;font-family:var(--label);letter-spacing:0.12em;font-size:13px;font-weight:bold;color:var(--magenta);text-decoration:none;border-bottom:1px solid rgba(139,67,131,.4);padding-bottom:4px}
+@media(max-width:640px){h1{font-size:32px}.hero{padding:64px 0 60px}.beat .big,.claim .big{font-size:20px}.facts dl{grid-template-columns:1fr;gap:2px}.facts dt{margin-top:12px}}
+</style>
+</head>
+<body>
 
-<!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<nav><div class="wrap">
+<a href="/" class="brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.66 67.07" role="img" aria-label="Eudaimonia Universe のマーク: トーラスをかたちづくる6本のリング">
+<title>Eudaimonia Universe</title>
+<g transform="translate(-31.316,-21.730)">
+<path fill="#3BAD90" d="M 55.085938 85.023438 C 50.265625 84.4375 45.730469 81.539062 42.15625 76.707031 C 37.945312 71.007812 35.625 63.390625 35.625 55.265625 C 35.625 47.136719 37.945312 39.523438 42.15625 33.824219 C 45.730469 28.988281 50.265625 26.089844 55.085938 25.507812 C 56.355469 24.011719 57.726562 22.804688 59.175781 21.894531 C 58.425781 21.789062 57.664062 21.730469 56.898438 21.730469 C 49.875 21.730469 43.34375 25.332031 38.507812 31.871094 C 33.871094 38.148438 31.316406 46.457031 31.316406 55.265625 C 31.316406 64.074219 33.871094 72.378906 38.507812 78.65625 C 43.34375 85.195312 49.875 88.800781 56.898438 88.800781 C 57.6875 88.800781 58.457031 88.746094 59.207031 88.652344 C 57.742188 87.742188 56.363281 86.523438 55.085938 85.023438 "/>
+<path fill="#147EBF" d="M 69.136719 83.945312 C 68.058594 84.726562 66.984375 85.132812 65.929688 85.132812 C 59.628906 85.132812 52.609375 72.867188 52.609375 55.265625 C 52.609375 47.03125 54.160156 39.320312 56.976562 33.550781 C 59.507812 28.367188 62.769531 25.394531 65.929688 25.394531 C 67.023438 25.394531 68.097656 25.96875 69.066406 26.78125 C 69.527344 25.464844 70.082031 24.238281 70.757812 23.195312 C 69.214844 22.21875 67.605469 21.730469 65.929688 21.730469 C 60.867188 21.730469 56.273438 25.429688 52.996094 32.144531 C 49.96875 38.351562 48.300781 46.5625 48.300781 55.265625 C 48.300781 63.96875 49.96875 72.179688 52.996094 78.382812 C 56.273438 85.097656 60.867188 88.796875 65.929688 88.796875 C 67.636719 88.796875 69.273438 88.347656 70.835938 87.453125 C 70.15625 86.433594 69.601562 85.230469 69.136719 83.945312 "/>
+<path fill="#88167B" d="M 79.628906 41.042969 C 78.144531 31.175781 76.761719 27.414062 76.015625 26.007812 C 75.390625 27.019531 74.355469 29.355469 73.414062 34.550781 C 72.386719 40.257812 71.816406 47.613281 71.816406 55.265625 C 71.816406 62.917969 72.386719 70.273438 73.414062 75.976562 C 74.390625 81.386719 75.476562 83.699219 76.089844 84.636719 C 76.847656 83.382812 78.320312 79.757812 79.78125 69.550781 C 80.75 62.773438 81.257812 56.242188 81.328125 55.277344 C 81.242188 54.3125 80.648438 47.8125 79.628906 41.042969 M 69.4375 77.996094 C 68.191406 71.90625 67.507812 63.832031 67.507812 55.265625 C 67.507812 46.695312 68.191406 38.621094 69.4375 32.535156 C 70.964844 25.0625 73.03125 21.730469 76.140625 21.730469 C 79.003906 21.730469 80.328125 24.769531 81.328125 28.058594 C 82.152344 30.757812 82.945312 34.496094 83.6875 39.167969 C 84.941406 47.058594 85.632812 55.050781 85.636719 55.132812 L 85.648438 55.253906 L 85.640625 55.375 C 85.632812 55.457031 85.054688 63.453125 83.859375 71.351562 C 83.148438 76.03125 82.359375 79.777344 81.515625 82.484375 C 80.542969 85.605469 79.140625 88.800781 76.140625 88.800781 C 73.03125 88.800781 70.964844 85.46875 69.4375 77.996094 "/>
+<path fill="#DA3B49" d="M 89.960938 55.277344 C 90.03125 56.242188 90.539062 62.773438 91.507812 69.550781 C 92.96875 79.757812 94.441406 83.382812 95.199219 84.636719 C 95.8125 83.699219 96.894531 81.386719 97.875 75.976562 C 98.902344 70.273438 99.472656 62.914062 99.472656 55.265625 C 99.472656 47.613281 98.902344 40.257812 97.875 34.550781 C 96.933594 29.355469 95.898438 27.019531 95.273438 26.011719 C 94.527344 27.414062 93.144531 31.175781 91.660156 41.042969 C 90.640625 47.8125 90.046875 54.3125 89.960938 55.277344 M 95.148438 88.796875 C 92.148438 88.796875 90.746094 85.605469 89.773438 82.484375 C 88.929688 79.777344 88.140625 76.03125 87.429688 71.347656 C 86.234375 63.453125 85.65625 55.457031 85.648438 55.375 L 85.640625 55.253906 L 85.652344 55.128906 C 85.65625 55.050781 86.347656 47.058594 87.601562 39.167969 C 88.34375 34.496094 89.136719 30.753906 89.960938 28.054688 C 90.960938 24.769531 92.285156 21.730469 95.148438 21.730469 C 98.257812 21.730469 100.324219 25.0625 101.851562 32.535156 C 103.09375 38.621094 103.78125 46.695312 103.78125 55.265625 C 103.78125 63.835938 103.09375 71.90625 101.851562 77.996094 C 100.324219 85.464844 98.257812 88.796875 95.148438 88.796875 "/>
+<path fill="#EA953C" d="M 118.292969 32.144531 C 115.015625 25.429688 110.421875 21.730469 105.359375 21.730469 C 103.683594 21.730469 102.074219 22.21875 100.53125 23.195312 C 101.207031 24.238281 101.765625 25.46875 102.226562 26.777344 C 103.191406 25.96875 104.265625 25.394531 105.359375 25.394531 C 108.519531 25.394531 111.78125 28.367188 114.3125 33.550781 C 117.128906 39.320312 118.679688 47.03125 118.679688 55.265625 C 118.679688 72.867188 111.660156 85.132812 105.359375 85.132812 C 104.304688 85.132812 103.230469 84.726562 102.152344 83.945312 C 101.6875 85.234375 101.132812 86.433594 100.453125 87.453125 C 102.015625 88.347656 103.652344 88.800781 105.359375 88.800781 C 110.421875 88.800781 115.015625 85.097656 118.292969 78.382812 C 121.320312 72.179688 122.992188 63.96875 122.992188 55.265625 C 122.992188 46.5625 121.320312 38.351562 118.292969 32.144531 "/>
+<path fill="#F3CB3F" d="M 132.78125 31.871094 C 127.945312 25.332031 121.414062 21.730469 114.386719 21.730469 C 113.621094 21.730469 112.863281 21.785156 112.109375 21.894531 C 113.5625 22.804688 114.9375 24.011719 116.203125 25.503906 C 121.023438 26.089844 125.558594 28.988281 129.132812 33.820312 C 133.34375 39.523438 135.664062 47.136719 135.664062 55.265625 C 135.664062 63.390625 133.34375 71.007812 129.132812 76.707031 C 125.558594 81.539062 121.023438 84.4375 116.203125 85.023438 C 114.925781 86.523438 113.546875 87.742188 112.082031 88.652344 C 112.832031 88.746094 113.601562 88.800781 114.386719 88.800781 C 121.414062 88.800781 127.945312 85.195312 132.78125 78.65625 C 137.417969 72.378906 139.972656 64.070312 139.972656 55.265625 C 139.972656 46.457031 137.417969 38.148438 132.78125 31.871094 "/>
+</g>
+</svg><b>Eudaimonia Universe</b></a>
+<a class="lk" href="#purpose">パーパス</a>
+<a class="lk" href="#method">メソッド</a>
+<a class="lk" href="#humanos">Human OS</a>
+<a class="lk" href="#conflictology">対立学</a>
+<a class="lk" href="#divisions">部門とプロダクト</a>
+<a class="lk" href="#faq">FAQ</a>
+<span class="lang"><b>JA</b> ｜ <a href="/en/">EN</a></span>
+</div></nav>
 
-<!-- Structured Data -->
+<div class="hero"><div class="wrap">
+<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.66 67.07" role="img" aria-label="Eudaimonia Universe のマーク: トーラスをかたちづくる6本のリング">
+<title>Eudaimonia Universe</title>
+<g transform="translate(-31.316,-21.730)">
+<path fill="#3BAD90" d="M 55.085938 85.023438 C 50.265625 84.4375 45.730469 81.539062 42.15625 76.707031 C 37.945312 71.007812 35.625 63.390625 35.625 55.265625 C 35.625 47.136719 37.945312 39.523438 42.15625 33.824219 C 45.730469 28.988281 50.265625 26.089844 55.085938 25.507812 C 56.355469 24.011719 57.726562 22.804688 59.175781 21.894531 C 58.425781 21.789062 57.664062 21.730469 56.898438 21.730469 C 49.875 21.730469 43.34375 25.332031 38.507812 31.871094 C 33.871094 38.148438 31.316406 46.457031 31.316406 55.265625 C 31.316406 64.074219 33.871094 72.378906 38.507812 78.65625 C 43.34375 85.195312 49.875 88.800781 56.898438 88.800781 C 57.6875 88.800781 58.457031 88.746094 59.207031 88.652344 C 57.742188 87.742188 56.363281 86.523438 55.085938 85.023438 "/>
+<path fill="#147EBF" d="M 69.136719 83.945312 C 68.058594 84.726562 66.984375 85.132812 65.929688 85.132812 C 59.628906 85.132812 52.609375 72.867188 52.609375 55.265625 C 52.609375 47.03125 54.160156 39.320312 56.976562 33.550781 C 59.507812 28.367188 62.769531 25.394531 65.929688 25.394531 C 67.023438 25.394531 68.097656 25.96875 69.066406 26.78125 C 69.527344 25.464844 70.082031 24.238281 70.757812 23.195312 C 69.214844 22.21875 67.605469 21.730469 65.929688 21.730469 C 60.867188 21.730469 56.273438 25.429688 52.996094 32.144531 C 49.96875 38.351562 48.300781 46.5625 48.300781 55.265625 C 48.300781 63.96875 49.96875 72.179688 52.996094 78.382812 C 56.273438 85.097656 60.867188 88.796875 65.929688 88.796875 C 67.636719 88.796875 69.273438 88.347656 70.835938 87.453125 C 70.15625 86.433594 69.601562 85.230469 69.136719 83.945312 "/>
+<path fill="#88167B" d="M 79.628906 41.042969 C 78.144531 31.175781 76.761719 27.414062 76.015625 26.007812 C 75.390625 27.019531 74.355469 29.355469 73.414062 34.550781 C 72.386719 40.257812 71.816406 47.613281 71.816406 55.265625 C 71.816406 62.917969 72.386719 70.273438 73.414062 75.976562 C 74.390625 81.386719 75.476562 83.699219 76.089844 84.636719 C 76.847656 83.382812 78.320312 79.757812 79.78125 69.550781 C 80.75 62.773438 81.257812 56.242188 81.328125 55.277344 C 81.242188 54.3125 80.648438 47.8125 79.628906 41.042969 M 69.4375 77.996094 C 68.191406 71.90625 67.507812 63.832031 67.507812 55.265625 C 67.507812 46.695312 68.191406 38.621094 69.4375 32.535156 C 70.964844 25.0625 73.03125 21.730469 76.140625 21.730469 C 79.003906 21.730469 80.328125 24.769531 81.328125 28.058594 C 82.152344 30.757812 82.945312 34.496094 83.6875 39.167969 C 84.941406 47.058594 85.632812 55.050781 85.636719 55.132812 L 85.648438 55.253906 L 85.640625 55.375 C 85.632812 55.457031 85.054688 63.453125 83.859375 71.351562 C 83.148438 76.03125 82.359375 79.777344 81.515625 82.484375 C 80.542969 85.605469 79.140625 88.800781 76.140625 88.800781 C 73.03125 88.800781 70.964844 85.46875 69.4375 77.996094 "/>
+<path fill="#DA3B49" d="M 89.960938 55.277344 C 90.03125 56.242188 90.539062 62.773438 91.507812 69.550781 C 92.96875 79.757812 94.441406 83.382812 95.199219 84.636719 C 95.8125 83.699219 96.894531 81.386719 97.875 75.976562 C 98.902344 70.273438 99.472656 62.914062 99.472656 55.265625 C 99.472656 47.613281 98.902344 40.257812 97.875 34.550781 C 96.933594 29.355469 95.898438 27.019531 95.273438 26.011719 C 94.527344 27.414062 93.144531 31.175781 91.660156 41.042969 C 90.640625 47.8125 90.046875 54.3125 89.960938 55.277344 M 95.148438 88.796875 C 92.148438 88.796875 90.746094 85.605469 89.773438 82.484375 C 88.929688 79.777344 88.140625 76.03125 87.429688 71.347656 C 86.234375 63.453125 85.65625 55.457031 85.648438 55.375 L 85.640625 55.253906 L 85.652344 55.128906 C 85.65625 55.050781 86.347656 47.058594 87.601562 39.167969 C 88.34375 34.496094 89.136719 30.753906 89.960938 28.054688 C 90.960938 24.769531 92.285156 21.730469 95.148438 21.730469 C 98.257812 21.730469 100.324219 25.0625 101.851562 32.535156 C 103.09375 38.621094 103.78125 46.695312 103.78125 55.265625 C 103.78125 63.835938 103.09375 71.90625 101.851562 77.996094 C 100.324219 85.464844 98.257812 88.796875 95.148438 88.796875 "/>
+<path fill="#EA953C" d="M 118.292969 32.144531 C 115.015625 25.429688 110.421875 21.730469 105.359375 21.730469 C 103.683594 21.730469 102.074219 22.21875 100.53125 23.195312 C 101.207031 24.238281 101.765625 25.46875 102.226562 26.777344 C 103.191406 25.96875 104.265625 25.394531 105.359375 25.394531 C 108.519531 25.394531 111.78125 28.367188 114.3125 33.550781 C 117.128906 39.320312 118.679688 47.03125 118.679688 55.265625 C 118.679688 72.867188 111.660156 85.132812 105.359375 85.132812 C 104.304688 85.132812 103.230469 84.726562 102.152344 83.945312 C 101.6875 85.234375 101.132812 86.433594 100.453125 87.453125 C 102.015625 88.347656 103.652344 88.800781 105.359375 88.800781 C 110.421875 88.800781 115.015625 85.097656 118.292969 78.382812 C 121.320312 72.179688 122.992188 63.96875 122.992188 55.265625 C 122.992188 46.5625 121.320312 38.351562 118.292969 32.144531 "/>
+<path fill="#F3CB3F" d="M 132.78125 31.871094 C 127.945312 25.332031 121.414062 21.730469 114.386719 21.730469 C 113.621094 21.730469 112.863281 21.785156 112.109375 21.894531 C 113.5625 22.804688 114.9375 24.011719 116.203125 25.503906 C 121.023438 26.089844 125.558594 28.988281 129.132812 33.820312 C 133.34375 39.523438 135.664062 47.136719 135.664062 55.265625 C 135.664062 63.390625 133.34375 71.007812 129.132812 76.707031 C 125.558594 81.539062 121.023438 84.4375 116.203125 85.023438 C 114.925781 86.523438 113.546875 87.742188 112.082031 88.652344 C 112.832031 88.746094 113.601562 88.800781 114.386719 88.800781 C 121.414062 88.800781 127.945312 85.195312 132.78125 78.65625 C 137.417969 72.378906 139.972656 64.070312 139.972656 55.265625 C 139.972656 46.457031 137.417969 38.148438 132.78125 31.871094 "/>
+</g>
+</svg>
+<div class="klabel">Think &amp; Do Tank for Emergence</div>
+<h1>社会の対立を、<br>創発へと変換する。</h1>
+<p class="ja-sub">二項対立を活用して、社会の止揚を目指す</p>
+<div class="claim">
+<p class="big">対立は、診断できる。</p>
+<p class="sm">打ち手の前に、型を見る。</p>
+</div>
+<p class="def">Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think &amp; Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す。</p>
+</div></div>
+
+<section id="purpose"><div class="wrap">
+<div class="klabel">Purpose</div>
+<div class="beat">
+<p class="big">対立を止揚し、人類のユーダイモニアを増やす。</p>
+<p class="sm">決着した対立は、誰かが払っている。止揚した対立は、全員に返る。</p>
+</div>
+<p style="margin-top:28px">対立は、どちらかが勝つという前提の上にあります。止揚はその前提を壊し、双方が持っていなかったものを生む。総量が増える。これが私たちの言うアバンダンスであり、奪い合いを創造に変える操作です。</p>
+<p style="margin-top:14px">一人ひとりの側から見れば、それはユーダイモニア（善く在ること）とイキガイ（朝、起きる理由）が同時に成り立つ状態を指します。社名は、その世界の名前です。</p>
+
+<h3 style="margin-top:40px">用語について</h3>
+<div class="gloss">
+<p><b>止揚（しよう）</b>はドイツ語 Aufhebung の訳語です。否定しながら同時に保存し、より高い次元へ引き上げる運動を指すヘーゲルの概念で、英語では sublation にあたります。</p>
+<p>テーゼとアンチテーゼからジンテーゼへという三段の定型は、<b>ヘーゲル自身の用語ではありません</b>。フィヒテに由来し、Heinrich Moritz Chalybäus が広めた整理です。私たちはこの定型を説明の道具として使い、概念の出所は Aufhebung に置いています。</p>
+<p>英語表記に <b>Synthese</b>（ドイツ語）を採るのは、synthesis が「単なる折衷」の意味に流れやすいためです。</p>
+</div>
+</div></section>
+
+<section id="method"><div class="wrap">
+<div class="klabel">Method</div>
+<h2>事象と意思決定のあいだに、<br>判断の余白をつくる。</h2>
+<p>組織にも、人と同じ反射があります。ある出来事と、それが引き起こす意思決定のあいだ。その区間に判断が宿ります。私たちが設計するのはそこです。すべての支援は、名前のついた4段階を通ります。</p>
+
+<div class="flow">
+<div class="step s1"><span class="n">段階 01</span><h3>構造理解</h3><p>Human OS の5層で、いま何がどこで起きているかを読む。</p></div>
+<span class="arrow" aria-hidden="true">&#8594;</span>
+<div class="step s2"><span class="n">段階 02</span><h3>診断</h3><p>対立学の4類型で、その対立がどの型かを判別する。</p></div>
+<span class="arrow" aria-hidden="true">&#8594;</span>
+<div class="step s3"><span class="n">段階 03</span><h3>介入設計</h3><p>診断に合わせて、論点、意思決定プロセス、役割のいずれかを組み直す。</p></div>
+<span class="arrow" aria-hidden="true">&#8594;</span>
+<div class="step s4"><span class="n">段階 04</span><h3>創発</h3><p>双方が最初は持っていなかった、より高い次元の答えに至る。これを止揚と呼ぶ。</p></div>
+</div>
+<p style="margin-top:26px;color:var(--purple)">「相性の問題」で片づけられた対立は、必ず戻ってきます。決まらない会議、止まった統合、辞めていく中核人材。原因が特定されないまま、打ち手だけが増えていきます。</p>
+</div></section>
+
+<section id="humanos"><div class="wrap">
+<div class="klabel">Framework One</div>
+<h2>Human OS</h2>
+<p>Human OS は、人間の内的構造を身体・感情・思考・意味・関係性の5層で捉える、私たちが独自開発したモデルです。診断において「何がどこで起きているか」を語る共通言語になります。</p>
+<div class="grid g5">
+<div class="card" style="border-top:3px solid var(--r-green)"><div class="t">身体<span class="en">Body</span></div><p>身体の状態とエネルギー</p></div>
+<div class="card" style="border-top:3px solid var(--r-blue)"><div class="t">感情<span class="en">Emotion</span></div><p>情動と、それが発する信号</p></div>
+<div class="card" style="border-top:3px solid var(--r-purple)"><div class="t">思考<span class="en">Mind</span></div><p>思考と認知</p></div>
+<div class="card" style="border-top:3px solid var(--r-red)"><div class="t">意味<span class="en">Meaning</span></div><p>目的と価値観</p></div>
+<div class="card" style="border-top:3px solid var(--r-orange)"><div class="t">関係性<span class="en">Relationship</span></div><p>つながりと帰属</p></div>
+</div>
+</div></section>
+
+<section id="conflictology"><div class="wrap">
+<div class="klabel">Framework Two</div>
+<h2>対立学<span class="en">Conflictology</span></h2>
+<p>対立学（Conflictology）は、対立を価値・構造・認知・存在の4タイプに分類して診断する、私たちが独自開発したフレームワークです。型を名づけないまま打ち手を選ぶことが、対話が失敗する最も多い理由です。</p>
+<div class="grid g2">
+<div class="card"><div class="t">価値<span class="en">Value</span></div><p>大切だとすることが、互いに違う。問われているのは「どうあるべきか」。</p></div>
+<div class="card"><div class="t">構造<span class="en">Structure</span></div><p>意図とは関係なく、動機づけ・役割・プロセスが両者を対立の位置に置いている。</p></div>
+<div class="card"><div class="t">認知<span class="en">Cognition</span></div><p>同じ事実を、互いに別々に読んでいる。問われているのは「何であるか」。</p></div>
+<div class="card"><div class="t">存在<span class="en">Existence</span></div><p>立場や存在そのものが脅かされていると感じている。問われているのは「誰であるか」。</p></div>
+</div>
+</div></section>
+
+<section id="divisions"><div class="wrap">
+<div class="klabel">Architecture</div>
+<h2>3つの部門が、ひとつの循環をつくる</h2>
+<p>研究がフレームワークを鋭くし、現場が検証し、資産化が社会へ返す。それぞれの部門が、次の部門を養います。</p>
+<div class="grid g3">
+<div class="card" style="border-top:3px solid var(--r-green)"><div class="t">Think Tank</div><p>対立と人間の構造を研究し、学んだことを再現可能な方法論として定式化する。</p></div>
+<div class="card" style="border-top:3px solid var(--r-blue)"><div class="t">Produce</div><p>方法論を組織の中で適用する。組織変容、意思決定の設計、事業開発。企業からのご相談の窓口。</p></div>
+<div class="card" style="border-top:3px solid var(--r-purple)"><div class="t">Asset</div><p>現場の知をプロダクトに変える。私たちがその場にいなくても、方法が届くように。</p></div>
+</div>
+<p class="note">自社発の社会実装プロジェクトとして、育業（Ikugyo）、The Guild、Giver研究を運営しています。</p>
+
+<h2 style="margin-top:54px">10のプロダクト</h2>
+<p>10のアプリケーションが、ひとつの理論レイヤーを共有しています。理論はひとつのリポジトリで版管理され、すべてのアプリが同じ定義を参照するため、資料と実装がずれません。</p>
+<div class="tablewrap"><table>
+<caption class="klabel" style="margin:24px 0 0">ポートフォリオ 2026年7月</caption>
+<tr><th scope="col">プロダクト</th><th scope="col">対象</th><th scope="col">扱うもの</th><th scope="col">状況</th></tr>
+<tr><td>Source</td><td>個人</td><td>価値観と感性を、自分の地図として描く</td><td class="st">提供中</td></tr>
+<tr><td>Omusubi Quest</td><td>個人</td><td>物語による継続。11言語で提供</td><td class="st">提供中</td></tr>
+<tr><td>Compass</td><td>企業</td><td>対立学によるリーダー育成と意思決定</td><td class="st">提供中</td></tr>
+<tr><td>CRV</td><td>企業・投資家</td><td>その企業が生んだ価値が、実際にどこへ分配されたか</td><td class="st">提供中</td></tr>
+<tr><td>操舵室 <span style="color:var(--grey)">Sōdashitsu</span></td><td>専門職ファーム</td><td>自分の時間の使われ方を俯瞰する</td><td class="st">提供中</td></tr>
+<tr><td>円卓会議 <span style="color:var(--grey)">Entaku Kaigi</span></td><td>チーム</td><td>複数のAIと人が、ひとつの場で議論する</td><td class="st">提供中</td></tr>
+<tr><td>Sovereign</td><td>経営層</td><td>決める人のための、日々の実践</td><td class="sd">開発中</td></tr>
+<tr><td>ikugyo</td><td>育児休業</td><td>本人と上司のあいだの相互理解</td><td class="sd">開発中</td></tr>
+<tr><td>Integration Compass</td><td>PMIチーム</td><td>統合後に生じる組織間の対立</td><td class="sd">開発中</td></tr>
+<tr><td>Omusubi for teams</td><td>チーム</td><td>チームの節目のための儀式と歌</td><td class="sd">設計中</td></tr>
+</table></div>
+<a class="cta" href="#contact">導入・共同研究のご相談</a>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<div class="klabel">Questions</div>
+<h2>よくあるご質問</h2>
+
+<details><summary>Eudaimonia Universe（ユーダイモニアユニバース）はどのような会社ですか？</summary>
+<div class="a">Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think &amp; Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す会社です。組織や社会に生じる対立を構造から診断し、打ち手を設計します。Founder &amp; CEO は水野貴之。</div></details>
+
+<details><summary>「対立は、診断できる」とはどういう意味ですか？</summary>
+<div class="a">対立には型があり、打ち手を選ぶ前にその型を特定できる、という意味です。対立学で4つの型に分類し、Human OS の5層のどこで起きているかを特定します。医療と同じく、診断が処方に先立ちます。</div></details>
+
+<details><summary>止揚（ジンテーゼ）とは何ですか？</summary>
+<div class="a">ドイツ語 Aufhebung の訳語で、否定しながら同時に保存し、より高い次元へ引き上げる運動を指すヘーゲルの概念です。対立を消すことも、片方を勝たせることもせず、双方が持っていなかった答えを生みます。なお、テーゼとアンチテーゼからジンテーゼへという三段の定型はヘーゲル自身の用語ではなく、フィヒテに由来します。</div></details>
+
+<details><summary>Human OSとは何ですか？</summary>
+<div class="a">Human OSとは、人間の内的構造をBody（身体）・Emotion（感情）・Mind（思考）・Meaning（意味）・Relationship（関係性）の5層で捉える、Eudaimonia Universeが独自開発したモデルです。対立の診断では「どの層で何が起きているのか」を読み解く共通言語として使います。</div></details>
+
+<details><summary>対立学（Conflictology）とは何ですか？</summary>
+<div class="a">対立学（Conflictology）とは、対立を「価値」「構造」「認知」「存在」の4タイプに分類して診断する、Eudaimonia Universeが独自開発したフレームワークです。どのタイプの対立が・どこで起きているのかを診断してから打ち手を選ぶことで、的外れな介入を避けます。</div></details>
+
+<details><summary>組織の対立は、なぜ話し合いだけでは解決しないのですか？</summary>
+<div class="a">対立は単一の原因ではなく、複数の要因が同時に絡んで発生する構造的な現象だからです。原因のタイプを特定しないまま話し合いを重ねても、打ち手が原因と噛み合わず空振りします。だからこそ、私たちは対立をいきなり解決しようとせず、まず診断を行います。</div></details>
+
+<details><summary>「介入」とは具体的に何をするのですか？</summary>
+<div class="a">介入とは、対立の構造に働きかける具体的な打ち手のことです。論点を捉え直す問いの設計（視点の再構成）、会議体や合意形成プロセスの組み直し（意思決定の再設計）、役割や対話の場のつくり直し（関係性の再定義）などが含まれます。唯一の正解を押しつけるのではなく、診断結果に基づいて、その組織にとっての最適解を設計します。</div></details>
+
+<details><summary>支援はどのようなプロセスで進みますか？</summary>
+<div class="a">支援は「構造理解 → 診断 → 介入設計 → 創発」の4ステップで進みます。まずHuman OSの5層で関わる人々の内的構造を把握し、次に対立学の4タイプで対立がどこで・なぜ起きているのかを診断します。診断に基づきAIの分析を活用しながら介入を設計し、対立を起点に新しい関係性・意味・これまでなかった選択肢が立ち上がる状態（創発）を目指します。</div></details>
+
+<details><summary>AIはどのように活用されていますか？</summary>
+<div class="a">介入を設計するのは私たち人間であり、AIはその分析を支援する役割を担います。Human OSと対立学にAIによる分析を組み合わせて対立の構造を読み解くことで、介入設計をより速く、より精緻にします。また、対立の診断から介入プランの提示までを支援するAIプロダクトの開発も進めています。</div></details>
+
+<details><summary>どのような相談ができますか？</summary>
+<div class="a">組織変容・事業開発の実装プロジェクトのほか、Human OS・対立学の共同研究、投資・パートナーシップ、取材・講演のご相談をお受けしています。新規事業開発部門、組織開発部門、人事部門、経営管理室等の皆さまが主な想定窓口で、課題の整理段階からご一緒します。ご連絡は info@eudaimonialab.org へ（日本語・英語対応）。</div></details>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="klabel" id="record">第三者の記録</div>
+<h2>会社概要</h2>
+<p>媒体、登壇、著作、登記。確認できる形で置いています。</p>
+<div class="facts">
+<dl>
+<dt>商号</dt><dd>Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）</dd>
+<dt>法人番号</dt><dd>4010001191271</dd>
+<dt>本店所在地</dt><dd>東京都港区虎ノ門4丁目3番20号 神谷町MTビル14階</dd>
+<dt>形態</dt><dd>Think &amp; Do Tank</dd>
+<dt>Founder &amp; CEO</dt><dd>Takayuki Mizuno（水野 貴之）</dd>
+<dt>部門</dt><dd>Think Tank、Produce、Asset</dd>
+<dt>理論</dt><dd>Human OS、対立学（Conflictology）、Source 108、Cognitive Window</dd>
+<dt>プロダクト</dt><dd>10件（うち6件が提供中）</dd>
+<dt>著書</dt><dd><a href="https://amzn.asia/d/07vj6FGu" target="_blank" rel="noopener">ikigai経営術</a>（日本語）、<a href="https://amzn.asia/d/0hevtcf2" target="_blank" rel="noopener">ikigai intelligence</a>（英語）いずれも水野貴之 著</dd>
+<dt>お問い合わせ</dt><dd><a href="mailto:info@eudaimonialab.org">info@eudaimonialab.org</a></dd>
+<dt>対応言語</dt><dd>日本語・英語</dd>
+</dl>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<p>株式会社ユーダイモニアユニバース ｜ 二項対立を活用して、社会の止揚を目指す</p>
+<p><a href="/en/">English</a> ｜ <a href="mailto:info@eudaimonialab.org">info@eudaimonialab.org</a> ｜ <a href="terms.html">利用規約</a> ｜ <a href="privacy.html">プライバシーポリシー</a></p>
+<p style="margin-top:16px">&copy; 2026 Eudaimonia Universe, Inc.</p>
+</div></footer>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,14 +321,27 @@
       "@type": "Organization",
       "@id": "https://eudaimoniauniverse.com/#organization",
       "name": "Eudaimonia Universe, Inc.",
-      "alternateName": "株式会社ユーダイモニアユニバース",
+      "alternateName": ["Eudaimonia Universe", "株式会社ユーダイモニアユニバース"],
       "url": "https://eudaimoniauniverse.com/",
-      "logo": "https://eudaimoniauniverse.com/img/mark-2026-05-14.png",
-      "slogan": "Transforming Conflict into Emergence",
-      "description": "人々がより善く幸せで在り続けられる社会を目指し、対立の複雑さを構造から診断して新しい合意・意思決定・関係性をつくるThink & Do Tank。",
+      "logo": "https://eudaimoniauniverse.com/assets/eu_mark.svg",
+      "description": "Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think & Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す。",
+      "slogan": "二項対立を活用して、社会の止揚を目指す",
       "email": "info@eudaimonialab.org",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Japan Corporate Number",
+        "value": "4010001191271"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kamiyacho MT Building 14F, 4-3-20 Toranomon",
+        "addressLocality": "Minato-ku",
+        "addressRegion": "Tokyo",
+        "addressCountry": "JP"
+      },
       "founder": { "@id": "https://eudaimoniauniverse.com/#founder" },
-      "knowsAbout": ["Human OS", "対立学", "Conflictology", "組織変容", "意思決定設計", "事業開発支援", "Ikigai"],
+      "knowsAbout": ["対立学", "Conflictology", "Human OS", "組織の対立", "意思決定設計", "ジンテーゼ社会"],
+      "inLanguage": ["ja", "en"],
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "info@eudaimonialab.org",
@@ -62,52 +356,55 @@
       "alternateName": "水野 貴之",
       "jobTitle": "Founder & CEO",
       "worksFor": { "@id": "https://eudaimoniauniverse.com/#organization" },
-      "knowsAbout": ["Human OS", "対立学 (Conflictology)", "Ikigai", "組織変容", "意思決定設計"]
-    },
-    {
-      "@type": "Book",
-      "@id": "https://eudaimoniauniverse.com/#book-ikigai-keiei",
-      "name": "ikigai経営術",
-      "alternateName": "ikigai経営術 — 自己実現を企業の原動力に変える方法",
-      "author": { "@id": "https://eudaimoniauniverse.com/#founder" },
-      "inLanguage": "ja",
-      "url": "https://amzn.asia/d/07vj6FGu"
-    },
-    {
-      "@type": "Book",
-      "@id": "https://eudaimoniauniverse.com/#book-ikigai-intelligence",
-      "name": "ikigai intelligence",
-      "alternateName": "ikigai intelligence — Transforming personal purpose into a growth engine for your organization",
-      "author": { "@id": "https://eudaimoniauniverse.com/#founder" },
-      "inLanguage": "en",
-      "url": "https://amzn.asia/d/0hevtcf2"
+      "knowsAbout": ["対立学 (Conflictology)", "Human OS", "組織変容", "意思決定設計"]
     },
     {
       "@type": "WebSite",
       "@id": "https://eudaimoniauniverse.com/#website",
-      "name": "Eudaimonia Universe",
       "url": "https://eudaimoniauniverse.com/",
-      "publisher": { "@id": "https://eudaimoniauniverse.com/#organization" },
-      "inLanguage": ["ja", "en"]
+      "name": "Eudaimonia Universe",
+      "inLanguage": "ja",
+      "publisher": { "@id": "https://eudaimoniauniverse.com/#organization" }
     },
     {
       "@type": "WebPage",
       "@id": "https://eudaimoniauniverse.com/#webpage",
       "url": "https://eudaimoniauniverse.com/",
-      "name": "Eudaimonia Universe — 社会の対立を、創発へと変換する Think & Do Tank",
+      "name": "Eudaimonia Universe｜社会の対立を、創発へと変換する Think & Do Tank",
       "isPartOf": { "@id": "https://eudaimoniauniverse.com/#website" },
       "about": { "@id": "https://eudaimoniauniverse.com/#organization" },
       "inLanguage": "ja",
-      "dateModified": "2026-07-17"
+      "dateModified": "2026-07-28"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://eudaimoniauniverse.com/#service",
+      "name": "対立の診断と介入設計",
+      "serviceType": "組織の対立の診断と介入設計",
+      "provider": { "@id": "https://eudaimoniauniverse.com/#organization" },
+      "description": "支援は「構造理解 → 診断 → 介入設計 → 創発」の4段階で進みます。Human OS の5層で状況を読み、対立学の4類型で対立の型を判別し、その診断に合わせた介入を設計して、双方が最初は持っていなかった、より高い次元の答えを目指します。",
+      "areaServed": "Worldwide"
     },
     {
       "@type": "FAQPage",
-      "@id": "https://eudaimoniauniverse.com/#faqpage",
+      "@id": "https://eudaimoniauniverse.com/#faq",
+      "isPartOf": { "@id": "https://eudaimoniauniverse.com/#website" },
+      "about": { "@id": "https://eudaimoniauniverse.com/#organization" },
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Eudaimonia Universe（ユーダイモニアユニバース）はどのような会社ですか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）は、組織や社会に生じる対立を構造から診断し、新しい合意・意思決定・関係性の設計を支援するThink & Do Tankです。独自開発した理論「Human OS」と「対立学」を基盤に、研究（Think Tank）・実装（Produce）・資産化（Asset）の3部門が循環する体制をとっています。Founder & CEOはTakayuki Mizuno（水野 貴之）です。" }
+          "acceptedAnswer": { "@type": "Answer", "text": "Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think & Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す会社です。組織や社会に生じる対立を構造から診断し、打ち手を設計します。Founder & CEO は水野貴之。" }
+        },
+        {
+          "@type": "Question",
+          "name": "「対立は、診断できる」とはどういう意味ですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "対立には型があり、打ち手を選ぶ前にその型を特定できる、という意味です。対立学で4つの型に分類し、Human OS の5層のどこで起きているかを特定します。医療と同じく、診断が処方に先立ちます。" }
+        },
+        {
+          "@type": "Question",
+          "name": "止揚（ジンテーゼ）とは何ですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "ドイツ語 Aufhebung の訳語で、否定しながら同時に保存し、より高い次元へ引き上げる運動を指すヘーゲルの概念です。対立を消すことも、片方を勝たせることもせず、双方が持っていなかった答えを生みます。なお、テーゼとアンチテーゼからジンテーゼへという三段の定型はヘーゲル自身の用語ではなく、フィヒテに由来します。" }
         },
         {
           "@type": "Question",
@@ -148,1727 +445,6 @@
     }
   ]
 }
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* ================================================================
-   EUDAIMONIA UNIVERSE — Brand Kit System
-   Cosmos × Lavender | 6-Color Logo Palette
-   Theme: Transforming Conflict into Emergence
-   ================================================================ */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  font-family: 'Calibri', 'Noto Sans JP', 'Inter', sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  word-break: auto-phrase;
-}
-img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; transition: color 0.35s; }
-ul { list-style: none; }
-
-:root {
-  --bg: #F7F8FC;
-  --bg2: #EFF2F9;
-  --bg3: #E7EBF6;
-  --nebula: #DFE5F5;
-  --card-bg: #FFFFFF;
-  --teal: #00877A;
-  --blue: #3A5B9E;
-  --purple: #6B4396;
-  --magenta: #B23A78;
-  --yellow: #A8821F;
-  --orange: #C05A20;
-  --lav-off-white: #2A2440;
-  --lav-light: #4A3F6B;
-  --lav-main: #5F4B8B;
-  --lav-purple: #7B6AA6;
-  --stellar: #3A5B9E;
-  --stellar-dim: rgba(58,91,158,0.10);
-  --gold: #A8821F;
-  --gold-glow: rgba(168,130,31,0.08);
-  --aurora: #00877A;
-  --text: #333B4F;
-  --text-dim: #4C5568;
-  --text-muted: #8A92A6;
-  --white: #1E2436;
-  --surface: rgba(20,30,60,0.03);
-  --border: rgba(30,40,80,0.12);
-  --hover: rgba(20,30,60,0.05);
-  --container: 1080px;
-  --ease: 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-}
-
-.container { max-width: var(--container); margin: 0 auto; padding: 0 48px; }
-.stars { display: none; }
-
-/* NAV */
-.nav {
-  position: fixed; top:0; left:0; width:100%; z-index:100;
-  padding: 0 48px;
-  transition: background var(--ease), backdrop-filter var(--ease);
-}
-.nav.scrolled {
-  background: rgba(247,248,252,0.92);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-inner {
-  max-width: var(--container); margin:0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 32px;
-  height: 92px;
-}
-.nav-logo { flex-shrink: 0; }
-.nav-links { flex-wrap: nowrap; }
-.nav-links a { white-space: nowrap; }
-@media (max-width: 1200px) {
-  .nav-logo-text { display: none; }
-}
-.nav-logo {
-  display: flex; align-items: center;
-  gap: 14px;
-  height: 64px;
-  transition: opacity var(--ease);
-}
-.nav-logo img {
-  height: 60px; width: auto;
-  display: block;
-}
-.nav-logo-text {
-  font-family: Cambria, 'Inter', 'Noto Sans JP', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--lav-main);
-  white-space: nowrap;
-}
-.nav-logo:hover { opacity: 0.85; }
-.nav-links { display: flex; gap: 36px; align-items: center; }
-.nav-links a {
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.72rem; font-weight: 500;
-  letter-spacing: 0.1em; color: var(--text-muted);
-  text-transform: uppercase;
-  transition: color var(--ease);
-}
-.nav-links a:hover, .nav-links a.active { color: var(--lav-main); }
-.nav-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
-.nav-toggle span { display:block; width:20px; height:1.5px; background:var(--text-dim); transition:all 0.3s; }
-
-/* HERO */
-.hero {
-  position: relative; z-index:1;
-  min-height: 100vh;
-  display: flex; align-items: center;
-  padding-top: 100px;
-}
-.hero-orb {
-  position: absolute; border-radius:50%; pointer-events:none; filter:blur(100px);
-}
-.hero-orb-1 {
-  width: 600px; height: 600px;
-  top: 10%; left: 50%; transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(95,75,139,0.10) 0%, rgba(0,135,122,0.06) 40%, transparent 70%);
-}
-.hero-orb-2 {
-  width: 350px; height: 350px;
-  top: 30%; right: 5%;
-  background: radial-gradient(circle, rgba(178,58,120,0.05) 0%, rgba(168,130,31,0.04) 50%, transparent 70%);
-}
-.hero-content { position: relative; z-index:2; }
-.hero-grid { display:flex; align-items:center; }
-.hero-text { flex:1 1 auto; min-width:0; }
-.hero-label {
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.65rem; font-weight: 500;
-  letter-spacing: 0.35em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 40px;
-  opacity:0; animation: fadeUp 0.8s 0.3s forwards;
-}
-.hero-catch {
-  font-family: Georgia, 'Noto Serif JP', serif;
-  font-size: 3.2rem; font-weight: 700;
-  line-height: 1.5; color: var(--white);
-  margin-bottom: 24px;
-  opacity:0; animation: fadeUp 0.8s 0.6s forwards;
-}
-.hero-catch-gradient {
-  background: linear-gradient(135deg, var(--lav-off-white) 10%, var(--teal) 35%, var(--blue) 55%, var(--purple) 75%, var(--magenta) 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero-sub {
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.85rem; font-weight: 400;
-  letter-spacing: 0.2em; color: var(--lav-main);
-  opacity:0; animation: fadeUp 0.8s 0.9s forwards;
-}
-.hero-desc {
-  margin-top: 44px;
-  font-size: 0.95rem; font-weight: 400;
-  line-height: 2.4; color: var(--text);
-  max-width: 560px;
-  opacity:0; animation: fadeUp 0.8s 1.2s forwards;
-}
-.hero-en {
-  margin-top: 28px;
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.82rem; font-style: italic;
-  letter-spacing: 0.04em; color: var(--text-muted);
-  max-width: 560px; line-height: 1.9;
-  opacity:0; animation: fadeUp 0.8s 1.4s forwards;
-}
-.hero-scroll {
-  position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap:6px;
-  opacity:0; animation: fadeUp 0.8s 1.5s forwards;
-}
-.hero-scroll span { font-family:'Inter',sans-serif; font-size:0.58rem; letter-spacing:0.25em; color:var(--text-muted); }
-.hero-scroll-bar { width:1px; height:36px; background:linear-gradient(to bottom,var(--text-muted),transparent); animation:pulse 2.5s infinite; }
-
-@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-@keyframes pulse { 0%,100%{opacity:0.2} 50%{opacity:0.8} }
-
-/* SECTIONS */
-.section { padding: 140px 0; position: relative; z-index:1; }
-.section-sm { padding: 100px 0; }
-.section-bordered { border-top: 1px solid var(--border); }
-.section-tint { background: var(--bg2); }
-
-.section-label {
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.65rem; font-weight: 600;
-  letter-spacing: 0.3em; text-transform: uppercase;
-  color: var(--lav-main); margin-bottom: 16px;
-}
-.section-title {
-  font-family: Georgia, 'Noto Serif JP', serif;
-  font-size: 2.2rem; font-weight: 700;
-  color: var(--white); line-height: 1.4;
-  margin-bottom: 20px;
-}
-.section-desc {
-  font-size: 0.95rem; color: var(--text);
-  line-height: 2.2; max-width: 600px;
-}
-
-/* CARDS */
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 44px;
-  transition: all var(--ease);
-  position: relative; overflow: hidden;
-}
-.card:hover {
-  background: #FFFFFF;
-  box-shadow: 0 6px 24px rgba(30,40,80,0.10);
-  border-color: rgba(95,75,139,0.18);
-  transform: translateY(-3px);
-}
-.card-num {
-  font-family: Georgia, serif;
-  font-size: 3rem; font-weight: 200;
-  color: rgba(74,112,181,0.10);
-  line-height: 1; margin-bottom: 20px;
-}
-.card h3 {
-  font-family: Georgia, 'Noto Serif JP', serif;
-  font-size: 1.15rem; font-weight: 700;
-  color: var(--white); margin-bottom: 6px;
-}
-.card .tag {
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.78rem; color: var(--lav-main);
-  font-style: italic; margin-bottom: 16px;
-}
-.card p, .card li {
-  font-size: 0.88rem; color: var(--text-dim); line-height: 1.9;
-}
-.card li { padding-left: 16px; position: relative; margin-bottom: 6px; }
-.card li::before {
-  content:''; width:4px; height:4px; background:var(--teal);
-  border-radius:50%; position:absolute; left:0; top:12px;
-  box-shadow: 0 0 6px rgba(0,181,160,0.3);
-}
-.card h4 {
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.68rem; font-weight: 600;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--blue); margin: 24px 0 10px;
-}
-.card h4:first-of-type { margin-top: 0; }
-
-/* GRIDS */
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
-
-/* THESIS FLOW */
-.thesis-flow { display:grid; gap:20px; }
-.thesis-step {
-  display:flex; align-items:flex-start; gap:16px;
-  padding:16px 20px;
-  background:rgba(255,255,255,0.02);
-  border:1px solid var(--border);
-  border-radius:8px;
-  transition:all var(--ease);
-}
-.thesis-step:hover {
-  background:rgba(255,255,255,0.04);
-  border-color:rgba(95,75,139,0.18);
-}
-.thesis-num {
-  font-family:Cambria,'Inter',sans-serif;
-  font-size:0.85rem; font-weight:700;
-  color:var(--lav-off-white);
-  width:32px; height:32px;
-  display:flex; align-items:center; justify-content:center;
-  border:1px solid rgba(95,75,139,0.3);
-  border-radius:50%; flex-shrink:0;
-  background: rgba(123,80,163,0.12);
-}
-.thesis-step p {
-  font-size:0.82rem; color:var(--text-dim); line-height:1.7; margin:0;
-}
-
-/* TIMELINE */
-.timeline { padding-left:24px; position:relative; }
-.timeline::before { content:''; position:absolute; left:3px; top:6px; bottom:6px; width:1px; background:linear-gradient(to bottom,var(--teal),var(--blue),var(--purple),var(--magenta),transparent); }
-.tl-item { position:relative; margin-bottom:28px; }
-.tl-item::before { content:''; position:absolute; left:-24px; top:7px; width:7px; height:7px; border-radius:50%; background:var(--teal); box-shadow:0 0 8px rgba(0,181,160,0.35); }
-.tl-item:nth-child(2)::before { background:var(--blue); box-shadow:0 0 8px rgba(74,112,181,0.35); }
-.tl-item:nth-child(3)::before { background:var(--purple); box-shadow:0 0 8px rgba(123,80,163,0.35); }
-.tl-item:nth-child(4)::before { background:var(--magenta); box-shadow:0 0 8px rgba(214,74,140,0.35); }
-.tl-year { font-family:Cambria,'Inter',sans-serif; font-size:0.72rem; font-weight:600; color:var(--lav-main); letter-spacing:0.06em; margin-bottom:4px; }
-.tl-item p { font-size:0.85rem; color:var(--text-dim); line-height:1.8; }
-
-/* ARCHIVE */
-.archive-quote {
-  font-family: Georgia, 'Noto Serif JP', serif;
-  font-size:1rem; color:var(--lav-main); font-style:italic;
-  border-left:2px solid var(--purple); padding-left:20px;
-  line-height:2; margin:32px 0;
-}
-.archive-item {
-  display:flex; align-items:center; gap:14px;
-  padding:16px 20px; background:var(--surface);
-  border:1px solid var(--border); border-radius:6px;
-  margin-bottom:10px; transition:background var(--ease);
-}
-.archive-item:hover { background:var(--hover); }
-.archive-dot { width:6px; height:6px; border-radius:50%; background:var(--lav-purple); box-shadow:0 0 6px rgba(155,138,191,0.3); flex-shrink:0; }
-.archive-item span { font-size:0.85rem; color:var(--text-dim); line-height:1.6; }
-
-/* ASSETS */
-.asset {
-  display:flex; align-items:flex-start; gap:16px;
-  padding: 24px 28px; background:var(--surface);
-  border:1px solid var(--border); border-radius:8px;
-  transition: all var(--ease);
-}
-.asset:hover { background:var(--hover); border-color:rgba(95,75,139,0.15); }
-.asset-icon {
-  width:36px; height:36px; border-radius:7px;
-  background:rgba(123,80,163,0.12); border:1px solid rgba(123,80,163,0.18);
-  display:flex; align-items:center; justify-content:center;
-  color:var(--lav-main); font-size:0.78rem; font-weight:600; letter-spacing:0.04em; flex-shrink:0;
-}
-.asset h4 { font-family: Georgia, 'Noto Serif JP', serif; font-size:0.95rem; color:var(--white); margin-bottom:4px; }
-.asset p { font-size:0.82rem; color:var(--text-muted); line-height:1.7; }
-
-.asset-group-label {
-  font-family: Cambria,'Inter',sans-serif;
-  font-size:0.65rem; font-weight:600;
-  letter-spacing:0.22em; text-transform:uppercase;
-  color: var(--lav-main);
-  margin: 8px 0 16px;
-  display: flex; align-items: center; gap: 12px;
-}
-.asset-group-label::after {
-  content:''; flex:1; height:1px; background: var(--border);
-}
-
-/* INFO TABLE */
-.info-table { width:100%; border-collapse:collapse; }
-.info-table tr { border-bottom:1px solid var(--border); }
-.info-table th { font-size:0.75rem; font-weight:600; color:var(--text-muted); text-align:left; padding:14px 0; width:110px; vertical-align:top; }
-.info-table td { font-size:0.88rem; color:var(--text); padding:14px 0; line-height:1.8; }
-
-/* CONTACT */
-.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-.contact-cat {
-  padding:20px 24px; border-radius:8px;
-  background:var(--surface); border:1px solid var(--border);
-  margin-bottom:12px; transition:all var(--ease);
-}
-.contact-cat:hover { background:var(--hover); border-color:rgba(95,75,139,0.15); }
-.contact-cat h4 { font-family: Georgia, 'Noto Serif JP', serif; font-size:0.9rem; color:var(--white); margin-bottom:2px; }
-.contact-cat p { font-size:0.75rem; color:var(--text-muted); }
-.form { display:grid; gap:16px; }
-.form label { font-size:0.72rem; font-weight:500; color:var(--text-muted); letter-spacing:0.05em; }
-.form input, .form select, .form textarea {
-  width:100%; padding:13px 16px;
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:6px; color:var(--text); font-size:0.88rem;
-  font-family:inherit; outline:none; transition:border var(--ease);
-}
-.form input:focus, .form select:focus, .form textarea:focus { border-color:var(--lav-purple); }
-.form select option { color:#111; background:#fff; }
-.form textarea { resize:vertical; min-height:110px; }
-.form input::placeholder, .form textarea::placeholder { color:var(--text-muted); }
-.form-btn {
-  padding:14px 44px; background:transparent;
-  border:1px solid var(--lav-main); color:var(--lav-main);
-  font-family:Cambria,'Inter',sans-serif; font-size:0.78rem; font-weight:500;
-  letter-spacing:0.14em; border-radius:4px; cursor:pointer;
-  transition:all var(--ease); justify-self:start;
-}
-.form-btn:hover { background:var(--lav-main); color:var(--bg); }
-
-/* FOOTER */
-/* Newsletter */
-.newsletter-wrap {
-  max-width: 640px; margin: 0 auto;
-  text-align: center; position: relative;
-}
-.newsletter-bg-orb {
-  position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
-  width: 400px; height: 400px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(123,80,163,0.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-.newsletter-title {
-  font-family: Georgia, 'Noto Serif JP', serif;
-  font-size: 1.9rem; font-weight: 700;
-  color: var(--white); line-height: 1.5;
-  margin-bottom: 20px;
-}
-.newsletter-desc {
-  font-size: 0.92rem; color: var(--text-dim);
-  line-height: 1.9; margin-bottom: 40px;
-}
-.newsletter-form { width: 100%; }
-.newsletter-input-wrap {
-  display: flex; gap: 0;
-  background: rgba(95,75,139,0.06);
-  border: 1px solid rgba(95,75,139,0.2);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: border-color 0.3s;
-}
-.newsletter-input-wrap:focus-within {
-  border-color: rgba(95,75,139,0.5);
-}
-.newsletter-input {
-  flex: 1; background: transparent;
-  border: none; outline: none;
-  padding: 16px 20px;
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.92rem; color: var(--white);
-}
-.newsletter-input::placeholder { color: var(--text-muted); }
-.newsletter-btn {
-  background: linear-gradient(135deg, var(--purple), var(--blue));
-  border: none; cursor: pointer;
-  padding: 16px 28px;
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.78rem; font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--white);
-  transition: opacity 0.25s, transform 0.2s;
-  white-space: nowrap;
-}
-.newsletter-btn:hover { opacity: 0.85; transform: translateX(2px); }
-.newsletter-note {
-  margin-top: 14px;
-  font-size: 0.72rem; color: var(--text-muted);
-  letter-spacing: 0.04em;
-}
-@media (max-width: 560px) {
-  .newsletter-input-wrap { flex-direction: column; border-radius: 8px; }
-  .newsletter-btn { border-radius: 0 0 8px 8px; padding: 14px; }
-  .newsletter-title { font-size: 1.4rem; }
-}
-
-/* Publications */
-.pub-card {
-  display: flex; gap: 28px; align-items: flex-start;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px;
-  transition: border-color 0.3s, transform 0.3s;
-  text-decoration: none; color: inherit;
-}
-.pub-card:hover {
-  border-color: rgba(95,75,139,0.35);
-  transform: translateY(-3px);
-}
-.pub-cover {
-  flex-shrink: 0;
-  width: 90px; height: 120px;
-  border-radius: 6px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2.2rem;
-  position: relative;
-  overflow: hidden;
-}
-.pub-cover-ja {
-  background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
-  box-shadow: 0 8px 24px rgba(0,181,160,0.25);
-}
-.pub-cover-en {
-  background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
-  box-shadow: 0 8px 24px rgba(123,80,163,0.25);
-}
-.pub-cover-icon {
-  font-family: Georgia, 'Noto Serif JP', serif;
-  color: rgba(255,255,255,0.9);
-  font-weight: 700;
-}
-.pub-info { flex: 1; }
-.pub-lang {
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--teal); display: block; margin-bottom: 10px;
-}
-.pub-book-title {
-  font-family: Georgia, 'Noto Serif JP', serif;
-  font-size: 1.15rem; font-weight: 700;
-  color: var(--white); line-height: 1.4;
-  margin-bottom: 6px;
-}
-.pub-subtitle {
-  font-size: 0.82rem; color: var(--text-dim);
-  line-height: 1.6; margin-bottom: 10px;
-}
-.pub-author {
-  font-size: 0.78rem; color: var(--text-muted);
-  margin-bottom: 16px;
-}
-.pub-amazon {
-  display: inline-block;
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.7rem; letter-spacing: 0.1em;
-  color: var(--lav-main);
-  border-bottom: 1px solid rgba(95,75,139,0.3);
-  padding-bottom: 2px;
-  transition: color 0.25s, border-color 0.25s;
-}
-.pub-card:hover .pub-amazon {
-  color: var(--white);
-  border-color: rgba(248,246,252,0.5);
-}
-@media (max-width: 600px) {
-  .pub-card { flex-direction: column; }
-  .pub-cover { width: 72px; height: 96px; }
-}
-
-.footer {
-  position:relative; z-index:1;
-  padding:48px 0 32px;
-  border-top:1px solid var(--border);
-}
-.footer-inner { display:flex; justify-content:center; align-items:center; text-align:center; }
-.footer-logo { font-family:Georgia,'Noto Serif JP',serif; font-size:0.88rem; font-weight:600; color:var(--white); letter-spacing:0.04em; }
-.footer-copy { font-family:Cambria,'Inter',sans-serif; font-size:0.65rem; color:var(--text-muted); }
-
-/* FADE IN */
-.fi { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease,transform 0.7s ease; }
-.fi.v { opacity:1; transform:translateY(0); }
-
-/* RESPONSIVE */
-@media (max-width:960px) {
-  .container { padding:0 24px; }
-  .nav { padding:0 24px; }
-  .nav-links { display:none; }
-  .nav-links.open {
-    display:flex; flex-direction:column;
-    position:fixed; inset:0;
-    background:rgba(247,248,252,0.97);
-    justify-content:center; align-items:center;
-    gap:28px; z-index:99;
-  }
-  .nav-links.open a { font-size:0.95rem; color:var(--text) !important; }
-  .nav-toggle { display:flex; z-index:101; }
-  .hero-catch { font-size:2rem; }
-  .section { padding:80px 0; }
-  .grid-2, .grid-3, .contact-grid { grid-template-columns:1fr; gap:24px; }
-  .card { padding:28px; }
-  .nav-logo { height: 48px; gap: 10px; }
-  .nav-logo img { height: 44px; }
-  .nav-logo-text { font-size: 0.92rem; }
-}
-@media (max-width:600px) {
-  .hero-catch { font-size:1.6rem; }
-  .section-title { font-size:1.6rem; }
-}
-
-/* LANG TOGGLE */
-.lang-toggle {
-  display: flex;
-  gap: 2px;
-  align-items: center;
-  font-family: Cambria, 'Inter', sans-serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-}
-.lang-btn {
-  background: none;
-  border: 1px solid transparent;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 3px 8px;
-  border-radius: 3px;
-  transition: all 0.25s;
-  font-family: inherit;
-  font-size: inherit;
-  letter-spacing: inherit;
-}
-.lang-btn.active {
-  color: var(--lav-main);
-  border-color: rgba(95,75,139,0.3);
-}
-.lang-btn:hover { color: var(--white); }
-</style>
-</head>
-<body>
-<canvas class="stars" id="stars"></canvas>
-
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#top" class="nav-logo" aria-label="Eudaimonia Universe, Inc.">
-      <img src="img/mark-2026-05-14.png?v=1781795429" alt="">
-      <span class="nav-logo-text">Eudaimonia Universe, Inc.</span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#top" class="active" data-i18n="nav-home">Home</a>
-      <a href="#purpose" data-i18n="nav-purpose">Purpose</a>
-      <a href="#humanos" data-i18n="nav-humanos">Human OS</a>
-      <a href="#conflictology" data-i18n="nav-conflictology">Conflictology</a>
-      <a href="#divisions" data-i18n="nav-divisions">Divisions</a>
-      <a href="#projects" data-i18n="nav-projects">Projects</a>
-      <a href="#contact" data-i18n="nav-contact">Contact</a>
-    </div>
-    <div class="lang-toggle" id="langToggle">
-      <button class="lang-btn" id="btnJA" onclick="setLang('ja')">JA</button>
-      <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
-    </div>
-    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
-  </div>
-</nav>
-
-<!-- ==================== ① TOP ==================== -->
-<section class="hero" id="top">
-  <div class="hero-orb hero-orb-1"></div>
-  <div class="hero-orb hero-orb-2"></div>
-  <div class="container hero-content">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <p class="hero-label" data-i18n="hero-label">Think &amp; Do Tank for Emergence</p>
-        <h1 class="hero-catch"><span class="hero-catch-gradient" data-i18n="hero-catch">社会の対立を、<br>創発へと変換する。</span></h1>
-        <p class="hero-sub" data-i18n="hero-sub">Transforming Conflict into Emergence.</p>
-        <p class="hero-desc" data-i18n="hero-desc">
-          Eudaimonia Universeは、<br>
-          人々がより善く幸せで在り続けることができる社会の実現を目指す会社です。<br>
-          対立の構造を診断し、合意・意思決定・関係性の再設計を支援します。
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <span>SCROLL</span>
-    <div class="hero-scroll-bar"></div>
-  </div>
-</section>
-
-<!-- SUB-COPY / INTRO -->
-<section class="section-sm section-bordered" style="z-index:1; position:relative;">
-  <div class="container fi" style="text-align:center;">
-    <p class="section-desc" style="max-width:640px; margin:0 auto; text-align:left;" data-i18n="intro">私たちが向き合うのは、個人・組織・社会に生じる対立の複雑さ。とくに、二元論や正義の衝突です。<br><br>独自理論「Human OS」と「対立学（Conflictology）」にAIの分析を重ねて対立の構造を読み解き、そこに働きかける打ち手「介入」を設計します。<br><br>対立から、新しい関係性や価値が立ち上がる。この現象を、私たちは「創発」と呼んでいます。</p>
-  </div>
-</section>
-
-<!-- ==================== ② PURPOSE / THESIS ==================== -->
-<section class="section section-bordered section-tint" id="purpose" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="grid-2" style="align-items:start;">
-      <div class="fi">
-        <p class="section-label">Purpose / Thesis</p>
-        <h2 class="section-title" data-i18n="purpose-title">対立は問題ではなく、<br>構造である</h2>
-        <p class="section-desc" data-i18n="purpose-desc1">対立は、単なる意見の食い違いや感情のもつれではなく、価値観・仕組み・認識のずれが絡み合う構造的な現象です。構造があるということは、分析でき、設計し直せるということです。</p>
-        <p class="section-desc" style="margin-top:20px;" data-i18n="purpose-desc2">多くの現場で、対立は妥協によって早々に処理されています。しかし、双方が大切にしていたものを掘り下げれば、どちらの案よりも優れた第三の選択肢が見つかることがあります。</p>
-        <p class="section-desc" style="margin-top:20px;" data-i18n="purpose-desc3">
-          Eudaimonia Universeは、対立を「解決すべき問題」ではなく、<strong style="color:var(--white);">「新たな価値を生み出す設計対象」</strong>として捉えます。
-        </p>
-        <div class="archive-quote" style="margin-top:32px;" data-i18n="purpose-quote">
-          創発とは、既存の要素の単なる統合ではなく、<br>
-          それらを超えて新しい関係性や意味が立ち上がる現象。<br>
-          対立は、その起点となる最も重要なエネルギーである。
-        </div>
-      </div>
-      <div class="card fi" style="border-left:3px solid var(--purple);">
-        <h3 style="color:var(--lav-main); font-size:0.72rem; letter-spacing:0.15em; font-family:'Inter',sans-serif; margin-bottom:12px;">FROM CONFLICT TO EMERGENCE</h3>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:20px;" data-i18n="purpose-flow-intro">この考え方を、3つの視点で表しています。</p>
-        <div class="thesis-flow">
-          <div class="thesis-step">
-            <span class="thesis-num" style="color:var(--teal); border-color:rgba(0,181,160,0.3); background:rgba(0,181,160,0.08);">01</span>
-            <div>
-              <h4 style="color:var(--white); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step1-title">構造として捉える</h4>
-              <p data-i18n="purpose-step1">感情論ではなく、分析できる構造として捉える</p>
-            </div>
-          </div>
-          <div class="thesis-step">
-            <span class="thesis-num" style="color:var(--blue); border-color:rgba(74,112,181,0.3); background:rgba(74,112,181,0.08);">02</span>
-            <div>
-              <h4 style="color:var(--white); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step2-title">設計対象として扱う</h4>
-              <p data-i18n="purpose-step2">新たな価値を生み出す設計対象として扱う</p>
-            </div>
-          </div>
-          <div class="thesis-step">
-            <span class="thesis-num" style="color:var(--gold); border-color:rgba(232,200,48,0.4); background:rgba(232,200,48,0.08);">03</span>
-            <div>
-              <h4 style="color:var(--gold); font-size:1rem; margin:0 0 4px;" data-i18n="purpose-step3-title">創発</h4>
-              <p data-i18n="purpose-step3-desc">対立を起点に、新しい関係性と意味が立ち上がる</p>
-            </div>
-          </div>
-        </div>
-        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:24px;" data-i18n="purpose-flow-note">実際の支援の進め方は、<a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(95,75,139,0.3);">Approachの4ステップ</a>をご覧ください。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ③ HUMAN OS ==================== -->
-<section class="section section-bordered" id="humanos" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="grid-2" style="align-items:start;">
-      <div class="fi">
-        <p class="section-label">Human OS</p>
-        <h2 class="section-title" data-i18n="humanos-title">人間は構造である</h2>
-        <p class="section-desc" data-i18n="humanos-desc1">人の意思決定や行動は、固定された性格や能力ではなく、変化し続ける構造から生まれている。これが私たちの人間観です。</p>
-        <p class="section-desc" style="margin-top:20px;" data-i18n="humanos-desc2"><strong style="color:var(--white);">Human OS</strong> は、人間の内的構造を5つの層で捉える独自開発のモデルです。対立の診断では「どの層で何が起きているのか」を読み解く共通言語になります。</p>
-        <p class="section-desc" style="margin-top:20px;" data-i18n="humanos-desc3">思考の食い違いに見える衝突が、実は価値観のずれから生じていることは少なくありません。層を特定できるからこそ、対立の「表面」ではなく「根本」を扱えます。</p>
-      </div>
-      <div class="card fi" style="border-left:3px solid var(--teal);">
-        <h3 style="color:var(--lav-main); font-size:0.72rem; letter-spacing:0.15em; font-family:'Inter',sans-serif; margin-bottom:20px;">HUMAN OS — 5 LAYERS</h3>
-        <div class="thesis-flow">
-          <div class="thesis-step">
-            <span class="thesis-num" style="color:var(--teal); border-color:rgba(0,181,160,0.3); background:rgba(0,181,160,0.08);">B</span>
-            <div>
-              <h4 style="color:var(--white); font-size:0.95rem; margin:0 0 4px;" data-i18n="humanos-B-title">Body — 身体</h4>
-              <p data-i18n="humanos-B-desc">体調やストレスなど、すべての判断の土台になる身体の状態</p>
-            </div>
-          </div>
-          <div class="thesis-step">
-            <span class="thesis-num" style="color:var(--blue); border-color:rgba(74,112,181,0.3); background:rgba(74,112,181,0.08);">E</span>
-            <div>
-              <h4 style="color:var(--white); font-size:0.95rem; margin:0 0 4px;" data-i18n="humanos-E-title">Emotion — 感情</h4>
-              <p data-i18n="humanos-E-desc">対立で最初に表面化しやすい、感情・情動の層</p>
-            </div>
-          </div>
-          <div class="thesis-step">
-            <span class="thesis-num" style="color:var(--purple); border-color:rgba(123,80,163,0.3); background:rgba(123,80,163,0.08);">M</span>
-            <div>
-              <h4 style="color:var(--white); font-size:0.95rem; margin:0 0 4px;" data-i18n="humanos-M1-title">Mind — 思考</h4>
-              <p data-i18n="humanos-M1-desc">認知・論理・判断のクセ</p>
-            </div>
-          </div>
-          <div class="thesis-step">
-            <span class="thesis-num" style="color:var(--magenta); border-color:rgba(214,74,140,0.3); background:rgba(214,74,140,0.08);">M</span>
-            <div>
-              <h4 style="color:var(--white); font-size:0.95rem; margin:0 0 4px;" data-i18n="humanos-M2-title">Meaning — 意味</h4>
-              <p data-i18n="humanos-M2-desc">何を大切にするかという価値観・世界観</p>
-            </div>
-          </div>
-          <div class="thesis-step">
-            <span class="thesis-num" style="color:var(--gold); border-color:rgba(232,200,48,0.3); background:rgba(232,200,48,0.08);">R</span>
-            <div>
-              <h4 style="color:var(--white); font-size:0.95rem; margin:0 0 4px;" data-i18n="humanos-R-title">Relationship — 関係性</h4>
-              <p data-i18n="humanos-R-desc">他者・社会との関係の構造</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ④ CONFLICTOLOGY ==================== -->
-<section class="section section-bordered section-tint" id="conflictology" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="fi" style="margin-bottom:56px;">
-      <p class="section-label">Conflictology — 対立学</p>
-      <h2 class="section-title" data-i18n="conflictology-title">まず、正しく診断する</h2>
-      <p class="section-desc" data-i18n="conflictology-desc">対立学（Conflictology）は、対立を価値・構造・認知・存在の4タイプに分類して診断する独自フレームワークです。私たちは対立をいきなり解決しようとせず、まず診断します。診断を誤れば、どんな打ち手も空振りするからです。</p>
-    </div>
-    <div class="grid-2 fi" style="align-items:start;">
-      <div>
-        <div class="card" style="margin-bottom:16px; border-top:2px solid var(--teal);">
-          <div style="display:flex; gap:14px; align-items:center;">
-            <span class="thesis-num" style="color:var(--teal); border-color:rgba(0,181,160,0.3); background:rgba(0,181,160,0.08);">01</span>
-            <div>
-              <h4 style="color:var(--white); font-size:1rem; margin:0 0 2px;" data-i18n="conflictology-c1-title">価値の対立</h4>
-              <p style="margin:0;" data-i18n="conflictology-c1-desc">Value — 「何を大切にするか」がずれている対立</p>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="margin-bottom:16px; border-top:2px solid var(--blue);">
-          <div style="display:flex; gap:14px; align-items:center;">
-            <span class="thesis-num" style="color:var(--blue); border-color:rgba(74,112,181,0.3); background:rgba(74,112,181,0.08);">02</span>
-            <div>
-              <h4 style="color:var(--white); font-size:1rem; margin:0 0 2px;" data-i18n="conflictology-c2-title">構造の対立</h4>
-              <p style="margin:0;" data-i18n="conflictology-c2-desc">Structure — 組織の仕組みが生む対立。当事者を入れ替えても再発する</p>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="margin-bottom:16px; border-top:2px solid var(--purple);">
-          <div style="display:flex; gap:14px; align-items:center;">
-            <span class="thesis-num" style="color:var(--purple); border-color:rgba(123,80,163,0.3); background:rgba(123,80,163,0.08);">03</span>
-            <div>
-              <h4 style="color:var(--white); font-size:1rem; margin:0 0 2px;" data-i18n="conflictology-c3-title">認知の対立</h4>
-              <p style="margin:0;" data-i18n="conflictology-c3-desc">Cognition — 同じ事実でも、解釈が食い違う対立</p>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="border-top:2px solid var(--magenta);">
-          <div style="display:flex; gap:14px; align-items:center;">
-            <span class="thesis-num" style="color:var(--magenta); border-color:rgba(214,74,140,0.3); background:rgba(214,74,140,0.08);">04</span>
-            <div>
-              <h4 style="color:var(--white); font-size:1rem; margin:0 0 2px;" data-i18n="conflictology-c4-title">存在の対立</h4>
-              <p style="margin:0;" data-i18n="conflictology-c4-desc">Existence — 役割や居場所が脅かされる感覚から生じる、最も根深い対立</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card" style="border-left:3px solid var(--gold);">
-        <h3 style="color:var(--gold); font-size:0.72rem; letter-spacing:0.15em; font-family:'Inter',sans-serif; margin-bottom:16px;">MESSAGE</h3>
-        <p style="font-family:Georgia,'Noto Serif JP',serif; font-size:1.35rem; font-weight:700; color:var(--white); line-height:1.7; margin-bottom:24px;" data-i18n="conflictology-msg-title">
-          対立は、扱い方次第で<br>価値の源泉になる。
-        </p>
-        <p style="font-size:0.88rem; color:var(--text-dim); line-height:1.9;" data-i18n="conflictology-msg-desc">対立のタイプと発生箇所を正確に診断できれば、対立は新たな関係性と価値を生み出す起点へと変わります。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑤ APPROACH ==================== -->
-<section class="section section-bordered" id="approach" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="fi" style="max-width:680px; margin:0 auto;">
-      <p class="section-label" style="text-align:center;">Approach</p>
-      <h2 class="section-title" style="text-align:center;" data-i18n="approach-title">構造で扱い、最適解を設計する</h2>
-      <p class="section-desc" style="text-align:center; margin:0 auto 48px;" data-i18n="approach-desc">感覚ではなく、構造で対立を扱う。唯一の正解ではなく、その組織にとっての最適解を設計する。それが私たちの進め方です。</p>
-      <div class="timeline" style="margin-top:16px;">
-        <div class="tl-item">
-          <div class="tl-year" data-i18n="approach-s1-label">Step 01 — Foundation</div>
-          <p data-i18n="approach-s1-desc"><strong style="color:var(--white);">構造理解（Human OS）</strong><br>関わる人々の内的構造を、5つの層で把握する。</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year" data-i18n="approach-s2-label">Step 02 — Diagnosis</div>
-          <p data-i18n="approach-s2-desc"><strong style="color:var(--white);">診断（対立学）</strong><br>対立がどこで・なぜ起きているのかを、4タイプで診断する。</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year" data-i18n="approach-s3-label">Step 03 — Design</div>
-          <p data-i18n="approach-s3-desc"><strong style="color:var(--white);">介入設計</strong><br>AIの分析を活用し、問いの設計、合意形成プロセスの組み直し、対話の場の再設計などの介入を設計する。</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year" data-i18n="approach-s4-label">Step 04 — Emergence</div>
-          <p data-i18n="approach-s4-desc"><strong style="color:var(--white);">創発</strong><br>対立を起点に、新しい関係性と選択肢が立ち上がる。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑥ DIVISIONS ==================== -->
-<section class="section section-bordered section-tint" id="divisions" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="fi" style="text-align:center; margin-bottom:64px;">
-      <p class="section-label">Divisions</p>
-      <h2 class="section-title" data-i18n="divisions-title">研究・実装・資産化が循環する3つの部門</h2>
-      <p class="section-desc" style="max-width:720px; margin:0 auto;" data-i18n="divisions-desc">研究がつくった理論を、実装が現場で検証し、資産化が再現可能な形に変える。この循環がThink &amp; Do Tankの骨格です。</p>
-    </div>
-    <div class="grid-3 fi">
-      <div class="card" style="text-align:center; border-top:2px solid var(--teal);">
-        <div class="card-num">01</div>
-        <h3>Think Tank</h3>
-        <div class="tag" data-i18n="divisions-d1-tag">対立と人間構造の研究</div>
-        <ul style="text-align:left; margin-top:12px;">
-          <li data-i18n="divisions-d1-li1">Human OSの進化</li>
-          <li data-i18n="divisions-d1-li2">対立学の体系化</li>
-          <li data-i18n="divisions-d1-li3">社会構造の分析</li>
-        </ul>
-      </div>
-      <div class="card" style="text-align:center; border-top:2px solid var(--blue);">
-        <div class="card-num">02</div>
-        <h3>Produce</h3>
-        <div class="tag" data-i18n="divisions-d2-tag">現場への実装</div>
-        <ul style="text-align:left; margin-top:12px;">
-          <li data-i18n="divisions-d2-li1">組織変容の伴走</li>
-          <li data-i18n="divisions-d2-li2">意思決定プロセスの設計支援</li>
-          <li data-i18n="divisions-d2-li3">事業開発支援</li>
-        </ul>
-        <p style="text-align:left; font-size:0.78rem; color:var(--lav-main); margin-top:12px;" data-i18n="divisions-d2-note">企業の皆さまからのご相談の窓口です。</p>
-      </div>
-      <div class="card" style="text-align:center; border-top:2px solid var(--purple);">
-        <div class="card-num">03</div>
-        <h3>Asset</h3>
-        <div class="tag" data-i18n="divisions-d3-tag">知の資産化・プロダクト化</div>
-        <ul style="text-align:left; margin-top:12px;">
-          <li data-i18n="divisions-d3-li1">AIツール化</li>
-          <li data-i18n="divisions-d3-li2">フレームワーク化</li>
-          <li data-i18n="divisions-d3-li3">社会実装</li>
-        </ul>
-        <p style="text-align:left; font-size:0.78rem; color:var(--text-muted); margin-top:12px;" data-i18n="divisions-d3-note">一度きりの支援で終わらせず、方法論として再現可能にします。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑦ PROJECTS ==================== -->
-<section class="section section-bordered" id="projects" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="fi" style="margin-bottom:56px;">
-      <p class="section-label">Projects</p>
-      <h2 class="section-title" data-i18n="projects-title">自社発の社会実装プロジェクト</h2>
-      <p class="section-desc" data-i18n="projects-desc">研究成果を現実の社会で検証する、自社発のプロジェクトです。</p>
-    </div>
-    <div class="grid-3 fi">
-      <div class="card" style="text-align:center;">
-        <h3>育業 <span style="font-family:Cambria,'Inter',sans-serif; font-size:0.72rem; color:var(--text-muted); font-weight:400; letter-spacing:0.08em;">Ikugyo</span></h3>
-        <div class="tag" data-i18n="projects-p1-tag">ライフイベント → 人材進化</div>
-        <p data-i18n="projects-p1-desc">育児などのライフイベントを、人が進化する機会へと転換する</p>
-      </div>
-      <div class="card" style="text-align:center;">
-        <h3>The Guild</h3>
-        <div class="tag" data-i18n="projects-p2-tag">文化資本・関係性資本の再設計</div>
-        <p data-i18n="projects-p2-desc">文化資本と関係性資本を捉え直し、創発が生まれる土壌を築く</p>
-      </div>
-      <div class="card" style="text-align:center;">
-        <h3>Giver研究</h3>
-        <div class="tag" data-i18n="projects-p3-tag">利他 × 創発</div>
-        <p data-i18n="projects-p3-desc">利他的にふるまう人（Giver）と創発の関係を探究し、対立学の理論を検証する</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑧ ASSETS ==================== -->
-<section class="section section-bordered section-tint" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="fi" style="margin-bottom:56px;">
-      <p class="section-label">Assets</p>
-      <h2 class="section-title" data-i18n="assets-title">変換を再現可能にする、知的資産体系</h2>
-      <p class="section-desc" data-i18n="assets-desc">対立から創発への変換を、再現可能なプロセスにするための知的資産です。理論（基盤）と道具（応用）の二層で構成されます。</p>
-    </div>
-
-    <div class="fi" style="margin-bottom:40px;">
-      <div class="asset-group-label" data-i18n="assets-foundation">Foundation — 基盤アセット</div>
-      <div class="grid-2">
-        <div class="asset" style="border-left:3px solid var(--teal);">
-          <div class="asset-icon" style="background:rgba(0,181,160,0.12); border-color:rgba(0,181,160,0.2); color:var(--teal);">OS</div>
-          <div>
-            <h4 data-i18n="assets-hos-title">Human OS</h4>
-            <p data-i18n="assets-hos-desc">Body・Emotion・Mind・Meaning・Relationshipの5層で人間の内的構造を捉えるモデル。診断と介入設計の土台。</p>
-          </div>
-        </div>
-        <div class="asset" style="border-left:3px solid var(--purple);">
-          <div class="asset-icon" style="background:rgba(123,80,163,0.12); border-color:rgba(123,80,163,0.2); color:var(--purple);">CL</div>
-          <div>
-            <h4 data-i18n="assets-cl-title">対立学</h4>
-            <p data-i18n="assets-cl-desc">価値・構造・認知・存在の4タイプで対立を診断するフレームワーク。介入設計の基盤理論。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="fi">
-      <div class="asset-group-label" data-i18n="assets-application">Application — 応用アセット</div>
-      <div class="grid-3">
-        <div class="asset" style="flex-direction:column; align-items:flex-start;">
-          <div class="asset-icon">AI</div>
-          <div style="margin-top:14px;">
-            <h4 data-i18n="assets-ai-title">AIソリューション</h4>
-            <p data-i18n="assets-ai-desc">診断から介入プランの提示までを支援するAIプロダクト。</p>
-          </div>
-        </div>
-        <div class="asset" style="flex-direction:column; align-items:flex-start;">
-          <div class="asset-icon">DL</div>
-          <div style="margin-top:14px;">
-            <h4 data-i18n="assets-dl-title">対話設計プロトコル</h4>
-            <p data-i18n="assets-dl-desc">関係性と意思決定の再設計を進める、対話の場の設計手順。</p>
-          </div>
-        </div>
-        <div class="asset" style="flex-direction:column; align-items:flex-start;">
-          <div class="asset-icon">OR</div>
-          <div style="margin-top:14px;">
-            <h4 data-i18n="assets-or-title">組織変容フレーム</h4>
-            <p data-i18n="assets-or-desc">「構造理解 → 診断 → 介入設計 → 創発」を組織単位で実装するフレームワーク。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑨ ARCHIVES ==================== -->
-<section class="section section-bordered" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="grid-2" style="align-items:start;">
-      <div class="fi">
-        <p class="section-label">Archives</p>
-        <h2 class="section-title" data-i18n="archives-title">現在の理論を支える、<br>蓄積された知</h2>
-        <p class="section-desc" data-i18n="archives-desc">創業以来の研究・事業活動で培われた知は、現在の「対立から創発へ」のプロセスを支える基盤に統合されています。</p>
-
-      </div>
-      <div class="fi">
-        <div class="archive-item"><div class="archive-dot"></div><span data-i18n="archives-a1"><strong style="color:var(--white);">生きがい経営</strong><br>生きがいを起点とした経営の探究 → Human OSの基盤</span></div>
-        <div class="archive-item"><div class="archive-dot"></div><span data-i18n="archives-a2"><strong style="color:var(--white);">Omusubi</strong><br>人と人の結びつきをめぐる取り組み → 関係性の設計原理</span></div>
-        <div class="archive-item"><div class="archive-dot"></div><span data-i18n="archives-a3"><strong style="color:var(--white);">IMX</strong><br>介入設計の方法論の源流となった活動</span></div>
-        <div class="archive-item"><div class="archive-dot"></div><span data-i18n="archives-a4"><strong style="color:var(--white);">研究・論文</strong><br>学術的な研究の蓄積 → 対立学の理論基盤</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑩ PUBLICATIONS ==================== -->
-<section class="section section-bordered section-tint" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="fi" style="margin-bottom:56px;">
-      <p class="section-label" data-i18n="pub-label">Publications</p>
-      <h2 class="section-title" data-i18n="pub-title">代表著書</h2>
-      <p class="section-desc" data-i18n="pub-desc">水野貴之の著書。Human OSと生きがい経営の理論を体系化</p>
-    </div>
-    <div class="grid-2 fi">
-
-      <!-- 書籍 1: ikigai経営術 -->
-      <a href="https://amzn.asia/d/07vj6FGu" target="_blank" rel="noopener" class="pub-card">
-        <div class="pub-cover pub-cover-ja">
-          <span class="pub-cover-icon">生</span>
-        </div>
-        <div class="pub-info">
-          <span class="pub-lang" data-i18n="pub-lang-ja">日本語版</span>
-          <h3 class="pub-book-title" data-i18n="pub-book1-title">ikigai 経営術</h3>
-          <p class="pub-subtitle" data-i18n="pub-book1-sub">自己実現を企業の原動力に変える方法</p>
-          <p class="pub-author">水野 貴之 著</p>
-          <span class="pub-amazon" data-i18n="pub-amazon">Amazon で見る →</span>
-        </div>
-      </a>
-
-      <!-- 書籍 2: ikigai intelligence -->
-      <a href="https://amzn.asia/d/0hevtcf2" target="_blank" rel="noopener" class="pub-card">
-        <div class="pub-cover pub-cover-en">
-          <span class="pub-cover-icon">生</span>
-        </div>
-        <div class="pub-info">
-          <span class="pub-lang" data-i18n="pub-lang-en">English Edition</span>
-          <h3 class="pub-book-title">ikigai intelligence</h3>
-          <p class="pub-subtitle" data-i18n="pub-book2-sub">Transforming personal purpose into a growth engine for your organization</p>
-          <p class="pub-author">Takayuki Mizuno</p>
-          <span class="pub-amazon">Amazon →</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑪ ABOUT ==================== -->
-<section class="section section-bordered section-tint" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="grid-2" style="align-items:start;">
-      <div class="fi">
-        <p class="section-label">About</p>
-        <h2 class="section-title" data-i18n="about-title">研究 × 実装 × 資産化の<br>Think &amp; Do Tank</h2>
-        <p class="section-desc" data-i18n="about-desc">人間と対立の構造を研究し、組織や社会の現場で実装するThink &amp; Do Tank。人間の意識やIkigaiなど、長年の内面研究を基盤としています。</p>
-        <table class="info-table" style="margin-top:32px;">
-          <tr><th data-i18n="about-th-org">組織名</th><td>Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）</td></tr>
-          <tr><th>Founder &amp; CEO</th><td>Takayuki Mizuno（水野 貴之）</td></tr>
-          <tr><th data-i18n="about-th-type">形態</th><td>Think &amp; Do Tank</td></tr>
-          <tr><th data-i18n="about-th-base">基盤</th><td>Human OS &times; 対立学 &times; AI介入設計</td></tr>
-          <tr><th data-i18n="about-th-mission">ミッション</th><td>社会の対立を創発へと変換する<br>Transforming Conflict into Emergence</td></tr>
-          <tr><th data-i18n="about-th-structure">構成</th><td>Think Tank Division<br>Produce Division<br>Asset Division</td></tr>
-
-        </table>
-      </div>
-      <div class="fi">
-        <h3 style="color:var(--white); font-size:1.1rem; margin-bottom:20px; font-family:Georgia,'Noto Serif JP',serif;">特徴</h3>
-        <div class="card" style="margin-bottom:16px; border-left:3px solid var(--teal);">
-          <h4 style="color:var(--teal);" data-i18n="about-f1-title">研究 × 実装 × 資産化</h4>
-          <p data-i18n="about-f1-desc">理論の探究から現場実装、資産化までを一社で担う。研究と現場が循環し、理論が磨かれ続けます。</p>
-        </div>
-        <div class="card" style="margin-bottom:16px; border-left:3px solid var(--blue);">
-          <h4 style="color:var(--blue);" data-i18n="about-f2-title">構造で診断するアプローチ</h4>
-          <p data-i18n="about-f2-desc">Human OSと対立学に基づいて診断し、介入を設計する。だから、打ち手の理由を説明できます。</p>
-        </div>
-        <div class="card" style="border-left:3px solid var(--purple);">
-          <h4 style="color:var(--purple);" data-i18n="about-f3-title">グローバル対応</h4>
-          <p data-i18n="about-f3-desc">対立の構造は、言語や文化を越えて共通。多文化環境でも同じアプローチで診断します。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑫ FAQ ==================== -->
-<section class="section section-bordered" id="faq" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="fi" style="margin-bottom:40px;">
-      <p class="section-label">FAQ</p>
-      <h2 class="section-title" data-i18n="faq-title">よくあるご質問</h2>
-    </div>
-    <div class="fi">
-      <div class="card" style="margin-bottom:16px;">
-        <h3 data-i18n="faq-q1">Eudaimonia Universe（ユーダイモニアユニバース）はどのような会社ですか？</h3>
-        <p data-i18n="faq-a1">Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）は、組織や社会に生じる対立を構造から診断し、新しい合意・意思決定・関係性の設計を支援するThink &amp; Do Tankです。独自開発した理論「Human OS」と「対立学」を基盤に、研究（Think Tank）・実装（Produce）・資産化（Asset）の3部門が循環する体制をとっています。Founder &amp; CEOはTakayuki Mizuno（水野 貴之）です。</p>
-      </div>
-      <div class="card" style="margin-bottom:16px;">
-        <h3 data-i18n="faq-q2">Human OSとは何ですか？</h3>
-        <p data-i18n="faq-a2">Human OSとは、人間の内的構造をBody（身体）・Emotion（感情）・Mind（思考）・Meaning（意味）・Relationship（関係性）の5層で捉える、Eudaimonia Universeが独自開発したモデルです。対立の診断では「どの層で何が起きているのか」を読み解く共通言語として使います。</p>
-      </div>
-      <div class="card" style="margin-bottom:16px;">
-        <h3 data-i18n="faq-q3">対立学（Conflictology）とは何ですか？</h3>
-        <p data-i18n="faq-a3">対立学（Conflictology）とは、対立を「価値」「構造」「認知」「存在」の4タイプに分類して診断する、Eudaimonia Universeが独自開発したフレームワークです。どのタイプの対立が・どこで起きているのかを診断してから打ち手を選ぶことで、的外れな介入を避けます。</p>
-      </div>
-      <div class="card" style="margin-bottom:16px;">
-        <h3 data-i18n="faq-q4">組織の対立は、なぜ話し合いだけでは解決しないのですか？</h3>
-        <p data-i18n="faq-a4">対立は単一の原因ではなく、複数の要因が同時に絡んで発生する構造的な現象だからです。原因のタイプを特定しないまま話し合いを重ねても、打ち手が原因と噛み合わず空振りします。だからこそ、私たちは対立をいきなり解決しようとせず、まず診断を行います。</p>
-      </div>
-      <div class="card" style="margin-bottom:16px;">
-        <h3 data-i18n="faq-q5">「介入」とは具体的に何をするのですか？</h3>
-        <p data-i18n="faq-a5">介入とは、対立の構造に働きかける具体的な打ち手のことです。論点を捉え直す問いの設計（視点の再構成）、会議体や合意形成プロセスの組み直し（意思決定の再設計）、役割や対話の場のつくり直し（関係性の再定義）などが含まれます。唯一の正解を押しつけるのではなく、診断結果に基づいて、その組織にとっての最適解を設計します。</p>
-      </div>
-      <div class="card" style="margin-bottom:16px;">
-        <h3 data-i18n="faq-q6">支援はどのようなプロセスで進みますか？</h3>
-        <p data-i18n="faq-a6">支援は「構造理解 → 診断 → 介入設計 → 創発」の4ステップで進みます。まずHuman OSの5層で関わる人々の内的構造を把握し、次に対立学の4タイプで対立がどこで・なぜ起きているのかを診断します。診断に基づきAIの分析を活用しながら介入を設計し、対立を起点に新しい関係性・意味・これまでなかった選択肢が立ち上がる状態（創発）を目指します。</p>
-      </div>
-      <div class="card" style="margin-bottom:16px;">
-        <h3 data-i18n="faq-q7">AIはどのように活用されていますか？</h3>
-        <p data-i18n="faq-a7">介入を設計するのは私たち人間であり、AIはその分析を支援する役割を担います。Human OSと対立学にAIによる分析を組み合わせて対立の構造を読み解くことで、介入設計をより速く、より精緻にします。また、対立の診断から介入プランの提示までを支援するAIプロダクトの開発も進めています。</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="faq-q8">どのような相談ができますか？</h3>
-        <p data-i18n="faq-a8">組織変容・事業開発の実装プロジェクトのほか、Human OS・対立学の共同研究、投資・パートナーシップ、取材・講演のご相談をお受けしています。新規事業開発部門、組織開発部門、人事部門、経営管理室等の皆さまが主な想定窓口で、課題の整理段階からご一緒します。ご連絡は info@eudaimonialab.org へ（日本語・英語対応）。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑬ NEWSLETTER ==================== -->
-<section class="section section-bordered" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="newsletter-wrap fi">
-      <div class="newsletter-bg-orb"></div>
-      <p class="section-label" data-i18n="nl-label">Newsletter</p>
-      <h2 class="newsletter-title" data-i18n="nl-title">対立と創発の最前線を、<br>あなたの受信箱へ。</h2>
-      <p class="newsletter-desc" data-i18n="nl-desc">Human OS・対立学・社会実装に関する研究レポートをお届けします。</p>
-      <!-- TODO: ブラストメールのフォームURLを action に設定してください -->
-      <form class="newsletter-form" action="#" method="post" onsubmit="event.preventDefault();">
-        <div class="newsletter-input-wrap">
-          <input
-            type="email"
-            name="email"
-            class="newsletter-input"
-            data-i18n-placeholder="nl-placeholder"
-            placeholder="your@email.com"
-            required
-          >
-          <button type="submit" class="newsletter-btn">
-            <span data-i18n="nl-btn">登録する</span>
-          </button>
-        </div>
-        <p class="newsletter-note" data-i18n="nl-note">登録は無料です。いつでも解除できます。</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ⑬ CONTACT ==================== -->
-<section class="section section-bordered" id="contact" style="z-index:1; position:relative;">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="fi">
-        <p class="section-label">Contact</p>
-        <h2 class="section-title" style="font-size:1.8rem;" data-i18n="contact-title">お問い合わせ</h2>
-        <a href="mailto:info@eudaimonialab.org" style="display:inline-block; margin-top:20px; font-family:Cambria,'Inter',sans-serif; font-size:1.05rem; color:var(--lav-main); letter-spacing:0.04em; border-bottom:1px solid rgba(95,75,139,0.3); padding-bottom:4px; transition:all var(--ease);">info@eudaimonialab.org</a>
-        <p style="font-size:0.88rem; color:var(--text-dim); line-height:1.9; margin-top:20px;" data-i18n="contact-lead">新規事業開発部門、組織開発部門、人事部門、経営管理室等の皆さまからのご相談をお受けしています。<br>状況を伺いながら、課題の整理からご一緒します。</p>
-        <div style="margin-top:32px;">
-          <div class="contact-cat">
-            <h4 data-i18n="contact-cat2-title">組織変容・事業開発</h4>
-            <p data-i18n="contact-cat2-desc">組織内の対立の診断、意思決定プロセスの設計、事業開発支援など、実装プロジェクトのご相談</p>
-          </div>
-          <div class="contact-cat">
-            <h4 data-i18n="contact-cat1-title">共同研究</h4>
-            <p data-i18n="contact-cat1-desc">Human OS・対立学の共同研究やプロジェクトの企画段階からのご相談</p>
-          </div>
-          <div class="contact-cat">
-            <h4 data-i18n="contact-cat3-title">投資・パートナーシップ</h4>
-            <p data-i18n="contact-cat3-desc">Human OS・対立学の社会実装活動への投資・協賛・提携のご相談</p>
-          </div>
-          <div class="contact-cat">
-            <h4 data-i18n="contact-cat4-title">メディア・講演</h4>
-            <p data-i18n="contact-cat4-desc">Human OS・対立学・創発に関する取材・講演・登壇のご依頼</p>
-          </div>
-        </div>
-      </div>
-      <form class="form fi" onsubmit="event.preventDefault(); const subject=encodeURIComponent('[Web] '+(this.topic.value||'お問い合わせ')); const body=encodeURIComponent('お名前: '+this.name.value+'\n\n'+this.message.value); window.location.href='mailto:info@eudaimonialab.org?subject='+subject+'&body='+body;">
-        <div><label data-i18n="contact-name-label">お名前</label><input name="name" type="text" data-i18n-placeholder="contact-name-placeholder" placeholder="山田 太郎" required></div>
-        <div><label data-i18n="contact-email-label">メールアドレス</label><input name="email" type="email" placeholder="your@email.com" required></div>
-        <div>
-          <label data-i18n="contact-topic-label">ご相談内容</label>
-          <select name="topic">
-            <option value="" data-i18n="contact-topic-default">お選びください</option>
-            <option data-i18n="contact-topic-2">組織変容・事業開発</option>
-            <option data-i18n="contact-topic-1">共同研究</option>
-            <option data-i18n="contact-topic-3">投資・パートナーシップ</option>
-            <option data-i18n="contact-topic-4">メディア・講演</option>
-            <option data-i18n="contact-topic-5">その他</option>
-          </select>
-        </div>
-        <div><label data-i18n="contact-msg-label">メッセージ</label><textarea name="message" data-i18n-placeholder="contact-msg-placeholder" placeholder="ご相談内容をお書きください"></textarea></div>
-        <button type="submit" class="form-btn" data-i18n="contact-send">SEND MESSAGE</button>
-        <p style="font-size:0.72rem; color:var(--text-muted); margin-top:4px;" data-i18n="contact-send-note">送信すると info@eudaimonialab.org 宛にメールが作成されます。</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-inner" style="flex-direction:column; gap:16px;">
-      <a href="#top" class="nav-logo" style="height:auto;" aria-label="Eudaimonia Universe, Inc.">
-        <img src="img/mark-2026-05-14.png?v=1781795429" alt="" style="height:54px;">
-      </a>
-      <div style="display:flex; gap:28px; font-family:Cambria,'Inter',sans-serif; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;">
-        <a href="terms.html" style="color:var(--text-muted); transition:color var(--ease);" onmouseover="this.style.color='var(--lav-main)'" onmouseout="this.style.color='var(--text-muted)'" data-i18n="footer-terms">利用規約</a>
-        <a href="privacy.html" style="color:var(--text-muted); transition:color var(--ease);" onmouseover="this.style.color='var(--lav-main)'" onmouseout="this.style.color='var(--text-muted)'" data-i18n="footer-privacy">プライバシーポリシー</a>
-      </div>
-      <span class="footer-copy">&copy; 2026 Eudaimonia Universe, Inc.</span>
-    </div>
-  </div>
-</footer>
-
-<script>
-// Stars canvas animation
-(function(){
-  const c = document.getElementById('stars');
-  if(!c) return;
-  const ctx = c.getContext('2d');
-  let S = [];
-  const N = 180;
-  function resize(){
-    c.width = window.innerWidth;
-    c.height = Math.max(document.documentElement.scrollHeight, window.innerHeight);
-    S = [];
-    for(let i=0;i<N;i++) S.push({
-      x:Math.random()*c.width, y:Math.random()*c.height,
-      r:Math.random()*1.1+0.2, a:Math.random()*0.4+0.08,
-      p:Math.random()*0.018+0.004, ph:Math.random()*Math.PI*2
-    });
-  }
-  let f=0;
-  function draw(){
-    ctx.clearRect(0,0,c.width,c.height);
-    f++;
-    const palette=[
-      [197,184,222],[155,138,191],[0,181,160],[74,112,181],[123,80,163],[214,74,140]
-    ];
-    S.forEach((s,i)=>{
-      const a=s.a+Math.sin(f*s.p+s.ph)*0.12;
-      const c2=palette[i%palette.length];
-      ctx.beginPath();
-      ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(${c2[0]},${c2[1]},${c2[2]},${Math.max(0,a)})`;
-      ctx.fill();
-    });
-    requestAnimationFrame(draw);
-  }
-  resize(); draw();
-  window.addEventListener('resize',resize);
-  window.addEventListener('load',resize);
-  new ResizeObserver(resize).observe(document.body);
-})();
-
-// Nav scroll
-const nav=document.getElementById('nav');
-if(nav) window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
-
-// Fade in
-const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')}),{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
-
-// Mobile menu
-const toggle=document.getElementById('navToggle');
-const links=document.getElementById('navLinks');
-if(toggle&&links){
-  toggle.addEventListener('click',()=>links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-}
-
-// Active nav on scroll
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const top = section.offsetTop - 100;
-    if(scrollY >= top) current = section.getAttribute('id');
-  });
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if(link.getAttribute('href') === '#' + current) link.classList.add('active');
-  });
-});
-
-// ================================================================
-// i18n — Japanese / English toggle
-// ================================================================
-const translations = {
-  ja: {
-    'nav-home': 'Home',
-    'nav-purpose': 'Purpose',
-    'nav-humanos': 'Human OS',
-    'nav-conflictology': 'Conflictology',
-    'nav-divisions': 'Divisions',
-    'nav-projects': 'Projects',
-    'nav-contact': 'Contact',
-
-    'hero-label': 'Think &amp; Do Tank for Emergence',
-    'hero-catch': '社会の対立を、<br>創発へと変換する。',
-    'hero-sub': 'Transforming Conflict into Emergence.',
-    'hero-desc': 'Eudaimonia Universeは、<br>人々がより善く幸せで在り続けることができる社会の実現を目指す会社です。<br>対立の構造を診断し、合意・意思決定・関係性の再設計を支援します。',
-    'hero-en': 'Diagnosing conflict structurally and designing interventions<br>to create new relationships and value.',
-
-    'intro': '私たちが向き合うのは、個人・組織・社会に生じる対立の複雑さ。とくに、二元論や正義の衝突です。<br><br>独自理論「Human OS」と「対立学（Conflictology）」にAIの分析を重ねて対立の構造を読み解き、そこに働きかける打ち手「介入」を設計します。<br><br>対立から、新しい関係性や価値が立ち上がる。この現象を、私たちは「創発」と呼んでいます。',
-
-    'purpose-title': '対立は問題ではなく、<br>構造である',
-    'purpose-desc1': '対立は、単なる意見の食い違いや感情のもつれではなく、価値観・仕組み・認識のずれが絡み合う構造的な現象です。構造があるということは、分析でき、設計し直せるということです。',
-    'purpose-desc2': '多くの現場で、対立は妥協によって早々に処理されています。しかし、双方が大切にしていたものを掘り下げれば、どちらの案よりも優れた第三の選択肢が見つかることがあります。',
-    'purpose-desc3': 'Eudaimonia Universeは、対立を「解決すべき問題」ではなく、<strong style="color:var(--white);">「新たな価値を生み出す設計対象」</strong>として捉えます。',
-    'purpose-quote': '創発とは、既存の要素の単なる統合ではなく、<br>それらを超えて新しい関係性や意味が立ち上がる現象。<br>対立は、その起点となる最も重要なエネルギーである。',
-    'purpose-flow-intro': 'この考え方を、3つの視点で表しています。',
-    'purpose-step1-title': '構造として捉える',
-    'purpose-step1': '感情論ではなく、分析できる構造として捉える',
-    'purpose-step2-title': '設計対象として扱う',
-    'purpose-step2': '新たな価値を生み出す設計対象として扱う',
-    'purpose-step3-title': '創発',
-    'purpose-step3-desc': '対立を起点に、新しい関係性と意味が立ち上がる',
-    'purpose-flow-note': '実際の支援の進め方は、<a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(95,75,139,0.3);">Approachの4ステップ</a>をご覧ください。',
-
-    'humanos-title': '人間は構造である',
-    'humanos-desc1': '人の意思決定や行動は、固定された性格や能力ではなく、変化し続ける構造から生まれている。これが私たちの人間観です。',
-    'humanos-desc2': '<strong style="color:var(--white);">Human OS</strong> は、人間の内的構造を5つの層で捉える独自開発のモデルです。対立の診断では「どの層で何が起きているのか」を読み解く共通言語になります。',
-    'humanos-desc3': '思考の食い違いに見える衝突が、実は価値観のずれから生じていることは少なくありません。層を特定できるからこそ、対立の「表面」ではなく「根本」を扱えます。',
-    'humanos-B-title': 'Body — 身体',
-    'humanos-B-desc': '体調やストレスなど、すべての判断の土台になる身体の状態',
-    'humanos-E-title': 'Emotion — 感情',
-    'humanos-E-desc': '対立で最初に表面化しやすい、感情・情動の層',
-    'humanos-M1-title': 'Mind — 思考',
-    'humanos-M1-desc': '認知・論理・判断のクセ',
-    'humanos-M2-title': 'Meaning — 意味',
-    'humanos-M2-desc': '何を大切にするかという価値観・世界観',
-    'humanos-R-title': 'Relationship — 関係性',
-    'humanos-R-desc': '他者・社会との関係の構造',
-
-    'conflictology-title': 'まず、正しく診断する',
-    'conflictology-desc': '対立学（Conflictology）は、対立を価値・構造・認知・存在の4タイプに分類して診断する独自フレームワークです。私たちは対立をいきなり解決しようとせず、まず診断します。診断を誤れば、どんな打ち手も空振りするからです。',
-    'conflictology-c1-title': '価値の対立',
-    'conflictology-c1-desc': 'Value — 「何を大切にするか」がずれている対立',
-    'conflictology-c2-title': '構造の対立',
-    'conflictology-c2-desc': 'Structure — 組織の仕組みが生む対立。当事者を入れ替えても再発する',
-    'conflictology-c3-title': '認知の対立',
-    'conflictology-c3-desc': 'Cognition — 同じ事実でも、解釈が食い違う対立',
-    'conflictology-c4-title': '存在の対立',
-    'conflictology-c4-desc': 'Existence — 役割や居場所が脅かされる感覚から生じる、最も根深い対立',
-    'conflictology-msg-title': '対立は、扱い方次第で<br>価値の源泉になる。',
-    'conflictology-msg-desc': '対立のタイプと発生箇所を正確に診断できれば、対立は新たな関係性と価値を生み出す起点へと変わります。',
-
-    'approach-title': '構造で扱い、最適解を設計する',
-    'approach-desc': '感覚ではなく、構造で対立を扱う。唯一の正解ではなく、その組織にとっての最適解を設計する。それが私たちの進め方です。',
-    'approach-s1-label': 'Step 01 — Foundation',
-    'approach-s1-desc': '<strong style="color:var(--white);">構造理解（Human OS）</strong><br>関わる人々の内的構造を、5つの層で把握する。',
-    'approach-s2-label': 'Step 02 — Diagnosis',
-    'approach-s2-desc': '<strong style="color:var(--white);">診断（対立学）</strong><br>対立がどこで・なぜ起きているのかを、4タイプで診断する。',
-    'approach-s3-label': 'Step 03 — Design',
-    'approach-s3-desc': '<strong style="color:var(--white);">介入設計</strong><br>AIの分析を活用し、問いの設計、合意形成プロセスの組み直し、対話の場の再設計などの介入を設計する。',
-    'approach-s4-label': 'Step 04 — Emergence',
-    'approach-s4-desc': '<strong style="color:var(--white);">創発</strong><br>対立を起点に、新しい関係性と選択肢が立ち上がる。',
-
-    'divisions-title': '研究・実装・資産化が循環する3つの部門',
-    'divisions-desc': '研究がつくった理論を、実装が現場で検証し、資産化が再現可能な形に変える。この循環がThink &amp; Do Tankの骨格です。',
-    'divisions-d1-tag': '対立と人間構造の研究',
-    'divisions-d1-li1': 'Human OSの進化',
-    'divisions-d1-li2': '対立学の体系化',
-    'divisions-d1-li3': '社会構造の分析',
-    'divisions-d2-tag': '現場への実装',
-    'divisions-d2-li1': '組織変容の伴走',
-    'divisions-d2-li2': '意思決定プロセスの設計支援',
-    'divisions-d2-li3': '事業開発支援',
-    'divisions-d2-note': '企業の皆さまからのご相談の窓口です。',
-    'divisions-d3-tag': '知の資産化・プロダクト化',
-    'divisions-d3-li1': 'AIツール化',
-    'divisions-d3-li2': 'フレームワーク化',
-    'divisions-d3-li3': '社会実装',
-    'divisions-d3-note': '一度きりの支援で終わらせず、方法論として再現可能にします。',
-
-    'projects-title': '自社発の社会実装プロジェクト',
-    'projects-desc': '研究成果を現実の社会で検証する、自社発のプロジェクトです。',
-    'projects-p1-tag': 'ライフイベント → 人材進化',
-    'projects-p1-desc': '育児などのライフイベントを、人が進化する機会へと転換する',
-    'projects-p2-tag': '文化資本・関係性資本の再設計',
-    'projects-p2-desc': '文化資本と関係性資本を捉え直し、創発が生まれる土壌を築く',
-    'projects-p3-tag': '利他 × 創発',
-    'projects-p3-desc': '利他的にふるまう人（Giver）と創発の関係を探究し、対立学の理論を検証する',
-
-    'assets-title': '変換を再現可能にする、知的資産体系',
-    'assets-desc': '対立から創発への変換を、再現可能なプロセスにするための知的資産です。理論（基盤）と道具（応用）の二層で構成されます。',
-    'assets-foundation': 'Foundation — 基盤アセット',
-    'assets-hos-title': 'Human OS',
-    'assets-hos-desc': 'Body・Emotion・Mind・Meaning・Relationshipの5層で人間の内的構造を捉えるモデル。診断と介入設計の土台。',
-    'assets-cl-title': '対立学',
-    'assets-cl-desc': '価値・構造・認知・存在の4タイプで対立を診断するフレームワーク。介入設計の基盤理論。',
-    'assets-application': 'Application — 応用アセット',
-    'assets-ai-title': 'AIソリューション',
-    'assets-ai-desc': '診断から介入プランの提示までを支援するAIプロダクト。',
-    'assets-dl-title': '対話設計プロトコル',
-    'assets-dl-desc': '関係性と意思決定の再設計を進める、対話の場の設計手順。',
-    'assets-or-title': '組織変容フレーム',
-    'assets-or-desc': '「構造理解 → 診断 → 介入設計 → 創発」を組織単位で実装するフレームワーク。',
-
-    'archives-title': '現在の理論を支える、<br>蓄積された知',
-    'archives-desc': '創業以来の研究・事業活動で培われた知は、現在の「対立から創発へ」のプロセスを支える基盤に統合されています。',
-    'archives-quote': 'これまでの研究は、現在の創発を支える地層',
-    'pub-label': 'Publications',
-    'pub-title': '代表著書',
-    'pub-desc': '水野貴之の著書。Human OSと生きがい経営の理論を体系化',
-    'pub-lang-ja': '日本語版',
-    'pub-lang-en': 'English Edition',
-    'pub-book1-title': 'ikigai 経営術',
-    'pub-book1-sub': '自己実現を企業の原動力に変える方法',
-    'pub-book2-sub': 'Transforming personal purpose into a growth engine for your organization',
-    'pub-amazon': 'Amazon で見る →',
-    'nl-label': 'Newsletter',
-    'nl-title': '対立と創発の最前線を、<br>あなたの受信箱へ。',
-    'nl-desc': 'Human OS・対立学・社会実装に関する研究レポートをお届けします。',
-    'nl-placeholder': 'your@email.com',
-    'nl-btn': '登録する',
-    'nl-note': '登録は無料です。いつでも解除できます。',
-    'archives-a1': '<strong style="color:var(--white);">生きがい経営</strong><br>生きがいを起点とした経営の探究 → Human OSの基盤',
-    'archives-a2': '<strong style="color:var(--white);">Omusubi</strong><br>人と人の結びつきをめぐる取り組み → 関係性の設計原理',
-    'archives-a3': '<strong style="color:var(--white);">IMX</strong><br>介入設計の方法論の源流となった活動',
-    'archives-a4': '<strong style="color:var(--white);">研究・論文</strong><br>学術的な研究の蓄積 → 対立学の理論基盤',
-
-    'about-title': '研究 × 実装 × 資産化の<br>Think &amp; Do Tank',
-    'about-desc': '人間と対立の構造を研究し、組織や社会の現場で実装するThink &amp; Do Tank。人間の意識やIkigaiなど、長年の内面研究を基盤としています。',
-    'about-th-org': '組織名',
-    'about-th-type': '形態',
-    'about-th-base': '基盤',
-    'about-th-mission': 'ミッション',
-    'about-th-structure': '構成',
-    'about-f1-title': '研究 × 実装 × 資産化',
-    'about-f1-desc': '理論の探究から現場実装、資産化までを一社で担う。研究と現場が循環し、理論が磨かれ続けます。',
-    'about-f2-title': '構造で診断するアプローチ',
-    'about-f2-desc': 'Human OSと対立学に基づいて診断し、介入を設計する。だから、打ち手の理由を説明できます。',
-    'about-f3-title': 'グローバル対応',
-    'about-f3-desc': '対立の構造は、言語や文化を越えて共通。多文化環境でも同じアプローチで診断します。',
-
-    'contact-title': 'お問い合わせ',
-    'contact-name-label': 'お名前',
-    'contact-name-placeholder': '山田 太郎',
-    'contact-email-label': 'メールアドレス',
-    'contact-topic-label': 'ご相談内容',
-    'contact-topic-default': 'お選びください',
-    'contact-topic-1': '共同研究',
-    'contact-topic-2': '組織変容・事業開発',
-    'contact-topic-3': '投資・パートナーシップ',
-    'contact-topic-4': 'メディア・講演',
-    'contact-topic-5': 'その他',
-    'contact-msg-label': 'メッセージ',
-    'contact-msg-placeholder': 'ご相談内容をお書きください',
-    'contact-send': 'SEND MESSAGE',
-    'contact-send-note': '送信すると info@eudaimonialab.org 宛にメールが作成されます。',
-    'contact-lead': '新規事業開発部門、組織開発部門、人事部門、経営管理室等の皆さまからのご相談をお受けしています。<br>状況を伺いながら、課題の整理からご一緒します。',
-    'contact-cat1-title': '共同研究',
-    'contact-cat1-desc': 'Human OS・対立学の共同研究やプロジェクトの企画段階からのご相談',
-    'contact-cat2-title': '組織変容・事業開発',
-    'contact-cat2-desc': '組織内の対立の診断、意思決定プロセスの設計、事業開発支援など、実装プロジェクトのご相談',
-    'contact-cat3-title': '投資・パートナーシップ',
-    'contact-cat3-desc': 'Human OS・対立学の社会実装活動への投資・協賛・提携のご相談',
-    'contact-cat4-title': 'メディア・講演',
-    'contact-cat4-desc': 'Human OS・対立学・創発に関する取材・講演・登壇のご依頼',
-
-    'faq-title': 'よくあるご質問',
-    'faq-q1': 'Eudaimonia Universe（ユーダイモニアユニバース）はどのような会社ですか？',
-    'faq-a1': 'Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）は、組織や社会に生じる対立を構造から診断し、新しい合意・意思決定・関係性の設計を支援するThink &amp; Do Tankです。独自開発した理論「Human OS」と「対立学」を基盤に、研究（Think Tank）・実装（Produce）・資産化（Asset）の3部門が循環する体制をとっています。Founder &amp; CEOはTakayuki Mizuno（水野 貴之）です。',
-    'faq-q2': 'Human OSとは何ですか？',
-    'faq-a2': 'Human OSとは、人間の内的構造をBody（身体）・Emotion（感情）・Mind（思考）・Meaning（意味）・Relationship（関係性）の5層で捉える、Eudaimonia Universeが独自開発したモデルです。対立の診断では「どの層で何が起きているのか」を読み解く共通言語として使います。',
-    'faq-q3': '対立学（Conflictology）とは何ですか？',
-    'faq-a3': '対立学（Conflictology）とは、対立を「価値」「構造」「認知」「存在」の4タイプに分類して診断する、Eudaimonia Universeが独自開発したフレームワークです。どのタイプの対立が・どこで起きているのかを診断してから打ち手を選ぶことで、的外れな介入を避けます。',
-    'faq-q4': '組織の対立は、なぜ話し合いだけでは解決しないのですか？',
-    'faq-a4': '対立は単一の原因ではなく、複数の要因が同時に絡んで発生する構造的な現象だからです。原因のタイプを特定しないまま話し合いを重ねても、打ち手が原因と噛み合わず空振りします。だからこそ、私たちは対立をいきなり解決しようとせず、まず診断を行います。',
-    'faq-q5': '「介入」とは具体的に何をするのですか？',
-    'faq-a5': '介入とは、対立の構造に働きかける具体的な打ち手のことです。論点を捉え直す問いの設計（視点の再構成）、会議体や合意形成プロセスの組み直し（意思決定の再設計）、役割や対話の場のつくり直し（関係性の再定義）などが含まれます。唯一の正解を押しつけるのではなく、診断結果に基づいて、その組織にとっての最適解を設計します。',
-    'faq-q6': '支援はどのようなプロセスで進みますか？',
-    'faq-a6': '支援は「構造理解 → 診断 → 介入設計 → 創発」の4ステップで進みます。まずHuman OSの5層で関わる人々の内的構造を把握し、次に対立学の4タイプで対立がどこで・なぜ起きているのかを診断します。診断に基づきAIの分析を活用しながら介入を設計し、対立を起点に新しい関係性・意味・これまでなかった選択肢が立ち上がる状態（創発）を目指します。',
-    'faq-q7': 'AIはどのように活用されていますか？',
-    'faq-a7': '介入を設計するのは私たち人間であり、AIはその分析を支援する役割を担います。Human OSと対立学にAIによる分析を組み合わせて対立の構造を読み解くことで、介入設計をより速く、より精緻にします。また、対立の診断から介入プランの提示までを支援するAIプロダクトの開発も進めています。',
-    'faq-q8': 'どのような相談ができますか？',
-    'faq-a8': '組織変容・事業開発の実装プロジェクトのほか、Human OS・対立学の共同研究、投資・パートナーシップ、取材・講演のご相談をお受けしています。新規事業開発部門、組織開発部門、人事部門、経営管理室等の皆さまが主な想定窓口で、課題の整理段階からご一緒します。ご連絡は info@eudaimonialab.org へ（日本語・英語対応）。',
-
-    'footer-terms': '利用規約',
-    'footer-privacy': 'プライバシーポリシー',
-  },
-
-  en: {
-    'nav-home': 'Home',
-    'nav-purpose': 'Purpose',
-    'nav-humanos': 'Human OS',
-    'nav-conflictology': 'Conflictology',
-    'nav-divisions': 'Divisions',
-    'nav-projects': 'Projects',
-    'nav-contact': 'Contact',
-
-    'hero-label': 'Think &amp; Do Tank for Emergence',
-    'hero-catch': "Transforming society's conflicts,<br>into emergence.",
-    'hero-sub': 'Transforming Conflict into Emergence.',
-    'hero-desc': 'Eudaimonia Universe works toward a society where people can<br>continue to live well and happily.<br>We diagnose the structure of conflict and support the redesign of<br>agreements, decision-making, and relationships.',
-    'hero-en': 'Diagnosing conflict structurally and designing interventions<br>to create new relationships and value.',
-
-    'intro': 'We face the complexity of conflict in individuals, organizations, and society, above all dualisms and clashes of justice.<br><br>Combining our theories Human OS and Conflictology with AI analysis, we read the structure of a conflict and design "interventions" that act on it.<br><br>When new relationships and value arise from conflict, we call it "emergence."',
-
-    'purpose-title': 'Conflict is not a problem,<br>but a structure',
-    'purpose-desc1': 'Conflict is not a mere difference of opinion. It is a structural phenomenon of intertwined gaps in values, systems, and perception. And a structure can be analyzed and redesigned.',
-    'purpose-desc2': 'In most settings, conflict is settled early by compromise. Yet digging into what each side truly valued can reveal a third option better than either.',
-    'purpose-desc3': 'Eudaimonia Universe views conflict not as "a problem to be solved," but as <strong style="color:var(--white);">"a design object that generates new value."</strong>',
-    'purpose-quote': 'Emergence is not merely the integration of existing elements,<br>but a phenomenon where new relationships and meanings arise beyond them.<br>Conflict is the most important energy at its origin.',
-    'purpose-flow-intro': 'We express this thesis in three perspectives.',
-    'purpose-step1-title': 'Conflict as Structure',
-    'purpose-step1': 'See conflict as an analyzable structure, not a battle of emotions',
-    'purpose-step2-title': 'Design Object',
-    'purpose-step2': 'Treat conflict as a design object that generates new value',
-    'purpose-step3-title': 'Emergence',
-    'purpose-step3-desc': 'Starting from conflict, new relationships and meanings arise',
-    'purpose-flow-note': 'For how an actual engagement proceeds, see the <a href="#approach" style="color:var(--lav-main); border-bottom:1px solid rgba(95,75,139,0.3);">four steps in Approach</a>.',
-
-    'humanos-title': 'Humans are structure',
-    'humanos-desc1': 'Human decision-making and behavior arise not from fixed personality, but from an ever-changing structure. This is our view of human beings.',
-    'humanos-desc2': '<strong style="color:var(--white);">Human OS</strong> is our proprietary model that captures the inner structure of human beings in five layers. In diagnosis, it serves as a common language for reading which layer a conflict is occurring in.',
-    'humanos-desc3': 'A clash that looks like a disagreement of logic often stems from a gap in values. Identifying the layer lets us address the root of conflict, not its surface.',
-    'humanos-B-title': 'Body — Physical',
-    'humanos-B-desc': 'The bodily state — health, stress — that underlies every judgment',
-    'humanos-E-title': 'Emotion — Feeling',
-    'humanos-E-desc': 'The layer of feelings, often the first to surface in conflict',
-    'humanos-M1-title': 'Mind — Thinking',
-    'humanos-M1-desc': 'Patterns of cognition, logic, and judgment',
-    'humanos-M2-title': 'Meaning — Value',
-    'humanos-M2-desc': 'Values and worldview — what one holds important',
-    'humanos-R-title': 'Relationship — Connection',
-    'humanos-R-desc': 'The structure of relationships with others and society',
-
-    'conflictology-title': 'First, Diagnose Correctly',
-    'conflictology-desc': 'Conflictology is our proprietary framework that classifies conflict into four types: Value, Structure, Cognition, and Existence. We never rush to resolve a conflict; we diagnose it first, because a wrong diagnosis makes every intervention miss.',
-    'conflictology-c1-title': 'Value Conflict',
-    'conflictology-c1-desc': 'Value — A clash over what matters most',
-    'conflictology-c2-title': 'Structural Conflict',
-    'conflictology-c2-desc': 'Structure — Conflict built into the organization itself. It recurs even if the people change',
-    'conflictology-c3-title': 'Cognitive Conflict',
-    'conflictology-c3-desc': 'Cognition — The same facts, interpreted differently',
-    'conflictology-c4-title': 'Existential Conflict',
-    'conflictology-c4-desc': 'Existence — The deepest conflict, arising from a threatened sense of role or place',
-    'conflictology-msg-title': "Conflict becomes a source of value<br>depending on how it's handled.",
-    'conflictology-msg-desc': 'Diagnose the type and location of a conflict precisely, and it turns into a starting point for new relationships and value.',
-
-    'approach-title': 'Treat with structure, design optimal solutions',
-    'approach-desc': 'Treat conflict through structure, not intuition. Design the optimal solution for each organization, not a single answer. That is how we work.',
-    'approach-s1-label': 'Step 01 — Foundation',
-    'approach-s1-desc': '<strong style="color:var(--white);">Structural Understanding (Human OS)</strong><br>Map the inner structure of the people involved across five layers.',
-    'approach-s2-label': 'Step 02 — Diagnosis',
-    'approach-s2-desc': '<strong style="color:var(--white);">Diagnosis (Conflictology)</strong><br>Diagnose where and why the conflict arises, across four types.',
-    'approach-s3-label': 'Step 03 — Design',
-    'approach-s3-desc': '<strong style="color:var(--white);">Intervention Design</strong><br>With AI-supported analysis, design interventions: reframing questions, rebuilding consensus processes, redesigning dialogue.',
-    'approach-s4-label': 'Step 04 — Emergence',
-    'approach-s4-desc': '<strong style="color:var(--white);">Emergence</strong><br>From conflict, new relationships and options arise.',
-
-    'divisions-title': 'Three Divisions in a Cycle: Research, Implementation, and Asset Creation',
-    'divisions-desc': 'Research builds the theory, implementation tests it in the field, and asset creation makes it reusable. This cycle is the backbone of our Think &amp; Do Tank.',
-    'divisions-d1-tag': 'Research on conflict and human structure',
-    'divisions-d1-li1': 'Evolution of Human OS',
-    'divisions-d1-li2': 'Systematization of Conflictology',
-    'divisions-d1-li3': 'Analysis of social structures',
-    'divisions-d2-tag': 'Field implementation',
-    'divisions-d2-li1': 'Accompanying organizational transformation',
-    'divisions-d2-li2': 'Decision-making process design support',
-    'divisions-d2-li3': 'Business development support',
-    'divisions-d2-note': 'The gateway for inquiries from companies.',
-    'divisions-d3-tag': 'Knowledge asset creation & productization',
-    'divisions-d3-li1': 'AI tools',
-    'divisions-d3-li2': 'Framework development',
-    'divisions-d3-li3': 'Social implementation',
-    'divisions-d3-note': 'We turn methods into reproducible assets, so support does not end as a one-off.',
-
-    'projects-title': 'Social Implementation Projects of Our Own',
-    'projects-desc': 'Self-initiated projects that test our research in the real world.',
-    'projects-p1-tag': 'Life Events → Human Evolution',
-    'projects-p1-desc': 'Turning life events such as childcare into opportunities for people to evolve',
-    'projects-p2-tag': 'Redesign of cultural & relational capital',
-    'projects-p2-desc': 'Reframing cultural and relational capital to build ground where emergence keeps arising',
-    'projects-p3-tag': 'Altruism × Emergence',
-    'projects-p3-desc': 'Exploring how Givers relate to emergence, testing the theory of Conflictology',
-
-    'assets-title': 'Intellectual Assets that Make the Transformation Reproducible',
-    'assets-desc': 'Intellectual assets that make the transformation from conflict to emergence reproducible: theories (Foundation) and tools (Application).',
-    'assets-foundation': 'Foundation — Core Assets',
-    'assets-hos-title': 'Human OS',
-    'assets-hos-desc': 'A model that captures human inner structure in five layers: Body, Emotion, Mind, Meaning, and Relationship. The foundation of diagnosis and intervention design.',
-    'assets-cl-title': 'Conflictology',
-    'assets-cl-desc': 'A framework that diagnoses conflict across four types: Value, Structure, Cognition, and Existence. The foundational theory for intervention design.',
-    'assets-application': 'Application — Applied Assets',
-    'assets-ai-title': 'AI Solution',
-    'assets-ai-desc': 'An AI product that supports the process from diagnosis to intervention planning.',
-    'assets-dl-title': 'Dialogue Design Protocol',
-    'assets-dl-desc': 'A protocol for designing forums for dialogue that advance the redesign of relationships and decision-making.',
-    'assets-or-title': 'Organizational Transformation Frame',
-    'assets-or-desc': 'A framework for implementing structural understanding → diagnosis → intervention design → emergence at the organizational level.',
-
-    'archives-title': 'The Accumulated Knowledge<br>Behind Our Current Theory',
-    'archives-desc': 'Knowledge cultivated through our research and business activities since founding, now integrated into our process from conflict to emergence.',
-    'archives-quote': 'Our research to date is the geological layer supporting the current emergence',
-    'pub-label': 'Publications',
-    'pub-title': 'Books by the Founder',
-    'pub-desc': 'Books by Takayuki Mizuno, systematizing Human OS and Ikigai Management.',
-    'pub-lang-ja': 'Japanese Edition',
-    'pub-lang-en': 'English Edition',
-    'pub-book1-title': 'ikigai Management',
-    'pub-book1-sub': 'Transforming Self-Realization into a Driving Force for Your Organization',
-    'pub-book2-sub': 'Transforming personal purpose into a growth engine for your organization',
-    'pub-amazon': 'View on Amazon →',
-    'nl-label': 'Newsletter',
-    'nl-title': 'The frontlines of conflict and emergence,<br>delivered to your inbox.',
-    'nl-desc': 'Research reports on Human OS, Conflictology, and social implementation, delivered to your inbox.',
-    'nl-placeholder': 'your@email.com',
-    'nl-btn': 'Subscribe',
-    'nl-note': 'Free to subscribe. Unsubscribe anytime.',
-    'archives-a1': '<strong style="color:var(--white);">Ikigai Management</strong><br>An inquiry into management grounded in ikigai → the foundation of Human OS',
-    'archives-a2': '<strong style="color:var(--white);">Omusubi</strong><br>An initiative on human connection → the design principles of relationships',
-    'archives-a3': '<strong style="color:var(--white);">IMX</strong><br>The origin of our intervention design methodology',
-    'archives-a4': '<strong style="color:var(--white);">Research & Papers</strong><br>A body of academic research → the theoretical foundation of Conflictology',
-
-    'about-title': 'Think & Do Tank for<br>Research × Implementation × Asset Creation',
-    'about-desc': 'A Think &amp; Do Tank that studies the structure of human beings and conflict, and implements the results in organizations and society. Grounded in years of research into human consciousness and ikigai.',
-    'about-th-org': 'Organization',
-    'about-th-type': 'Type',
-    'about-th-base': 'Foundation',
-    'about-th-mission': 'Mission',
-    'about-th-structure': 'Structure',
-    'about-f1-title': 'Research × Implementation × Asset Creation',
-    'about-f1-desc': 'Theory, field implementation, and asset creation in one company. Research and practice circulate, so the theory keeps improving.',
-    'about-f2-title': 'Diagnosis through Structure',
-    'about-f2-desc': 'We diagnose and design interventions based on Human OS and Conflictology. That is why we can explain the reasoning behind every move.',
-    'about-f3-title': 'Global Capability',
-    'about-f3-desc': 'The structure of conflict is common across languages and cultures. We apply the same approach in multicultural settings.',
-
-    'contact-title': 'Contact Us',
-    'contact-name-label': 'Your Name',
-    'contact-name-placeholder': 'John Doe',
-    'contact-email-label': 'Email Address',
-    'contact-topic-label': 'Inquiry Type',
-    'contact-topic-default': 'Please select',
-    'contact-topic-1': 'Joint Research',
-    'contact-topic-2': 'Organizational Transformation & Business Development',
-    'contact-topic-3': 'Investment & Partnership',
-    'contact-topic-4': 'Media & Speaking',
-    'contact-topic-5': 'Other',
-    'contact-msg-label': 'Message',
-    'contact-msg-placeholder': 'Please describe your inquiry',
-    'contact-send': 'SEND MESSAGE',
-    'contact-send-note': 'Submitting will open an email to info@eudaimonialab.org',
-    'contact-lead': 'We welcome inquiries from new business development, organizational development, HR, and corporate planning teams.<br>We start by understanding your situation and organizing the issues together.',
-    'contact-cat1-title': 'Joint Research',
-    'contact-cat1-desc': 'Consultation on joint research projects involving Human OS and Conflictology',
-    'contact-cat2-title': 'Organizational Transformation & Business Development',
-    'contact-cat2-desc': 'Inquiries about implementation projects: diagnosing conflict within your organization, designing decision-making processes, and supporting business development',
-    'contact-cat3-title': 'Investment & Partnership',
-    'contact-cat3-desc': 'Consultation on investment, sponsorship, and partnership for Human OS and Conflictology social implementation',
-    'contact-cat4-title': 'Media & Speaking',
-    'contact-cat4-desc': 'Requests for media coverage, lectures, and speaking engagements on Human OS, Conflictology, and emergence',
-
-    'faq-title': 'Frequently Asked Questions',
-    'faq-q1': 'What kind of company is Eudaimonia Universe?',
-    'faq-a1': 'Eudaimonia Universe, Inc. is a Japanese Think &amp; Do Tank that diagnoses conflict in organizations and society from its structure, and supports the design of new agreements, decision-making, and relationships. It is built on two proprietary theories, Human OS and Conflictology, and operates through a cycle of three divisions: research (Think Tank), implementation (Produce), and asset creation (Asset). The Founder &amp; CEO is Takayuki Mizuno.',
-    'faq-q2': 'What is Human OS?',
-    'faq-a2': 'Human OS is a proprietary model developed by Eudaimonia Universe that captures the inner structure of human beings in five layers: Body, Emotion, Mind, Meaning, and Relationship. In diagnosis, it serves as a common language for reading which layer a conflict is occurring in.',
-    'faq-q3': 'What is Conflictology?',
-    'faq-a3': 'Conflictology is a proprietary framework developed by Eudaimonia Universe that diagnoses conflict by classifying it into four types: Value, Structure, Cognition, and Existence. Diagnosing the type and location of a conflict before choosing a response prevents misdirected interventions.',
-    'faq-q4': "Why can't organizational conflict be resolved by discussion alone?",
-    'faq-a4': 'Because conflict is a structural phenomenon in which multiple factors are entangled at once, rather than the result of a single cause. Without identifying the type of cause, discussion after discussion will miss the mark. That is why we always diagnose a conflict before trying to resolve it.',
-    'faq-q5': 'What does an "intervention" actually involve?',
-    'faq-a5': 'An intervention is a concrete move that acts on the structure of a conflict. It includes designing questions that reframe the issue (reconstructing perspectives), restructuring meeting bodies and consensus-building processes (redesigning decision-making), and rebuilding roles and forums for dialogue (redefining relationships). Rather than imposing a single answer, we design the optimal solution for each organization based on the diagnosis.',
-    'faq-q6': 'How does an engagement proceed?',
-    'faq-a6': 'Support proceeds in four steps: structural understanding → diagnosis → intervention design → emergence. We first map the inner structure of the people involved using the five layers of Human OS, then diagnose where and why the conflict arises using the four types of Conflictology. Based on the diagnosis, we design interventions with the support of AI analysis, aiming for a state where new relationships, meanings, and previously unseen options arise from the conflict: emergence.',
-    'faq-q7': 'How is AI used?',
-    'faq-a7': 'Humans design the interventions; AI supports the analysis. By combining Human OS and Conflictology with AI-powered analysis to read the structure of a conflict, we make intervention design faster and more precise. We are also developing an AI product that supports the process from diagnosis to intervention planning.',
-    'faq-q8': 'What kinds of inquiries do you accept?',
-    'faq-a8': 'We accept inquiries about implementation projects in organizational transformation and business development, joint research on Human OS and Conflictology, investment and partnership, and media or speaking requests. Teams in new business development, organizational development, HR, and corporate planning are our main points of contact, and we can start from organizing the issues together. Contact: info@eudaimonialab.org (Japanese / English).',
-
-    'footer-terms': 'Terms of Use',
-    'footer-privacy': 'Privacy Policy',
-  }
-};
-
-function applyLang(lang) {
-  const t = translations[lang];
-  if (!t) return;
-
-  // Update html lang attribute
-  document.documentElement.lang = lang;
-
-  // Update all data-i18n elements
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) {
-      el.innerHTML = t[key];
-    }
-  });
-
-  // Update placeholder attributes
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (t[key] !== undefined) {
-      el.placeholder = t[key];
-    }
-  });
-
-  // Update lang toggle buttons
-  document.getElementById('btnJA').classList.toggle('active', lang === 'ja');
-  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
-
-  // Persist
-  localStorage.setItem('lang', lang);
-}
-
-function setLang(lang) {
-  applyLang(lang);
-}
-
-// Init: localStorage > navigator.language > ja
-(function() {
-  const saved = localStorage.getItem('lang');
-  const detected = (navigator.language || '').toLowerCase().startsWith('ja') ? 'ja' : 'en';
-  applyLang(saved || detected);
-})();
 </script>
 </body>
 </html>

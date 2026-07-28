@@ -1,0 +1,12 @@
+# Netlify redirects — eudaimoniauniverse.com
+# 目的: 旧実体（2020年前後の旧ブログ / 2023年頃の旧英語サイト）にエンティティが分裂したままにしない。
+
+# 旧ブログ www.eudaimoniauniverse.com/post/* → トップ（本文は移植しない方針）
+/post/*  /  301!
+
+# 旧英語サイト en.eudaimoniauniverse.com/* → /en/
+# 注意: en. は現在 Wix で稼働中（DNS が Netlify を向いていない）ため、この2行はまだ発火しない。
+# en. の DNS を Netlify サイトへ向け、Netlify 側でドメインエイリアスに追加した時点で有効になる。
+# それまでは Wix 管理画面側でのリダイレクト設定が必要。
+http://en.eudaimoniauniverse.com/*   https://eudaimoniauniverse.com/en/  301!
+https://en.eudaimoniauniverse.com/*  https://eudaimoniauniverse.com/en/  301!
