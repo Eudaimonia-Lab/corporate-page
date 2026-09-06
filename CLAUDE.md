@@ -139,6 +139,14 @@ canonical / hreflang の期待値は本番 URL のまま照合する（staging �
   SNS 側のキャッシュを切る。`og:image:width` / `height` も併記する
 - **NEWS の構造化データは記事2件目から**。1件だけの間は `NewsArticle` / `ItemList` を入れない
 - **robots.txt**: AIクローラーを含む全許可方針。Disallow を足す変更は要相談
+- **お問い合わせは現在メール方式（2026-09、暫定）**: Netlify の Form detection が未有効で、
+  フォームを POST すると 404 になり送信が消えていた（GET は 200 なのに POST だけ 404 になるのが
+  この症状の見分け方）。`/contact/` `/en/contact/` は `mailto:` ボタンに差し替えてある。
+  **復旧手順**: ① Netlify UI で Site configuration → Forms → Form detection を有効化
+  ② 再デプロイする（フォーム登録はデプロイ時の HTML 解析で行われるため、①だけでは直らない）
+  ③ Forms → Form notifications に info@eudaimonialab.org を追加
+  ④ コミット `1d56731` の `<form>` ブロックを `/contact/` `/en/contact/` に復元する。
+  `contact/thanks.html` / `en/contact/thanks.html` はその復元先として残してある（noindex・sitemap 未収録）
 - **リダイレクト**: `_redirects` に旧実体の 301 を置いている。en.eudaimoniauniverse.com は現在 Wix 上で
   別サイトが生きており、DNS を Netlify に向けるまでこの行は発火しない（要対応。設計書 §1）
 

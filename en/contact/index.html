@@ -22,23 +22,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
 <link rel="stylesheet" href="/assets/site.css">
-<style>
-.formgrid{display:grid;gap:22px;max-width:640px;margin-top:36px}
-.formgrid label{display:block;font-family:var(--label);font-size:12px;letter-spacing:0.08em;color:var(--indigo);font-weight:bold;margin-bottom:8px}
-.formgrid input[type="text"],.formgrid input[type="email"],.formgrid select,.formgrid textarea{
-  width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--card);
-  border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-family:var(--sans)}
-.formgrid textarea{min-height:140px;resize:vertical}
-.formgrid input:focus-visible,.formgrid select:focus-visible,.formgrid textarea:focus-visible{outline:2.5px solid var(--purple);outline-offset:2px}
-.req{color:var(--r-red);margin-left:4px}
-.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.7}
-.consent input{margin-top:4px}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.submitrow{margin-top:8px}
-.submitrow button{font:inherit;font-family:var(--label);letter-spacing:0.1em;font-size:14px;font-weight:bold;
-  color:#fff;background:var(--indigo);border:none;border-radius:999px;padding:15px 34px;cursor:pointer}
-.submitrow button:hover{background:var(--purple)}
-</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -64,62 +47,36 @@
 </div></div>
 
 <section style="padding-top:20px"><div class="wrap">
+<!-- 2026-09: Netlify form detection is not enabled, so the form POST returns 404.
+     Temporarily switched to email. Once form detection is enabled and the site is
+     redeployed, restore the <form> block from commit 1d56731.
+     en/contact/thanks.html is kept (noindex) as the restore target. -->
 
-<form name="contact-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/en/contact/thanks.html" class="formgrid">
-<input type="hidden" name="form-name" value="contact-en">
-<p class="hp"><label>Leave this field blank<input name="bot-field"></label></p>
-
-<div>
-<label for="name">Name<span class="req">Required</span></label>
-<input type="text" id="name" name="name" required autocomplete="name">
+<div class="beat">
+<p class="big">Get in touch by email</p>
+<p class="sm">The button below opens your mail client with the fields already laid out.</p>
 </div>
 
-<div>
-<label for="org">Company or organization</label>
-<input type="text" id="org" name="organization" autocomplete="organization">
+<div class="btns">
+<a class="btn pri" href="mailto:info@eudaimonialab.org?subject=Enquiry%20%7C%20Eudaimonia%20Universe&body=Name%3A%0ACompany%20or%20organization%3A%0ARole%3A%0AEnquiry%20type%3A%0A%0ACurrent%20situation%20or%20challenge%3A%0A%0A">Write an enquiry email</a>
 </div>
 
-<div>
-<label for="role">Role</label>
-<input type="text" id="role" name="role" autocomplete="organization-title">
-</div>
+<h2 style="margin-top:54px">Enquiry types</h2>
+<p>If it helps, name one of these in the "Enquiry type" line of your email.</p>
+<ul class="edlist" style="columns:2;column-gap:54px">
+<li>Organizational transformation</li>
+<li>Leadership and decision-making</li>
+<li>Engagement and meaningful work</li>
+<li>Organizational conflict</li>
+<li>Sustainable value creation</li>
+<li>Business and innovation</li>
+<li>Research partnership</li>
+<li>Media or speaking</li>
+<li>Investment or partnership</li>
+<li>Other</li>
+</ul>
 
-<div>
-<label for="email">Email<span class="req">Required</span></label>
-<input type="email" id="email" name="email" required autocomplete="email">
-</div>
-
-<div>
-<label for="topic">Enquiry type<span class="req">Required</span></label>
-<select id="topic" name="topic" required>
-<option value="">Please select</option>
-<option value="Organizational transformation">Organizational transformation</option>
-<option value="Leadership and decision-making">Leadership and decision-making</option>
-<option value="Engagement and meaningful work">Engagement and meaningful work</option>
-<option value="Organizational conflict">Organizational conflict</option>
-<option value="Sustainable value creation">Sustainable value creation</option>
-<option value="Business and innovation">Business and innovation</option>
-<option value="Research collaboration">Research collaboration</option>
-<option value="Media or speaking">Media or speaking</option>
-<option value="Investment or partnership">Investment or partnership</option>
-<option value="Other">Other</option>
-</select>
-</div>
-
-<div>
-<label for="message">Current situation or challenge</label>
-<textarea id="message" name="message" placeholder="Whatever you know at this point is enough."></textarea>
-</div>
-
-<div class="consent">
-<input type="checkbox" id="consent" name="consent" required>
-<label for="consent" style="font-family:var(--sans);font-weight:normal;text-transform:none;letter-spacing:normal;margin-bottom:0">I agree to the <a href="/privacy.html" style="color:var(--purple)">Privacy Policy</a> and consent to submit this form.<span class="req">Required</span></label>
-</div>
-
-<div class="submitrow"><button type="submit">Send</button></div>
-</form>
-
-<p class="note" style="margin-top:30px">If you are unable to use this form, please contact us directly at <a href="mailto:info@eudaimonialab.org" style="color:var(--purple)">info@eudaimonialab.org</a> (Japanese and English supported).</p>
+<p class="note" style="margin-top:30px">If your mail client does not open, write to <a href="mailto:info@eudaimonialab.org" style="color:var(--purple)">info@eudaimonialab.org</a> directly (Japanese or English). See our <a href="/privacy.html" style="color:var(--purple)">Privacy Policy</a> for how we handle what you send.</p>
 
 </div></section>
 
