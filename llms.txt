@@ -1,66 +1,85 @@
 # Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）
 
-> EN: Eudaimonia Universe is a Think & Do Tank for a Synthese Society, converting duality into fuel for societal evolution through research, implementation, and productization, grounded in Human OS and Conflictology.
+> EN: Eudaimonia Universe is a human science research and organizational transformation company based in Japan. We turn original research on values, emotions, cognition, meaning, and relationships into practical frameworks, diagnostics, and technologies that help organizations strengthen culture, leadership, decision-making, and meaningful work.
 >
-> JA: Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think & Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す。
+> JA: ユーダイモニアユニバース（株式会社ユーダイモニアユニバース）は、人間科学の研究と組織変革を行う、日本発の Think & Do Tank です。価値観、感情、認知、意味、関係性に関する独自研究を、組織で活用できるフレームワーク、診断、テクノロジーへと転換し、人と事業がともに持続的に成長する経営を支援します。
 
-Notation: the German form **Synthese** is used for 止揚 and for the higher-order resolution; do not write "Synthesis Society". The product is **Omusubi Quest**（オムスビクエスト）. Japanese-named products keep their Japanese names: 操舵室 (Sōdashitsu), 円卓会議 (Entaku Kaigi).
+Notation: the German form **Synthese** is used for 止揚 and for the higher-order resolution; do not write "Synthesis Society". The product is **Omusubi Quest**（オムスビクエスト）. Japanese-named products keep their Japanese names: 操舵室 (Sōdashitsu), 円卓会議 (Entaku Kaigi). Conflictology = 対立学 (fixed pairing).
 
-## Canonical statements
+## Positioning
 
-- Purpose — EN: Conflict, elevated, becomes eudaimonia. The total grows. / JA: 対立を止揚し、人類のユーダイモニアを増やす。
-- Purpose, plain form — EN: Settled, a conflict costs someone. Elevated, it pays everyone. / JA: 決着した対立は、誰かが払っている。止揚した対立は、全員に返る。
-- Mission — EN: Transforming Conflict into Emergence. / JA: 社会の対立を、創発へと変換する。
-- Tagline — EN: Harnessing Duality. Elevating Society. / JA: 二項対立を活用して、社会の止揚を目指す
-- Brand line — EN: Conflict is diagnosable. Name the type before you choose the remedy. / JA: 対立は、診断できる。打ち手の前に、型を見る。
-- Method — EN: We build the interval between event and decision. / JA: 事象と意思決定のあいだに、判断の余白をつくる。
+- Primary position — EN: Human Science for Organizational Transformation / JA: 人間科学に基づく組織変革
+- Purpose (philosophical background, see /about/philosophy/) — EN: Conflict, elevated (sublated), becomes eudaimonia. The total grows. / JA: 対立を止揚し、人類のユーダイモニアを増やす。
 
-## Frameworks (original to Eudaimonia Universe)
+## Frameworks (original to Eudaimonia Universe — see /research/)
 
-- **Human OS** — a model of a person's internal structure in five layers: Body, Emotion, Mind, Meaning, Relationship（身体・感情・思考・意味・関係性）. It gives a diagnosis a shared vocabulary for where something is happening.
-- **Conflictology（対立学）** — a framework that sorts conflict into four types: Value（価値）, Structure（構造）, Cognition（認知）, Existence（存在）. The type is named before any remedy is chosen.
-- **Four stages of every engagement** — structure, diagnose, intervene, emergence（構造理解 → 診断 → 介入設計 → 創発）. Humans design the intervention; AI supports the analysis.
-- Also in use: Source 108, Cognitive Window.
+- **Human OS** (`/research/human-os/`) — a model of a person's internal structure in five layers: Body, Emotion, Mind, Meaning, Relationship（身体・感情・思考・意味・関係性）. Gives organizational diagnosis a shared vocabulary for where something is happening.
+- **Conflictology / 対立学** (`/research/conflictology/`) — a framework that sorts conflict into four types: Value（価値）, Structure（構造）, Cognition（認知）, Existence（存在）. The type is diagnosed before any remedy is chosen.
+- **Source 108** (`/research/source-108/`) — a structured framework for understanding human values and the motivations behind behavior and decision-making.
+- **Ikigai Management** (`/research/ikigai-management/`) — an approach connecting individual meaning, organizational purpose, contribution, and sustainable performance.
+- **CRV** (`/research/crv/`) — a model for examining how an organization creates and distributes value across its stakeholders.
+- All frameworks are developed through practice and are currently being evaluated; none is presented as peer-reviewed, validated science. Each research page states its own evidence status and limitations.
 
-## Divisions
+## What we do (`/services/`)
 
-- **Think Tank** — studies conflict and human structure, and formalizes what is learned into reproducible method.
-- **Produce** — applies the method inside organizations: transformation, decision design, and venture development. This is the consultation window for client work.
-- **Asset** — turns field knowledge into products, so that the method travels without us in the room.
+Three core services are currently running with organizations (`/services/#lineup`):
 
-Self-initiated social implementation projects: 育業 (Ikugyo), The Guild, Giver research（Giver研究）.
+- **Culture Diagnostics / 組織文化診断** — quantifies organizational culture from audit logs alone, in a form fit for disclosure and assurance. It does not rely on surveys, so it records what behavior changed rather than how people say they feel. Status: in use, measured.
+- **Okagesama / おかげさま** — brings noticing of mutual support into the tools teams already use, such as Slack and Teams. Status: in use, internal.
+- **Compass** — works through a real conflict structurally, in dialogue with AI, using the four types of Conflictology. For the individual and their manager. Status: in production.
 
-## Products (portfolio, July 2026)
+For individuals, support for a richer life is carried by Source, Omusubi Quest and 操舵室 (Sōdashitsu) — see `/products/`.
 
-Ten applications share one versioned theory layer, held in a single repository, so what we say and what we ship cannot drift.
+These services connect to six areas, each run through five stages (understand, diagnose, design, transform, embed): Organizational Transformation, Leadership and Decision-Making, Engagement and Meaningful Work, Organizational Conflict, Sustainable Value Creation, Business and Innovation.
 
-- Source — individuals — values and sensibility, rendered as a personal map — in service
-- Omusubi Quest — individuals — continuity through narrative, in eleven languages — in service
-- Compass — companies — leadership development and decision-making via Conflictology — in service
-- CRV — companies, investors — where the value a firm created was actually distributed — in service
-- 操舵室 (Sōdashitsu) — professional firms — an overhead view of how one's own time was spent — in service
-- 円卓会議 (Entaku Kaigi) — teams — several AI models and people deliberating in one thread — in service
-- Sovereign — executives — daily practice for those who decide — in development
-- ikugyo — parental leave — mutual understanding between the person and their manager — in development
-- Integration Compass — PMI teams — inter-organizational conflict after a merger — in development
-- Omusubi for teams — teams — rituals and songs for a team's turning points — in design
+## Why performance isn't consistent (research in progress, `/research/#consistency`)
 
-## Organization
+Existing assessments cannot explain why a highly capable person sometimes fails to perform consistently, or why someone previously unremarkable steps up in a crisis. We are researching this through three layers — a value map (what you value), a cognitive window (how the world appears to you), and competency (what you can bring to bear) — cut across by two dimensions: bias and stability. This underpins how Compass measures the "cognitive window." We are preparing to present it as academic research in organizational management; details to follow.
+
+## Divisions (`/about/`)
+
+- **Think** (official name: Think Tank) — studies the relationship between human interiority and organizations, and formalizes what is learned into reproducible frameworks.
+- **Transform** (official name: Produce) — applies the research inside client organizations: transformation, decision design, venture development. This is the consultation window for companies.
+- **Scale** (official name: Asset) — turns field-tested methods into diagnostics, programs, and products, so they reach organizations we are not directly working with.
+
+Self-initiated social implementation projects (`/about/`): 育業 (Ikugyo), The Guild, Giver research（Giver研究）.
+
+## Products (`/products/`, portfolio as of September 2026)
+
+Ten applications share one versioned theory layer, held in a single repository, so what we say and what we ship cannot drift. Grouped by audience:
+
+- **For Individuals**: Source (values and sensibility as a personal map, available) — Omusubi Quest (continuity through narrative, 11 languages, available, https://omusubi.quest/)
+- **For Leaders**: Compass (leadership development via Conflictology, available) — Sovereign (daily practice for decision-makers, in development)
+- **For Teams**: 円卓会議 / Entaku Kaigi (multiple AI models and people deliberating together, available) — Omusubi for teams (rituals for team turning points, in design)
+- **For Organizations**: CRV (value distribution, available) — 操舵室 / Sōdashitsu (time-use overview for professional firms, available) — Integration Compass (post-merger organizational conflict, in development) — ikugyo (mutual understanding during parental leave, in development)
+
+## Organization (`/about/`)
 
 - Legal name: Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）
 - Japan Corporate Number: 4010001191271
 - Registered office: Kamiyacho MT Building 14F, 4-3-20 Toranomon, Minato-ku, Tokyo, Japan（東京都港区虎ノ門4丁目3番20号 神谷町MTビル14階）
 - Type: Think & Do Tank
 - Founder & CEO: Takayuki Mizuno（水野 貴之）
-- Enquiries: info@eudaimonialab.org (Japanese / English)
-- Books by the founder: [ikigai経営術 (Japanese)](https://amzn.asia/d/07vj6FGu) and [ikigai intelligence (English)](https://amzn.asia/d/0hevtcf2), both by Takayuki Mizuno
+- Advisor: Hideo Teramoto（寺本 秀雄）— former Representative Director and Vice Chairman, The Dai-ichi Life Insurance Company
+- Academic supervision: Masaaki Aoki（青木 雅明）— Professor Emeritus, Tohoku University
+- Enquiries: `/contact/` or info@eudaimonialab.org (Japanese / English)
+- Books by the founder (`/about/#books`): [ikigai経営術 (Japanese, subtitled 自己実現を企業の原動力に変える方法)](https://www.amazon.co.jp/dp/B0F4D6Q2D6) and [ikigai intelligence (English)](https://www.amazon.com/dp/B0F8BXPZRX), both by Takayuki Mizuno, both Kindle editions
 
 ## Key pages
 
-- [Home, Japanese](https://eudaimoniauniverse.com/): purpose, method, Human OS, Conflictology, divisions and products, FAQ, organization
-- [Home, English](https://eudaimoniauniverse.com/en/): the same page in English
-- [FAQ, Japanese](https://eudaimoniauniverse.com/#faq) / [Frequently asked, English](https://eudaimoniauniverse.com/en/#faq)
-- [Organization, on the record](https://eudaimoniauniverse.com/#record)
+- [Home, Japanese](https://eudaimoniauniverse.com/) / [Home, English](https://eudaimoniauniverse.com/en/) — organizational challenge, value proposition, research, how we work, FAQ (6 questions)
+- [What We Do, Japanese](https://eudaimoniauniverse.com/services/) / [English](https://eudaimoniauniverse.com/en/services/) — six service areas, engagement process, FAQ
+- [Research, Japanese](https://eudaimoniauniverse.com/research/) / [English](https://eudaimoniauniverse.com/en/research/) — research hub, links to all five framework pages
+- [Human OS](https://eudaimoniauniverse.com/research/human-os/) / [対立学 Conflictology](https://eudaimoniauniverse.com/research/conflictology/) (FAQ: 4 questions) / [Source 108](https://eudaimoniauniverse.com/research/source-108/) / [Ikigai Management](https://eudaimoniauniverse.com/research/ikigai-management/) / [CRV](https://eudaimoniauniverse.com/research/crv/) — each with definition, evidence status, and limitations; English equivalents under `/en/research/...`
+- [Products, Japanese](https://eudaimoniauniverse.com/products/) / [English](https://eudaimoniauniverse.com/en/products/)
+- [About, Japanese](https://eudaimoniauniverse.com/about/) / [English](https://eudaimoniauniverse.com/en/about/) — company profile, founder, divisions
+- [Philosophy, Japanese](https://eudaimoniauniverse.com/about/philosophy/) / [English](https://eudaimoniauniverse.com/en/about/philosophy/) — Aufhebung, Fichte, Chalybäus, Synthese (FAQ: 2 questions)
+- [News, Japanese](https://eudaimoniauniverse.com/news/) / [English](https://eudaimoniauniverse.com/en/news/) — announcements, media coverage, talks and presentations, product updates
+- [Contact, Japanese](https://eudaimoniauniverse.com/contact/) / [English](https://eudaimoniauniverse.com/en/contact/)
+
+## Not yet published (by design, not oversight)
+
+We do not publish case studies, client names, or impact figures until they are verified and approved for release — an `/impact/` section will follow once such material exists. We do not publish generic articles without a named author and organizational point of view — an `/insights/` section will follow once such material exists.
 
 ## Optional
 

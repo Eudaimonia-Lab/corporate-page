@@ -1,0 +1,276 @@
+/* Eudaimonia Universe — shared stylesheet (2026-07 renewal)
+   トークンの正: docs/EU_website_spec.md §4（公式ロゴ .ai から抽出した確定値）
+   鉄則: ロゴ6色のうち文字に使ってよいのは --r-purple #88167B のみ。他5色は装飾限定。 */
+
+:root{
+  --bg:#F7F8FC; --bg2:#F1F3F9; --line:#E2E5EE; --card:#FFFFFF;
+  --ink:#353B4D; --indigo:#29243E; --purple:#5C4C87; --grey:#8B92A4; --gold:#A28335;
+  --teal:#39817F; --steel:#386F8B; --magenta:#8B4383;
+  --r-green:#3BAD90; --r-blue:#147EBF; --r-purple:#88167B;
+  --r-red:#DA3B49; --r-orange:#EA953C; --r-yellow:#F3CB3F;
+  --wordmark:#3F3B3A;
+  --ink-on-dark:#EDEFF6; --sub-on-dark:#B9BDD0; --line-on-dark:rgba(241,243,249,.18);
+  --serif:Georgia,'Times New Roman','Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif;
+  --sans:'Helvetica Neue',Inter,Arial,'Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif;
+  --label:Cambria,Georgia,serif;
+  --brand:'Futura','Avenir Next','Century Gothic',Jost,'Helvetica Neue',sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1}
+html[lang="en"] body{line-height:1.65}
+.wrap{max-width:1000px;margin:0 auto;padding:0 30px}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2.5px solid var(--purple);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--indigo);color:#fff;padding:10px 18px;z-index:100;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+
+/* ── ナビゲーション ── */
+nav.top{position:sticky;top:0;z-index:50;background:rgba(247,248,252,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:18px;height:64px;overflow-x:auto}
+nav.top .brand{display:flex;align-items:center;gap:11px;text-decoration:none;white-space:nowrap}
+nav.top .brand img{height:26px;width:auto;display:block}
+nav.top .brand b{font-family:var(--brand);color:var(--wordmark);font-size:15.5px;font-weight:500;letter-spacing:.045em}
+nav.top a.lk{color:var(--purple);text-decoration:none;font-size:12.5px;letter-spacing:.08em;white-space:nowrap}
+nav.top a.lk:hover,nav.top a.lk[aria-current="page"]{color:var(--magenta)}
+nav.top .navcta{margin-left:auto;white-space:nowrap;font-size:12px;letter-spacing:.06em;color:#fff;background:var(--indigo);text-decoration:none;padding:9px 16px;border-radius:99px}
+nav.top .navcta:hover{background:var(--magenta)}
+nav.top .lang{font-size:11.5px;letter-spacing:.14em;white-space:nowrap;color:var(--grey)}
+nav.top .lang a{color:var(--purple);text-decoration:none}
+nav.top .lang b{color:var(--indigo)}
+
+/* ── 見出し・本文 ── */
+section{padding:88px 0;border-top:1px solid var(--line)}
+.klabel{font-family:var(--label);font-size:12.5px;font-weight:bold;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+h1{font-family:var(--serif);font-weight:normal;font-size:44px;line-height:1.4;letter-spacing:.01em;color:var(--indigo)}
+h1.grad{background:linear-gradient(100deg,#29243E 0%,#39817F 34%,#386F8B 62%,#8B4383 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;width:fit-content}
+h2{font-family:var(--serif);font-weight:normal;color:var(--indigo);font-size:29px;line-height:1.5;margin-bottom:18px}
+h2 .en{font-family:var(--label);font-size:15px;color:var(--grey);letter-spacing:.12em;margin-left:12px}
+h3{font-family:var(--serif);font-weight:normal;color:var(--indigo);font-size:18px;margin-bottom:6px}
+p{max-width:720px}
+.lead{font-size:17.5px;max-width:680px}
+.sub{color:var(--purple)}
+.small{font-size:13.5px;color:var(--grey)}
+
+/* ── ヒーロー ── */
+.hero{padding:92px 0 84px}
+.hero .logo{width:150px;height:auto;display:block;margin-bottom:36px}
+.hero .lead{margin-top:26px}
+.hero .tags{margin-top:30px;font-family:var(--label);font-size:12px;font-weight:bold;letter-spacing:.2em;color:var(--grey);text-transform:uppercase}
+.pagehead{padding:72px 0 56px}
+.pagehead .lead{margin-top:20px}
+.crumbs{padding:14px 0 0;font-size:12px;color:var(--grey);letter-spacing:.04em}
+.crumbs a{color:var(--purple);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.crumbs span[aria-hidden]{padding:0 7px}
+
+/* ── ボタン ── */
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;text-decoration:none;font-size:14px;letter-spacing:.05em;padding:14px 26px;border-radius:99px}
+.btn.pri{background:var(--indigo);color:#fff}
+.btn.pri:hover{background:var(--magenta)}
+.btn.sec{color:var(--indigo);border:1.5px solid var(--indigo)}
+.btn.sec:hover{color:var(--magenta);border-color:var(--magenta)}
+.cta{display:inline-block;margin-top:24px;font-family:var(--label);letter-spacing:.12em;font-size:13px;font-weight:bold;color:var(--magenta);text-decoration:none;border-bottom:1px solid rgba(139,67,131,.4);padding-bottom:4px}
+
+/* ── 定義・強調ブロック ── */
+.def{color:var(--ink);font-size:15.5px;margin-top:32px;max-width:700px}
+.beat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 38px;margin:6px 0}
+.beat .big{font-family:var(--serif);color:var(--indigo);font-size:24px;line-height:1.6}
+.beat .sm{color:var(--purple);font-size:15px;margin-top:12px}
+.gloss{background:var(--bg2);border-left:3px solid var(--r-purple);border-radius:0 12px 12px 0;padding:24px 26px;margin-top:22px}
+.gloss p{font-size:14px;max-width:760px;line-height:1.95}
+.gloss p+p{margin-top:12px}
+.answer{border-left:3px solid var(--r-purple);padding:4px 0 4px 22px;margin:26px 0}
+.answer .q{font-family:var(--serif);color:var(--indigo);font-size:19px;margin-bottom:8px}
+.answer p{font-size:15px}
+
+/* ── 編集的リスト（カードを使わない節） ── */
+.edlist{margin-top:26px;max-width:760px}
+.edlist li{list-style:none;border-top:1px solid var(--line);padding:16px 0 16px 4px;font-size:15px;line-height:1.8}
+.edlist li:last-child{border-bottom:1px solid var(--line)}
+.numsec{margin-top:34px;max-width:800px}
+.numsec .row{display:grid;grid-template-columns:88px 1fr;gap:10px 26px;border-top:1px solid var(--line);padding:26px 0}
+.numsec .row:last-child{border-bottom:1px solid var(--line)}
+.numsec .n{font-family:var(--label);font-size:15px;font-weight:bold;letter-spacing:.14em;color:var(--gold)}
+.numsec h3{margin-bottom:8px}
+.numsec p{font-size:14.5px;max-width:640px}
+
+/* ── サービス領域（編集的・分割レイアウト） ── */
+.svc{border-top:1px solid var(--line);padding:52px 0}
+.svc:first-of-type{border-top:none;padding-top:8px}
+.svc .grid2{display:grid;grid-template-columns:minmax(220px,.9fr) 1.6fr;gap:20px 54px}
+.svc h3{font-size:22px}
+.svc .who{font-size:13px;color:var(--purple);margin-top:10px}
+.svc h4{font-family:var(--label);font-size:11.5px;font-weight:bold;letter-spacing:.18em;color:var(--grey);text-transform:uppercase;margin:22px 0 8px}
+.svc h4:first-child{margin-top:0}
+.svc p,.svc li{font-size:14.5px}
+.svc ul{margin-left:1.2em}
+.svc .links{font-size:13px;margin-top:18px}
+.svc .links a{color:var(--magenta)}
+
+/* ── カード（モジュラーな内容のみに使用） ── */
+.grid{display:grid;gap:14px;margin-top:22px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(285px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.g5{grid-template-columns:repeat(auto-fit,minmax(158px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.card p{font-size:13.5px;color:var(--ink);line-height:1.85}
+.card .t{font-family:var(--serif);color:var(--indigo);font-size:16.5px;margin-bottom:6px}
+.card .t .en{font-family:var(--label);font-size:11px;color:var(--grey);letter-spacing:.1em;margin-left:7px}
+a.card{text-decoration:none;display:block}
+a.card:hover{border-color:var(--purple)}
+a.card .more{font-size:12px;color:var(--magenta);margin-top:10px;display:block}
+.note{color:var(--purple);font-size:13.5px;margin-top:18px}
+
+/* ── プロセス（フロー） ── */
+.flow{display:flex;flex-wrap:wrap;margin:24px 0 6px;align-items:stretch}
+.step{flex:1 1 190px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:6px}
+.step .n{font-family:var(--label);font-size:11px;letter-spacing:.2em;color:var(--grey);display:block;margin-bottom:8px;text-transform:uppercase}
+.step p{font-size:13.5px;color:var(--ink);line-height:1.85}
+.step.s1{border-top:3px solid var(--r-green)} .step.s2{border-top:3px solid var(--r-blue)}
+.step.s3{border-top:3px solid var(--r-purple)} .step.s4{border-top:3px solid var(--r-red)}
+.step.s5{border-top:3px solid var(--r-orange)}
+.arrow{align-self:center;color:var(--grey);font-size:15px;padding:0 3px}
+
+/* ── 表 ── */
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:20px}
+table{width:100%;min-width:560px;border-collapse:collapse;font-size:13.5px}
+caption{text-align:left}
+th{font-family:var(--label);font-size:11px;font-weight:bold;letter-spacing:.16em;color:var(--grey);text-align:left;padding:9px 12px;border-bottom:1.5px solid var(--line);text-transform:uppercase}
+td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.st{color:var(--teal);font-weight:bold} td.sd{color:var(--gold);font-weight:bold}
+
+/* ── 会社概要 ── */
+.facts{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin-top:22px;font-size:14.5px}
+.facts dl{display:grid;grid-template-columns:minmax(150px,auto) 1fr;gap:10px 24px}
+.facts dt{color:var(--grey);font-family:var(--label);font-size:11.5px;font-weight:bold;letter-spacing:.1em;padding-top:5px}
+.facts dd{color:var(--ink)}
+
+/* ── FAQ ── */
+details{border-bottom:1px solid var(--line)}
+details summary{cursor:pointer;padding:18px 0;font-family:var(--serif);color:var(--indigo);font-size:17px;line-height:1.6;list-style:none;position:relative;padding-right:30px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";position:absolute;right:4px;top:17px;color:var(--purple);font-family:var(--sans);font-size:19px}
+details[open] summary::after{content:"\2212"}
+details .a{padding:0 0 22px;font-size:15px;color:var(--ink);line-height:1.95;max-width:760px}
+
+/* ── 研究ページのメタ情報・図 ── */
+.meta{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;margin:30px 0;font-size:13px;color:var(--grey);display:flex;flex-wrap:wrap;gap:8px 34px}
+.meta b{color:var(--ink);font-weight:normal}
+.evidence{background:var(--bg2);border-radius:12px;padding:22px 26px;margin-top:22px;font-size:14px;max-width:760px}
+.evidence h4{font-family:var(--label);font-size:11.5px;font-weight:bold;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.citebox{border:1px dashed var(--line);border-radius:12px;padding:18px 22px;margin-top:22px;font-size:13px;color:var(--grey);max-width:760px}
+.diagram{margin:28px 0;max-width:560px}
+.diagram .layer{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:12px 18px;margin:8px 0;font-size:14px;display:flex;gap:14px;align-items:baseline}
+.diagram .layer b{font-family:var(--serif);font-weight:normal;color:var(--indigo);min-width:5.2em}
+.diagram .layer span{color:var(--grey);font-size:12.5px}
+.diagram .down{text-align:center;color:var(--grey);font-size:14px;line-height:1.2}
+.diagram .stage{border-left:3px solid var(--line);padding:6px 18px;margin:8px 0 8px 12px;font-size:14px;color:var(--ink)}
+.diagram .l1{border-left:3px solid var(--r-green)}
+.diagram .l2{border-left:3px solid var(--r-blue)}
+.diagram .l3{border-left:3px solid var(--r-purple)}
+.diagram .l4{border-left:3px solid var(--r-red)}
+.diagram .l5{border-left:3px solid var(--r-orange)}
+
+/* ── ダークセクション（最終CTA） ── */
+.sec-dark{background:var(--indigo);border-top:none;color:var(--ink-on-dark)}
+.sec-dark h2,.sec-dark h3{color:#fff}
+.sec-dark p{color:var(--ink-on-dark)}
+.sec-dark .klabel{color:var(--r-yellow)}
+.sec-dark .btn.pri{background:#fff;color:var(--indigo)}
+.sec-dark .btn.pri:hover{background:var(--bg2)}
+.sec-dark .btn.sec{color:#fff;border-color:rgba(255,255,255,.6)}
+.sec-dark .btn.sec:hover{border-color:#fff}
+
+/* ── フォーム ── */
+form.contact{max-width:640px;margin-top:30px}
+form.contact label{display:block;font-size:13.5px;color:var(--indigo);margin:20px 0 6px;font-weight:bold}
+form.contact label .req{color:var(--r-purple);font-weight:normal;font-size:12px;margin-left:6px}
+form.contact input,form.contact select,form.contact textarea{width:100%;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+form.contact textarea{min-height:160px;resize:vertical}
+form.contact .consent{display:flex;gap:10px;align-items:flex-start;margin-top:24px;font-size:13.5px}
+form.contact .consent input{width:auto;margin-top:5px}
+form.contact button{margin-top:28px;font-family:var(--sans);font-size:14.5px;letter-spacing:.05em;color:#fff;background:var(--indigo);border:none;border-radius:99px;padding:15px 34px;cursor:pointer}
+form.contact button:hover{background:var(--magenta)}
+
+/* ── フッター ── */
+footer{padding:60px 0 78px;color:var(--grey);font-size:13px;line-height:2.1;border-top:1px solid var(--line)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px 30px;margin-bottom:34px}
+footer .cols h4{font-family:var(--label);font-size:11px;font-weight:bold;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+footer .cols a{display:block;color:var(--purple);text-decoration:none}
+footer .cols a:hover{color:var(--magenta)}
+footer .base{border-top:1px solid var(--line);padding-top:24px}
+footer .base a{color:var(--purple)}
+
+@media(max-width:640px){
+  h1{font-size:31px}
+  h2{font-size:24px}
+  .hero{padding:60px 0 56px}
+  .pagehead{padding:52px 0 42px}
+  section{padding:64px 0}
+  .beat .big{font-size:20px}
+  .facts dl{grid-template-columns:1fr;gap:2px}
+  .facts dt{margin-top:12px}
+  .svc .grid2{grid-template-columns:1fr}
+  .numsec .row{grid-template-columns:1fr;gap:4px}
+}
+
+/* ── ステータスバッジ（2026-09 リニューアル） ── */
+.badge{display:inline-block;font-family:var(--label);font-size:10.5px;font-weight:bold;letter-spacing:.14em;color:var(--purple);background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:3px 11px;white-space:nowrap}
+.card .badge{margin-bottom:10px}
+
+/* ── 課題提起の公開統計 ── */
+.stats{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.stat{flex:1 1 190px;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--r-blue);border-radius:12px;padding:22px 24px}
+.stat .fig{font-family:var(--serif);color:var(--indigo);font-size:34px;line-height:1.2;display:block}
+.stat .cap{display:block;font-size:13px;color:var(--ink);line-height:1.8;margin-top:8px}
+
+/* ── 対応する課題（サービスカード内に畳む） ── */
+.tags-inline{margin-top:14px;font-size:12.5px;color:var(--purple);line-height:1.9}
+.tags-inline b{display:block;font-family:var(--label);font-size:10.5px;font-weight:bold;letter-spacing:.14em;color:var(--grey);text-transform:uppercase;margin-bottom:2px}
+
+/* ── NEWS ── */
+.newslist{margin-top:26px;max-width:820px}
+.newslist li{list-style:none;border-top:1px solid var(--line);padding:16px 4px;display:grid;grid-template-columns:110px 1fr;gap:4px 22px;font-size:15px;line-height:1.8}
+.newslist li:last-child{border-bottom:1px solid var(--line)}
+.newslist time{font-family:var(--label);font-size:12.5px;letter-spacing:.08em;color:var(--grey);padding-top:5px}
+.newslist .cat{display:block;font-family:var(--label);font-size:10.5px;font-weight:bold;letter-spacing:.14em;text-transform:uppercase;color:var(--purple)}
+@media(max-width:560px){.newslist li{grid-template-columns:1fr}.newslist time{padding-top:0}}
+
+/* ── 顧問・監修 ── */
+.people{display:grid;gap:14px;margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(285px,1fr))}
+.person{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--r-purple);border-radius:12px;padding:22px 24px}
+.person .ro{font-family:var(--label);font-size:11px;font-weight:bold;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.person .nm{font-family:var(--serif);color:var(--indigo);font-size:17px}
+.person p{font-size:13.5px;color:var(--ink);line-height:1.85;margin-top:6px}
+details.disc{border-top:1px solid var(--line);margin-top:26px}
+details.disc summary{font-size:15.5px;padding:16px 0}
+details.disc summary::after{top:15px}
+details.disc .a{padding-top:0}
+.card .who{font-size:12.5px;color:var(--purple);margin:0 0 8px}
+
+/* ── モバイルのナビ: 「組織課題を相談する」を常時表示にする（2026-09） ──
+   従来は overflow-x:auto の1行で、狭い画面では CTA が画面外に出ていた。
+   狭い画面では2段に折り返し、1段目にブランドと CTA を必ず載せる。JS は使わない。 */
+@media(max-width:760px){
+  nav.top .wrap{flex-wrap:wrap;overflow-x:visible;height:auto;min-height:60px;padding-top:9px;padding-bottom:9px;gap:8px 14px}
+  nav.top .brand{order:1}
+  nav.top .navcta{order:2;margin-left:auto;font-size:11.5px;padding:8px 14px}
+  nav.top .lang{order:3}
+  nav.top .wrap::after{content:"";order:4;flex-basis:100%;height:0}
+  nav.top a.lk{order:5;font-size:12px;letter-spacing:.04em}
+}
+@media(max-width:400px){
+  nav.top .brand b{display:none}
+}
+
+/* ── カード内の補助行（プロダクト一覧・書籍で使用） ── */
+.card .status{font-size:13px;color:var(--purple);margin-top:12px}
+.card .links{font-size:13px;margin-top:12px}
+.card .links a{color:var(--magenta)}

@@ -2,9 +2,16 @@
 """EU_website_spec.md §9 の検収チェックリストを機械的に回す。
 
     python3 scripts/verify-geo.py            # ローカルファイルを検査
-    python3 scripts/verify-geo.py --live     # ライブ URL を取得して同じ検査
+    python3 scripts/verify-geo.py --live     # 本番 URL を取得して同じ検査
+    python3 scripts/verify-geo.py --live --base https://staging--example.netlify.app
+                                             # staging 等を取得して検査する。
+                                             # 取得先だけを差し替え、canonical / hreflang の
+                                             # 期待値は本番 URL のままにする（staging でも
+                                             # 本番向けの絶対 URL が入っているのが正のため）。
 
-FAQ の可視テキストと FAQPage JSON-LD の一致、エンティティ定義の5箇所一致、
+FAQ の可視テキストと FAQPage JSON-LD の一致、エンティティ定義の3箇所一致
+（p.def / FAQ第1問 / JSON-LD description。meta description・og:descriptionは
+検索意図向けの独立文として2026-08に分離。詳細: docs/seo-geo-strategy.md）、
 hreflang の相互参照、禁止表記、ロゴ6色の文字利用などを見る。
 """
 import argparse
@@ -12,6 +19,7 @@ import html
 import json
 import re
 import sys
+import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
@@ -22,19 +30,21 @@ PAGES = {
     "ja": {
         "file": ROOT / "index.html",
         "live": "https://eudaimoniauniverse.com/",
-        "definition": "Eudaimonia Universe（株式会社ユーダイモニアユニバース）は、二項対立を社会進化の燃料へと変換する Think & Do Tank であり、Human OS と対立学を基盤に、研究（Think Tank）、実装（Produce）、資産化（Asset）の循環でジンテーゼ社会の創造を目指す。",
+        "definition": "ユーダイモニアユニバース（株式会社ユーダイモニアユニバース）は、人間科学の研究と組織変革を行う、日本発の Think & Do Tank です。価値観、感情、認知、意味、関係性に関する独自研究を、組織で活用できるフレームワーク、診断、テクノロジーへと転換し、人と事業がともに持続的に成長する経営を支援します。",
         "lang": "ja",
         "alt": "https://eudaimoniauniverse.com/en/",
     },
     "en": {
         "file": ROOT / "en" / "index.html",
         "live": "https://eudaimoniauniverse.com/en/",
-        "definition": "Eudaimonia Universe is a Think & Do Tank for a Synthese Society, converting duality into fuel for societal evolution through research, implementation, and productization, grounded in Human OS and Conflictology.",
+        "definition": "Eudaimonia Universe is a human science research and organizational transformation company based in Japan. We turn original research on values, emotions, cognition, meaning, and relationships into practical frameworks, diagnostics, and technologies that help organizations strengthen culture, leadership, decision-making, and meaningful work.",
         "lang": "en",
         "alt": "https://eudaimoniauniverse.com/",
     },
 }
 
+# 2026-08 リニューアルで「対立は診断できる」等の旧ブランドラインは /research/conflictology/ へ移設済み。
+# トップページには残らないため禁止表記には含めない。Synthesis Society は引き続き禁止（Synthese が正）。
 BANNED = ["Synthesis Society", "おむすびクエスト", "#00B5A0", "OMUSUBI QUEST"]
 # ロゴ6色のうち文字に使ってよいのは purple #88167B だけ (spec §4.2)
 DECOR_ONLY = ["#3BAD90", "#147EBF", "#DA3B49", "#EA953C", "#F3CB3F"]
@@ -148,12 +158,13 @@ def verify(key: str, src: str) -> None:
             mismatch.append(f"Q{i} 回答文")
     check(not mismatch, "FAQ 可視テキスト = JSON-LD 全文一致", ", ".join(mismatch))
 
-    # --- エンティティ定義 5箇所 ---
+    # --- エンティティ定義 3箇所一致（2026-08 リニューアルで方針変更）---
+    # meta description / og:description は検索意図向けの独立した要約文とし、
+    # GEOの引用対象であるエンティティ定義（p.def / FAQ第1問 / JSON-LD description）とは
+    # あえて分離した（詳細: docs/seo-geo-strategy.md）。3箇所のみ一言一句一致を検査する。
     definition = cfg["definition"]
     esc = definition.replace("&", "&amp;")
     spots = {
-        "meta description": f'<meta name="description" content="{esc}">' in src,
-        "og:description": f'<meta property="og:description" content="{esc}">' in src,
         "ファーストビュー本文": f'<p class="def">{esc}</p>' in src,
         "FAQ 第1問の冒頭": bool(ld_qa)
         and ld_qa[0][1].startswith(definition.rstrip("。").rstrip(".")),
@@ -161,6 +172,15 @@ def verify(key: str, src: str) -> None:
     }
     for name, ok in spots.items():
         check(ok, f"エンティティ定義 一言一句一致: {name}")
+
+    # --- meta description / og:description: 存在し、GEO定義とは別文であること ---
+    m = re.search(r'<meta name="description" content="(.*?)">', src)
+    o = re.search(r'<meta property="og:description" content="(.*?)">', src)
+    meta_desc = html.unescape(m.group(1)) if m else ""
+    og_desc = html.unescape(o.group(1)) if o else ""
+    check(bool(meta_desc), "meta description が存在する")
+    check(bool(og_desc), "og:description が存在する")
+    check(meta_desc == og_desc, "meta description と og:description が一致する")
 
     # --- hreflang 相互参照 ---
     for hl, href in (("ja", "https://eudaimoniauniverse.com/"), ("en", "https://eudaimoniauniverse.com/en/"), ("x-default", "https://eudaimoniauniverse.com/")):
@@ -195,11 +215,25 @@ def verify(key: str, src: str) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--live", action="store_true", help="ライブ URL を取得して検査")
+    ap.add_argument(
+        "--base",
+        metavar="ORIGIN",
+        help="取得先のオリジンを差し替える（例: staging の Netlify URL）。"
+        "期待値の canonical / hreflang は本番 URL のまま検査する。",
+    )
     args = ap.parse_args()
+
+    if args.base and not args.live:
+        ap.error("--base は --live と一緒に使う")
+    base = args.base.rstrip("/") if args.base else None
 
     for key, cfg in PAGES.items():
         if args.live:
-            req = urllib.request.Request(cfg["live"], headers={"User-Agent": "verify-geo"})
+            url = cfg["live"]
+            if base:
+                url = base + urllib.parse.urlparse(url).path
+                print(f"\n[fetch] {url}")
+            req = urllib.request.Request(url, headers={"User-Agent": "verify-geo"})
             src = urllib.request.urlopen(req, timeout=20).read().decode("utf-8")
         else:
             src = cfg["file"].read_text(encoding="utf-8")
