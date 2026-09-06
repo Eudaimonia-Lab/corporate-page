@@ -10,6 +10,8 @@
                                              # 本番向けの絶対 URL が入っているのが正のため）。
 
 FAQ の可視テキストと FAQPage JSON-LD の一致、エンティティ定義の3箇所一致
+（日本語トップのファーストビュー本文のみ、主語を「私たちは、」に差し替えた変化形を許す。
+本文以降は一言一句同一であることを検査する）
 （p.def / FAQ第1問 / JSON-LD description。meta description・og:descriptionは
 検索意図向けの独立文として2026-08に分離。詳細: docs/seo-geo-strategy.md）、
 hreflang の相互参照、禁止表記、ロゴ6色の文字利用などを見る。
@@ -31,6 +33,10 @@ PAGES = {
         "file": ROOT / "index.html",
         "live": "https://eudaimoniauniverse.com/",
         "definition": "ユーダイモニアユニバース（株式会社ユーダイモニアユニバース）は、人間科学の研究と組織変革を行う、日本発の Think & Do Tank です。価値観、感情、認知、意味、関係性に関する独自研究を、組織で活用できるフレームワーク、診断、テクノロジーへと転換し、人と事業がともに持続的に成長する経営を支援します。",
+        # ファーストビュー本文 (p.def) だけは主語を「私たちは、」に差し替えた変化形を置く（2026-09 決定）。
+        # 定義本体を書き換えたらこの変化形も自動で追従するよう、ここでは置換の組だけを持つ。
+        # FAQ 第1問と JSON-LD Organization.description は社名入りの definition のまま。
+        "lede_subject": ("ユーダイモニアユニバース（株式会社ユーダイモニアユニバース）は、", "私たちは、"),
         "lang": "ja",
         "alt": "https://eudaimoniauniverse.com/en/",
     },
@@ -163,9 +169,18 @@ def verify(key: str, src: str) -> None:
     # GEOの引用対象であるエンティティ定義（p.def / FAQ第1問 / JSON-LD description）とは
     # あえて分離した（詳細: docs/seo-geo-strategy.md）。3箇所のみ一言一句一致を検査する。
     definition = cfg["definition"]
+    lede = definition
+    label_lede = "ファーストビュー本文"
+    sub = cfg.get("lede_subject")
+    if sub:
+        old_subject, new_subject = sub
+        assert definition.startswith(old_subject), "lede_subject が definition の冒頭と一致しない"
+        lede = new_subject + definition[len(old_subject) :]
+        label_lede = f"ファーストビュー本文（主語を「{new_subject}」に差し替えた変化形）"
     esc = definition.replace("&", "&amp;")
+    esc_lede = lede.replace("&", "&amp;")
     spots = {
-        "ファーストビュー本文": f'<p class="def">{esc}</p>' in src,
+        label_lede: f'<p class="def">{esc_lede}</p>' in src,
         "FAQ 第1問の冒頭": bool(ld_qa)
         and ld_qa[0][1].startswith(definition.rstrip("。").rstrip(".")),
         "JSON-LD Organization.description": org.get("description") == definition,
