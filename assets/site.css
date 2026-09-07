@@ -85,6 +85,11 @@ p{max-width:720px}
 .beat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 38px;margin:6px 0}
 .beat .big{font-family:var(--serif);color:var(--indigo);font-size:24px;line-height:1.6}
 .beat .sm{color:var(--purple);font-size:15px;margin-top:12px}
+.beat .addr{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.beat .addr .lb{font-family:var(--label);font-size:11px;font-weight:bold;letter-spacing:.18em;color:var(--grey);text-transform:uppercase}
+.beat .addr a{font-family:var(--serif);font-size:22px;color:var(--r-purple);text-decoration:none;word-break:break-all}
+.beat .addr a:hover{text-decoration:underline}
+@media(max-width:520px){.beat .addr a{font-size:18px}}
 .gloss{background:var(--bg2);border-left:3px solid var(--r-purple);border-radius:0 12px 12px 0;padding:24px 26px;margin-top:22px}
 .gloss p{font-size:14px;max-width:760px;line-height:1.95}
 .gloss p+p{margin-top:12px}
