@@ -274,3 +274,20 @@ details.disc .a{padding-top:0}
 .card .status{font-size:13px;color:var(--purple);margin-top:12px}
 .card .links{font-size:13px;margin-top:12px}
 .card .links a{color:var(--magenta)}
+
+/* Human OS 構造図（共通の源 → 並列2機能／横断2軸）2026-09 */
+.hosdiag{margin:28px 0;max-width:620px}
+.hosdiag .src{border:1px solid var(--line);border-top:3px solid var(--r-purple);background:var(--card);border-radius:12px;padding:16px 20px;text-align:center}
+.hosdiag .src b{font-family:var(--serif);font-weight:normal;color:var(--indigo);font-size:17px;display:block}
+.hosdiag .src span{color:var(--grey);font-size:12.5px}
+.hosdiag .fns{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:32px 12px;margin-top:32px}
+.hosdiag .fn{position:relative;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:14px 18px}
+.hosdiag .fn::before{content:"\2193";position:absolute;top:-26px;left:50%;transform:translateX(-50%);color:var(--grey);font-size:14px;line-height:1}
+.hosdiag .fn b{font-family:var(--serif);font-weight:normal;color:var(--indigo);font-size:15px;display:block}
+.hosdiag .fn span{color:var(--grey);font-size:12.5px}
+.hosdiag .fn.f1{border-top:3px solid var(--r-blue)}
+.hosdiag .fn.f2{border-top:3px solid var(--r-green)}
+.hosdiag .axes{margin-top:14px;border:1px dashed var(--line);border-radius:12px;padding:13px 18px;display:flex;flex-wrap:wrap;gap:8px 26px;align-items:baseline}
+.hosdiag .axes .lb{font-family:var(--label);font-size:11px;letter-spacing:.18em;color:var(--grey);text-transform:uppercase}
+.hosdiag .axes .ax{font-size:13.5px;color:var(--ink)}
+.hosdiag .axes .ax b{font-family:var(--serif);font-weight:normal;color:var(--indigo)}

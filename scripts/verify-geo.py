@@ -43,7 +43,7 @@ PAGES = {
     "en": {
         "file": ROOT / "en" / "index.html",
         "live": "https://eudaimoniauniverse.com/en/",
-        "definition": "Eudaimonia Universe is a human science research and organizational transformation company based in Japan. We turn original research on values, emotions, cognition, meaning, and relationships into practical frameworks, diagnostics, and technologies that help organizations strengthen culture, leadership, decision-making, and meaningful work.",
+        "definition": "Eudaimonia Universe is a human science research and organisational transformation company based in Japan. We turn original research on values, emotions, cognition, meaning, and relationships into practical frameworks, diagnostics, and technologies that help organisations strengthen culture, leadership, decision-making, and meaningful work.",
         "lang": "en",
         "alt": "https://eudaimoniauniverse.com/",
     },

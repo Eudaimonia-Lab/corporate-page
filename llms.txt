@@ -1,6 +1,6 @@
 # Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）
 
-> EN: Eudaimonia Universe is a human science research and organizational transformation company based in Japan. We turn original research on values, emotions, cognition, meaning, and relationships into practical frameworks, diagnostics, and technologies that help organizations strengthen culture, leadership, decision-making, and meaningful work.
+> EN: Eudaimonia Universe is a human science research and organisational transformation company based in Japan. We turn original research on values, emotions, cognition, meaning, and relationships into practical frameworks, diagnostics, and technologies that help organisations strengthen culture, leadership, decision-making, and meaningful work.
 >
 > JA: ユーダイモニアユニバース（株式会社ユーダイモニアユニバース）は、人間科学の研究と組織変革を行う、日本発の Think & Do Tank です。価値観、感情、認知、意味、関係性に関する独自研究を、組織で活用できるフレームワーク、診断、テクノロジーへと転換し、人と事業がともに持続的に成長する経営を支援します。
 
@@ -8,39 +8,39 @@ Notation: the German form **Synthese** is used for 止揚 and for the higher-ord
 
 ## Positioning
 
-- Primary position — EN: Human Science for Organizational Transformation / JA: 人間科学に基づく組織変革
-- Purpose (philosophical background, see /about/philosophy/) — EN: Conflict, elevated (sublated), becomes eudaimonia. The total grows. / JA: 対立を止揚し、人類のユーダイモニアを増やす。
+- Primary position — EN: Human Science for Organisational Transformation / JA: 人間科学に基づく組織変革
+- Purpose (philosophical background, see /about/philosophy/) — EN: Conflict, elevated, becomes eudaimonia. The total grows. (We use the German Aufhebung, not "sublation," for 止揚.) / JA: 対立を止揚し、人類のユーダイモニアを増やす。
 
 ## Frameworks (original to Eudaimonia Universe — see /research/)
 
-- **Human OS** (`/research/human-os/`) — a model of a person's internal structure in five layers: Body, Emotion, Mind, Meaning, Relationship（身体・感情・思考・意味・関係性）. Gives organizational diagnosis a shared vocabulary for where something is happening.
-- **Conflictology / 対立学** (`/research/conflictology/`) — a framework that sorts conflict into four types: Value（価値）, Structure（構造）, Cognition（認知）, Existence（存在）. The type is diagnosed before any remedy is chosen.
-- **Source 108** (`/research/source-108/`) — a structured framework for understanding human values and the motivations behind behavior and decision-making.
-- **Ikigai Management** (`/research/ikigai-management/`) — an approach connecting individual meaning, organizational purpose, contribution, and sustainable performance.
-- **CRV** (`/research/crv/`) — a model for examining how an organization creates and distributes value across its stakeholders.
+- **Human OS** (`/research/human-os/`) — a framework for structuring how people perceive the world and act on what they value. A value map（価値観地図）is the common source; two parallel functions, a cognitive window（認知の窓）and competency（コンピテンシー）, operate from it; two dimensions, bias（バイアス）and stability（安定性）, cut across both. Gives organisational diagnosis a shared vocabulary. The measurement of the cognitive window is the theoretical basis for Compass.
+- **Conflictology / 対立学** (`/research/conflictology/`) — a framework that sorts conflict into four types: Structure（構造）, Cognition（認知, is）, Value（価値, ought）, Existence（存在, who）. Conflict is treated as a structural fact of the world, not as a problem to be erased. The structure — whether the field still allows candid speech — is diagnosed first, then the content along the three remaining axes. The type is diagnosed before any remedy is chosen.
+- **Source 108** (`/research/source-108/`) — a structured framework for understanding human values and the motivations behind behaviour and decision-making.
+- **Ikigai Management** (`/research/ikigai-management/`) — an approach connecting individual meaning, organisational purpose, contribution, and sustainable performance.
+- **CRV** (`/research/crv/`) — a model for examining how an organisation creates and distributes value across its stakeholders.
 - All frameworks are developed through practice and are currently being evaluated; none is presented as peer-reviewed, validated science. Each research page states its own evidence status and limitations.
 
 ## What we do (`/services/`)
 
-Three core services are currently running with organizations (`/services/#lineup`):
+Three core services are currently running with organisations (`/services/#lineup`):
 
-- **Culture Diagnostics / 組織文化診断** — quantifies organizational culture from audit logs alone, in a form fit for disclosure and assurance. It does not rely on surveys, so it records what behavior changed rather than how people say they feel. Status: in use, measured.
+- **Culture Diagnostics / 組織文化診断** — quantifies organisational culture from audit logs alone, in a form fit for disclosure and assurance. It does not rely on surveys, so it records what behaviour changed rather than how people say they feel. Status: in use, measured.
 - **Okagesama / おかげさま** — brings noticing of mutual support into the tools teams already use, such as Slack and Teams. Status: in use, internal.
 - **Compass** — works through a real conflict structurally, in dialogue with AI, using the four types of Conflictology. For the individual and their manager. Status: in production.
 
 For individuals, support for a richer life is carried by Source, Omusubi Quest and 操舵室 (Sōdashitsu) — see `/products/`.
 
-These services connect to six areas, each run through five stages (understand, diagnose, design, transform, embed): Organizational Transformation, Leadership and Decision-Making, Engagement and Meaningful Work, Organizational Conflict, Sustainable Value Creation, Business and Innovation.
+These services connect to six areas, each run through five stages (understand, diagnose, design, transform, embed): Organisational Transformation, Leadership and Decision-Making, Engagement and Meaningful Work, Organisational Conflict, Sustainable Value Creation, Business and Innovation.
 
 ## Why performance isn't consistent (research in progress, `/research/#consistency`)
 
-Existing assessments cannot explain why a highly capable person sometimes fails to perform consistently, or why someone previously unremarkable steps up in a crisis. We are researching this through three layers — a value map (what you value), a cognitive window (how the world appears to you), and competency (what you can bring to bear) — cut across by two dimensions: bias and stability. This underpins how Compass measures the "cognitive window." We are preparing to present it as academic research in organizational management; details to follow.
+Existing assessments cannot explain why a highly capable person sometimes fails to perform consistently, or why someone previously unremarkable steps up in a crisis. We are researching this swing through Human OS, our framework in which a value map serves as the common source, two parallel functions — a cognitive window and competency — operate alongside each other, and two dimensions, bias and stability, cut across both. This underpins how Compass measures the "cognitive window." We are preparing to present it as academic research in organisational management; details to follow.
 
 ## Divisions (`/about/`)
 
-- **Think** (official name: Think Tank) — studies the relationship between human interiority and organizations, and formalizes what is learned into reproducible frameworks.
-- **Transform** (official name: Produce) — applies the research inside client organizations: transformation, decision design, venture development. This is the consultation window for companies.
-- **Scale** (official name: Asset) — turns field-tested methods into diagnostics, programs, and products, so they reach organizations we are not directly working with.
+- **Think** (official name: Think Tank) — studies the relationship between human interiority and organisations, and formalises what is learned into reproducible frameworks.
+- **Transform** (official name: Produce) — applies the research inside client organisations: transformation, decision design, venture development. This is the consultation window for companies.
+- **Scale** (official name: Asset) — turns field-tested methods into diagnostics, programmes, and products, so they reach organisations we are not directly working with.
 
 Self-initiated social implementation projects (`/about/`): 育業 (Ikugyo), The Guild, Giver research（Giver研究）.
 
@@ -51,9 +51,9 @@ Ten applications share one versioned theory layer, held in a single repository, 
 - **For Individuals**: Source (values and sensibility as a personal map, available) — Omusubi Quest (continuity through narrative, 11 languages, available, https://omusubi.quest/)
 - **For Leaders**: Compass (leadership development via Conflictology, available) — Sovereign (daily practice for decision-makers, in development)
 - **For Teams**: 円卓会議 / Entaku Kaigi (multiple AI models and people deliberating together, available) — Omusubi for teams (rituals for team turning points, in design)
-- **For Organizations**: CRV (value distribution, available) — 操舵室 / Sōdashitsu (time-use overview for professional firms, available) — Integration Compass (post-merger organizational conflict, in development) — ikugyo (mutual understanding during parental leave, in development)
+- **For Organisations**: CRV (value distribution, available) — 操舵室 / Sōdashitsu (time-use overview for professional firms, available) — Integration Compass (post-merger organisational conflict, in development) — ikugyo (mutual understanding during parental leave, in development)
 
-## Organization (`/about/`)
+## Organisation (`/about/`)
 
 - Legal name: Eudaimonia Universe, Inc.（株式会社ユーダイモニアユニバース）
 - Japan Corporate Number: 4010001191271
@@ -67,7 +67,7 @@ Ten applications share one versioned theory layer, held in a single repository, 
 
 ## Key pages
 
-- [Home, Japanese](https://eudaimoniauniverse.com/) / [Home, English](https://eudaimoniauniverse.com/en/) — organizational challenge, value proposition, research, how we work, FAQ (6 questions)
+- [Home, Japanese](https://eudaimoniauniverse.com/) / [Home, English](https://eudaimoniauniverse.com/en/) — organisational challenge, value proposition, research, how we work, FAQ (6 questions)
 - [What We Do, Japanese](https://eudaimoniauniverse.com/services/) / [English](https://eudaimoniauniverse.com/en/services/) — six service areas, engagement process, FAQ
 - [Research, Japanese](https://eudaimoniauniverse.com/research/) / [English](https://eudaimoniauniverse.com/en/research/) — research hub, links to all five framework pages
 - [Human OS](https://eudaimoniauniverse.com/research/human-os/) / [対立学 Conflictology](https://eudaimoniauniverse.com/research/conflictology/) (FAQ: 4 questions) / [Source 108](https://eudaimoniauniverse.com/research/source-108/) / [Ikigai Management](https://eudaimoniauniverse.com/research/ikigai-management/) / [CRV](https://eudaimoniauniverse.com/research/crv/) — each with definition, evidence status, and limitations; English equivalents under `/en/research/...`
@@ -79,7 +79,7 @@ Ten applications share one versioned theory layer, held in a single repository, 
 
 ## Not yet published (by design, not oversight)
 
-We do not publish case studies, client names, or impact figures until they are verified and approved for release — an `/impact/` section will follow once such material exists. We do not publish generic articles without a named author and organizational point of view — an `/insights/` section will follow once such material exists.
+We do not publish case studies, client names, or impact figures until they are verified and approved for release — an `/impact/` section will follow once such material exists. We do not publish generic articles without a named author and organisational point of view — an `/insights/` section will follow once such material exists.
 
 ## Optional
 

@@ -21,7 +21,8 @@ assets/
   eu_mark.svg       # 公式マーク（.ai 由来。ワードマークは含まない）
   site.css          # 全ページ共通のスタイルシート（CSS は 2026-08 に各ページのインラインから集約済み）
 img/
-  og-2026-ja.png    # OGP 画像（日）1200x630。og-2026-en.png が英。両者でコピーが異なる
+  og-2026b-ja.png   # OGP 画像（日）1200x630。og-2026b-en.png が英。両者でコピーが異なる。
+                    # 2026-09-07 に英国式つづりへ差し替え（旧 og-2026-*.png は SNS キャッシュ向けに残置）
   og-image.png      # 旧 OGP。2026-09 に上記へ差し替え済みで、どのページからも参照していない。
                     # 古いSNSキャッシュ向けにファイルだけ残している
 scripts/
@@ -65,6 +66,28 @@ scripts/
 
 **掲載してはいけない情報**（2026-09 の企画で確定）: 学会名・開催日／提携社名（個社固有の連携スキーム）／
 測定項目提供者の実名／組織文化診断の実測数値。ステータスは上表のラベルのみで表し、数値は出さない。
+
+**対立学の恒久レッドライン**（2026-09-07 追加）: 鎧の7分類（離脱／転嫁／依存／融解／置換／軽蔑／滅私）の
+名称・定義／認知バイアス31種の一覧と4機能軸の詳細分類／軸別の具体的介入手法・禁忌・誤介入の罠（TRAP）は
+**サイトに一切載せない**（Compass 等のサービス実装に直結する中核メソッド＝知財のため）。
+対立学の説明は常に「構造・認知・価値・存在の4類型で診断する」という概要レベルに留める。
+「鎧」「（対立学の文脈での）バイアス」という語そのものも出さない。
+なお **Human OS ページの「バイアス」は別**（そちらはフレームワークの横断軸そのもので、掲載可）。
+
+## Human OS の構造（2026-09-07 に全面更新）
+
+旧「5層モデル」（body / emotion / mind / meaning / relationships）は**廃止**。現行モデルは次のとおりで、
+サイト上の Human OS の説明はすべてこれに従う。
+
+- **共通の源**: 価値観地図 / Value Map — 何を大切にするか。すべての判断がここから始まる
+- **並列する2つの機能**: 認知の窓 / Cognitive Window（世界がどう見えるか）と
+  コンピテンシー / Competency（何を発揮できるか）。**上下関係ではなく対等な並列**
+- **横断する2つの軸**: バイアス / Bias（曲がる側）と 安定性 / Stability（折れる側）。両機能を横断し、対で働く
+- 認知の窓の測定が、法人向けサービス **Compass** の理論的な裏付け
+
+本体ページは `/research/human-os/`（日英）。`/research/` の `#consistency` は
+**構造の再説明をせず**、問いのストーリーと Human OS ページへのリンクに留める（重複を避けるため）。
+図解の CSS は `assets/site.css` の `.hosdiag`。研究セクション側で図を作り込まない。
 
 ## デザイントークン（CSS変数）
 
@@ -130,12 +153,20 @@ canonical / hreflang の期待値は本番 URL のまま照合する（staging �
 - **可視語数**: 英語ページは `<details>` を閉じた状態で900語以内（設計書 §3）。verify-geo.py が検査する。
   持つ量は減らさず、見せる量を減らす（詳細は `<details>` に入れる）
 - **用語の正準表記**: 「対立学」（英語は Conflictology 固定）／「Human OS」（半角・「モデル」を付けない）／
-  対立学は「4タイプ」・Human OSは「5層」／プロセス表記は「構造理解→診断→介入設計→創発」／
+  対立学は「4タイプ」／プロセス表記は「構造理解→診断→介入設計→創発」／
   止揚の英語は **Synthese**（Synthesis は禁止）／プロダクトは Omusubi Quest（全大文字・「おむすび」表記は禁止）
+- **英語は英国式つづりに統一（2026-09-07 決定）**: `organisation` / `organisational` / `centre` /
+  `judgement` / `behaviour` / `programme` / `towards` / `catalogue` / `-ise` 系（formalise, organise,
+  popularise, analyse）。**noun の practice は英国式でもそのまま**（動詞なら practise）。
+  ポジショニングの固定文も **Human Science for Organisational Transformation** に変更済み
+  （上位の EU_Brand_Identity_Guidelines_v3 側も要追随）。
+  **変換してはいけない例外**: JSON-LD の `"@type": "Organization"` と `@id` の `#organization`、
+  アンカー ID `id="organizations"`（`/products/#organizations` の参照先）、CSS の `center`。
+  `verify-geo.py` の英語エンティティ定義文も英国式に更新済み
 - **止揚に英語の等価語を当てない（2026-09 決定）**: 英語ページでは **Aufhebung** をそのまま使い、
   **sublation は使わない**。Synthese を synthesis より優先するのと同じ理由（英語語彙に置くと意味が流れる）。
   日本語版 `/about/philosophy/` からも「英語では sublation にあたります」を削除済み
-- **OGP 画像は日英で別**（`img/og-2026-ja.png` / `og-2026-en.png`）。差し替えるときはファイル名を変えて
+- **OGP 画像は日英で別**（`img/og-2026b-ja.png` / `og-2026b-en.png`）。差し替えるときはファイル名を変えて
   SNS 側のキャッシュを切る。`og:image:width` / `height` も併記する
 - **NEWS の構造化データは記事2件目から**。1件だけの間は `NewsArticle` / `ItemList` を入れない
 - **robots.txt**: AIクローラーを含む全許可方針。Disallow を足す変更は要相談
