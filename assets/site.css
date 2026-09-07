@@ -61,6 +61,8 @@ p{max-width:720px}
 .hero{padding:92px 0 84px}
 .hero .logo{width:150px;height:auto;display:block;margin-bottom:36px}
 .hero .lead{margin-top:26px}
+.hero .subline{margin-top:16px;font-family:var(--serif);color:var(--purple);font-size:20px;line-height:1.6}
+
 .hero .tags{margin-top:30px;font-family:var(--label);font-size:12px;font-weight:bold;letter-spacing:.2em;color:var(--grey);text-transform:uppercase}
 .pagehead{padding:72px 0 56px}
 .pagehead .lead{margin-top:20px}
