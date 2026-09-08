@@ -47,37 +47,71 @@
 </div></div>
 
 <section style="padding-top:20px"><div class="wrap">
-<!-- 2026-09: Netlify の Form detection が未有効で、フォーム POST が 404 になるため
-     メール送信へ一時的に切り替えている。Netlify 側で Form detection を有効化して
-     再デプロイしたら、コミット 1d56731 の <form> ブロックを復元すること。
-     contact/thanks.html はその復元先として残してある（noindex）。 -->
+<!-- 2026-09-08: Netlify の Form detection を有効化したため、フォーム方式に復帰。
+     フォームは data-netlify="true" とデプロイ時のHTML解析で登録される（JSは不要）。
+     name と hidden の form-name を一致させること。送信後は contact/thanks.html へ。 -->
 
 <div class="beat">
-<p class="big">メールでお問い合わせください</p>
-<p class="sm">下のボタンを押すと、記入項目をあらかじめ入れた状態でメールソフトが開きます。メールソフトが開かない場合は、下のアドレス宛に直接お送りください。</p>
+<p class="big">お問い合わせフォーム</p>
+<p class="sm">課題がまだ言葉になっていない段階でも構いません。メールでも同じ内容を承ります。</p>
 <p class="addr"><span class="lb">宛先</span><a href="mailto:info@eudaimonialab.org">info@eudaimonialab.org</a></p>
 </div>
 
-<div class="btns">
-<a class="btn pri" href="mailto:info@eudaimonialab.org?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%EF%BD%9C%E3%83%A6%E3%83%BC%E3%83%80%E3%82%A4%E3%83%A2%E3%83%8B%E3%82%A2%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B9&body=%E3%81%8A%E5%90%8D%E5%89%8D%3A%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%E3%83%BB%E7%B5%84%E7%B9%94%E5%90%8D%3A%0A%E5%BD%B9%E8%81%B7%3A%0A%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E7%A8%AE%E5%88%A5%3A%0A%0A%E7%8F%BE%E5%9C%A8%E3%81%AE%E7%8A%B6%E6%B3%81%E3%82%84%E8%AA%B2%E9%A1%8C%3A%0A%0A">お問い合わせメールを作成する</a>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thanks.html" class="formgrid">
+<input type="hidden" name="form-name" value="contact">
+<p class="hp"><label>これは入力しないでください<input name="bot-field"></label></p>
+
+<div>
+<label for="name">お名前<span class="req">必須</span></label>
+<input type="text" id="name" name="name" required autocomplete="name">
 </div>
 
-<h2 style="margin-top:54px">お問い合わせ種別</h2>
-<p>差し支えなければ、メール本文の「お問い合わせ種別」に次のいずれかをご記入ください。</p>
-<ul class="edlist" style="columns:2;column-gap:54px">
-<li>組織変革</li>
-<li>リーダーシップ・意思決定</li>
-<li>働きがい・エンゲージメント</li>
-<li>組織内対立</li>
-<li>持続的な企業価値</li>
-<li>事業開発・イノベーション</li>
-<li>共同研究</li>
-<li>講演・取材</li>
-<li>投資・パートナーシップ</li>
-<li>その他</li>
-</ul>
+<div>
+<label for="org">会社名・組織名</label>
+<input type="text" id="org" name="organization" autocomplete="organization">
+</div>
 
-<p class="note" style="margin-top:30px">日本語・英語のどちらでも承ります。お預かりした情報の取り扱いは<a href="/privacy.html" style="color:var(--purple)">プライバシーポリシー</a>をご覧ください。</p>
+<div>
+<label for="role">役職</label>
+<input type="text" id="role" name="role" autocomplete="organization-title">
+</div>
+
+<div>
+<label for="email">メールアドレス<span class="req">必須</span></label>
+<input type="email" id="email" name="email" required autocomplete="email">
+</div>
+
+<div>
+<label for="topic">お問い合わせ種別<span class="req">必須</span></label>
+<select id="topic" name="topic" required>
+<option value="">選択してください</option>
+<option value="組織変革">組織変革</option>
+<option value="リーダーシップ・意思決定">リーダーシップ・意思決定</option>
+<option value="働きがい・エンゲージメント">働きがい・エンゲージメント</option>
+<option value="組織内対立">組織内対立</option>
+<option value="持続的な企業価値">持続的な企業価値</option>
+<option value="事業開発・イノベーション">事業開発・イノベーション</option>
+<option value="共同研究">共同研究</option>
+<option value="講演・取材">講演・取材</option>
+<option value="投資・パートナーシップ">投資・パートナーシップ</option>
+<option value="その他">その他</option>
+</select>
+</div>
+
+<div>
+<label for="message">現在の状況や課題</label>
+<textarea id="message" name="message" placeholder="現時点でわかっている範囲で構いません。"></textarea>
+</div>
+
+<div class="consent">
+<input type="checkbox" id="consent" name="consent" required>
+<label for="consent" style="font-family:var(--sans);font-weight:normal;text-transform:none;letter-spacing:normal;margin-bottom:0"><a href="/privacy.html" style="color:var(--purple)">プライバシーポリシー</a>に同意の上、送信します。<span class="req">必須</span></label>
+</div>
+
+<div class="submitrow"><button type="submit">送信する</button></div>
+</form>
+
+<p class="note" style="margin-top:30px">日本語・英語のどちらでも承ります。フォームが使えない場合は <a href="mailto:info@eudaimonialab.org" style="color:var(--purple)">info@eudaimonialab.org</a> 宛に直接お送りください。お預かりした情報の取り扱いは<a href="/privacy.html" style="color:var(--purple)">プライバシーポリシー</a>をご覧ください。</p>
 
 </div></section>
 

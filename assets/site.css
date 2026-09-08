@@ -298,3 +298,20 @@ details.disc .a{padding-top:0}
 .hosdiag .axes .lb{font-family:var(--label);font-size:11px;letter-spacing:.18em;color:var(--grey);text-transform:uppercase}
 .hosdiag .axes .ax{font-size:13.5px;color:var(--ink)}
 .hosdiag .axes .ax b{font-family:var(--serif);font-weight:normal;color:var(--indigo)}
+
+/* お問い合わせフォーム（2026-09-08 Netlify Forms 復旧にともない各ページのインラインから集約） */
+.formgrid{display:grid;gap:22px;max-width:640px;margin-top:36px}
+.formgrid label{display:block;font-family:var(--label);font-size:12px;letter-spacing:.08em;color:var(--indigo);font-weight:bold;margin-bottom:8px}
+.formgrid input[type="text"],.formgrid input[type="email"],.formgrid select,.formgrid textarea{
+  width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--card);
+  border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-family:var(--sans)}
+.formgrid textarea{min-height:140px;resize:vertical}
+.formgrid input:focus-visible,.formgrid select:focus-visible,.formgrid textarea:focus-visible{outline:2.5px solid var(--purple);outline-offset:2px}
+.req{color:var(--r-red);margin-left:4px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.7}
+.consent input{margin-top:4px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.submitrow{margin-top:8px}
+.submitrow button{font:inherit;font-family:var(--label);letter-spacing:.1em;font-size:14px;font-weight:bold;
+  color:#fff;background:var(--indigo);border:none;border-radius:999px;padding:15px 34px;cursor:pointer}
+.submitrow button:hover{background:var(--purple)}

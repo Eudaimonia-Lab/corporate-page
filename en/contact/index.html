@@ -47,37 +47,71 @@
 </div></div>
 
 <section style="padding-top:20px"><div class="wrap">
-<!-- 2026-09: Netlify form detection is not enabled, so the form POST returns 404.
-     Temporarily switched to email. Once form detection is enabled and the site is
-     redeployed, restore the <form> block from commit 1d56731.
-     en/contact/thanks.html is kept (noindex) as the restore target. -->
+<!-- 2026-09-08: Form detection is enabled on Netlify, so the form is back.
+     Forms are registered by Netlify's HTML parse at deploy time via data-netlify="true" (no JS).
+     Keep name and the hidden form-name in sync. Submissions land on en/contact/thanks.html. -->
 
 <div class="beat">
-<p class="big">Get in touch by email</p>
-<p class="sm">The button below opens your mail client with the fields already laid out. If it does not open, write to the address below directly.</p>
+<p class="big">Enquiry form</p>
+<p class="sm">You do not need to have the challenge fully defined. Email works just as well.</p>
 <p class="addr"><span class="lb">Email</span><a href="mailto:info@eudaimonialab.org">info@eudaimonialab.org</a></p>
 </div>
 
-<div class="btns">
-<a class="btn pri" href="mailto:info@eudaimonialab.org?subject=Enquiry%20%7C%20Eudaimonia%20Universe&body=Name%3A%0ACompany%20or%20organisation%3A%0ARole%3A%0AEnquiry%20type%3A%0A%0ACurrent%20situation%20or%20challenge%3A%0A%0A">Write an enquiry email</a>
+<form name="contact-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/en/contact/thanks.html" class="formgrid">
+<input type="hidden" name="form-name" value="contact-en">
+<p class="hp"><label>Leave this field blank<input name="bot-field"></label></p>
+
+<div>
+<label for="name">Name<span class="req">Required</span></label>
+<input type="text" id="name" name="name" required autocomplete="name">
 </div>
 
-<h2 style="margin-top:54px">Enquiry types</h2>
-<p>If it helps, name one of these in the "Enquiry type" line of your email.</p>
-<ul class="edlist" style="columns:2;column-gap:54px">
-<li>Organisational transformation</li>
-<li>Leadership and decision-making</li>
-<li>Engagement and meaningful work</li>
-<li>Organisational conflict</li>
-<li>Sustainable value creation</li>
-<li>Business and innovation</li>
-<li>Research partnership</li>
-<li>Media or speaking</li>
-<li>Investment or partnership</li>
-<li>Other</li>
-</ul>
+<div>
+<label for="org">Company or organisation</label>
+<input type="text" id="org" name="organization" autocomplete="organization">
+</div>
 
-<p class="note" style="margin-top:30px">We reply in Japanese or English. See our <a href="/privacy.html" style="color:var(--purple)">Privacy Policy</a> for how we handle what you send.</p>
+<div>
+<label for="role">Role</label>
+<input type="text" id="role" name="role" autocomplete="organization-title">
+</div>
+
+<div>
+<label for="email">Email<span class="req">Required</span></label>
+<input type="email" id="email" name="email" required autocomplete="email">
+</div>
+
+<div>
+<label for="topic">Enquiry type<span class="req">Required</span></label>
+<select id="topic" name="topic" required>
+<option value="">Please select</option>
+<option value="Organisational transformation">Organisational transformation</option>
+<option value="Leadership and decision-making">Leadership and decision-making</option>
+<option value="Engagement and meaningful work">Engagement and meaningful work</option>
+<option value="Organisational conflict">Organisational conflict</option>
+<option value="Sustainable value creation">Sustainable value creation</option>
+<option value="Business and innovation">Business and innovation</option>
+<option value="Research partnership">Research partnership</option>
+<option value="Media or speaking">Media or speaking</option>
+<option value="Investment or partnership">Investment or partnership</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<div>
+<label for="message">Current situation or challenge</label>
+<textarea id="message" name="message" placeholder="Whatever you know at this point is enough."></textarea>
+</div>
+
+<div class="consent">
+<input type="checkbox" id="consent" name="consent" required>
+<label for="consent" style="font-family:var(--sans);font-weight:normal;text-transform:none;letter-spacing:normal;margin-bottom:0">I agree to the <a href="/privacy.html" style="color:var(--purple)">Privacy Policy</a> and consent to submit this form.<span class="req">Required</span></label>
+</div>
+
+<div class="submitrow"><button type="submit">Send</button></div>
+</form>
+
+<p class="note" style="margin-top:30px">We reply in Japanese or English. If the form does not work for you, write to <a href="mailto:info@eudaimonialab.org" style="color:var(--purple)">info@eudaimonialab.org</a> directly. See our <a href="/privacy.html" style="color:var(--purple)">Privacy Policy</a> for how we handle what you send.</p>
 
 </div></section>
 
