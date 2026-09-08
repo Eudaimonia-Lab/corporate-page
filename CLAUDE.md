@@ -40,6 +40,31 @@ scripts/
 
 ## デプロイとロールバック
 
+**Netlify プロジェクトの実体**（2026-09-08 に特定）:
+
+| 項目 | 値 |
+|---|---|
+| プロジェクト名 | `eudaimonia-univerce-corporate-page`（`universe` ではなく **`univerce`**。タイポのまま） |
+| site_id | `9366f5b0-ba0d-4e23-8a45-195b14e6ea41` |
+| 所有チーム | **Eudaimonia-Lab**（slug `eudaimonia-universe`） |
+| ビルド設定 | `provider=github` / `repo_branch=main` / `dir=.` / `cmd=None`（ビルドなし・リポジトリ直下を配信） |
+| 管理画面 | https://app.netlify.com/projects/eudaimonia-univerce-corporate-page |
+
+**アカウントの権限**: `aya.mizuno@gmail.com`（ayaPMI's team）と `aya@eudaimonialab.com`（aya-noyoiim's team）は
+**Eudaimonia-Lab チームのメンバーではない**。設定変更・デプロイができるのは **`develop@eudaimonialab.com`** だけ。
+CLI 作業の前に `netlify status` でログイン先を確認すること。別アカウントのままだと
+`netlify deploy` も `listSiteForms` も **404** を返す（403 ではないので権限問題と気づきにくい）。
+なお `netlify api getSite` は公開メタデータを返すため、権限がなくても通ってしまう点に注意。
+
+**ドラフトデプロイ**（本番を触らずに確認する手順）:
+
+```bash
+D=$(mktemp -d) && git archive HEAD | tar -x -C "$D"
+netlify deploy --dir "$D" --no-build     # --prod を付けなければ本番は無傷
+```
+
+`git archive HEAD` を使うのは、Netlify が Git から配信する内容と一致させるため（`.git` や未追跡ファイルを含めない）。
+
 - **main への push = Netlify 自動デプロイ = 本番公開**。push 前に必ず確認を取る
 - リモートに `staging` ブランチあり。大きめの変更は staging で確認してから main へ
 - ロールバック: ① `git revert` して push、または ② Netlify UI の Deploys 履歴から
@@ -66,6 +91,10 @@ scripts/
 
 **掲載してはいけない情報**（2026-09 の企画で確定）: 学会名・開催日／提携社名（個社固有の連携スキーム）／
 測定項目提供者の実名／組織文化診断の実測数値。ステータスは上表のラベルのみで表し、数値は出さない。
+
+**問い合わせの受付項目から「投資」を外す（2026-09-08 決定）**: 出資の相談窓口としての表記は日英とも掲載しない。
+一方 CRV の「投資家との対話」「対象: 企業・投資家」は**残す**（プロダクトの対象と研究の背景であって、
+出資の募集ではないため）。
 
 **対立学の恒久レッドライン**（2026-09-07 追加）: 鎧の7分類（離脱／転嫁／依存／融解／置換／軽蔑／滅私）の
 名称・定義／認知バイアス31種の一覧と4機能軸の詳細分類／軸別の具体的介入手法・禁忌・誤介入の罠（TRAP）は
@@ -170,14 +199,20 @@ canonical / hreflang の期待値は本番 URL のまま照合する（staging �
   SNS 側のキャッシュを切る。`og:image:width` / `height` も併記する
 - **NEWS の構造化データは記事2件目から**。1件だけの間は `NewsArticle` / `ItemList` を入れない
 - **robots.txt**: AIクローラーを含む全許可方針。Disallow を足す変更は要相談
-- **お問い合わせは現在メール方式（2026-09、暫定）**: Netlify の Form detection が未有効で、
-  フォームを POST すると 404 になり送信が消えていた（GET は 200 なのに POST だけ 404 になるのが
-  この症状の見分け方）。`/contact/` `/en/contact/` は `mailto:` ボタンに差し替えてある。
-  **復旧手順**: ① Netlify UI で Site configuration → Forms → Form detection を有効化
-  ② 再デプロイする（フォーム登録はデプロイ時の HTML 解析で行われるため、①だけでは直らない）
-  ③ Forms → Form notifications に info@eudaimonialab.org を追加
-  ④ コミット `1d56731` の `<form>` ブロックを `/contact/` `/en/contact/` に復元する。
-  `contact/thanks.html` / `en/contact/thanks.html` はその復元先として残してある（noindex・sitemap 未収録）
+- **お問い合わせは Netlify Forms で稼働中（2026-09-08 復旧、疎通確認済み）**:
+  `/contact/` は `name="contact"` → `/contact/thanks.html`、`/en/contact/` は `name="contact-en"` →
+  `/en/contact/thanks.html`。hidden の `form-name` を `name` と一致させること（ここがずれると 404 で
+  送信が消える）。honeypot は `bot-field`。**JS は不要** — 登録はデプロイ時の HTML 解析で行われる。
+  フォームの CSS は `assets/site.css` の `.formgrid` 系に集約済み。
+  メールアドレスの可視表示（`.beat .addr`）はフォームの上に残す。フォームが使えない利用者の導線のため
+- **通知はサイト単位で1件だけ**: Project configuration → Notifications → Emails and webhooks →
+  Form submission notifications。`Any form` を選べば `contact` / `contact-en` の両方を1件でカバーする
+  （フォームごとに作る必要はない）。現在 `info@eudaimonialab.org` 宛で稼働中。
+  **通知を設定するまでメールは出ない**（送信はダッシュボードに溜まるだけ）。ここが 2026-09 の障害の主因
+- **Slack にはフォーム通知が来ない**: このサイトに Slack 連携はない（フックは GitHub のデプロイ通知9件のみ）。
+  Slack へ流すには webhook ではなく **Netlify App for Slack** の導入が必要。
+  なお Slack アプリ「お問い合わせ」から届く通知は**別システム**のもの（項目に「従業員数」「部署」「スコア」が
+  あり、当サイトのフォームには存在しない。日付も `/contact/` 作成前）。送信元は未特定
 - **リダイレクト**: `_redirects` に旧実体の 301 を置いている。en.eudaimoniauniverse.com は現在 Wix 上で
   別サイトが生きており、DNS を Netlify に向けるまでこの行は発火しない（要対応。設計書 §1）
 
